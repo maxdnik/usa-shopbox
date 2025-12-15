@@ -3,7 +3,7 @@
 // src/app/producto/[slug]/page.tsx
 import Link from "next/link";
 import Image from "next/image";
-import { useParams, useSearchParams } from "next/navigation";
+import { use } from "react";
 
 import HeaderEcom from "@/components/home/HeaderEcom";
 import { mockProducts } from "@/lib/products";
@@ -28,17 +28,22 @@ function getFirstParam(value: string | string[] | null | undefined) {
   return undefined;
 }
 
-export default function ProductPage() {
-  const { slug } = useParams<{ slug: string }>();
-  const sp = useSearchParams();
+type PageProps = {
+  params: Promise<{ slug: string | string[] }>;
+  searchParams: Promise<Record<string, string | string[] | null | undefined>>;
+};
+
+export default function ProductPage({ params, searchParams }: PageProps) {
+  const resolvedParams = use(params);
+  const sp = use(searchParams);
+
+  const slug = resolvedParams.slug;
 
   const resolvedSlug = Array.isArray(slug) ? slug[0] : slug;
 
   const getSearchParam = (key: string) => {
-    if (!sp) return undefined;
-    const values = sp.getAll(key);
-    if (values.length > 0) return getFirstParam(values);
-    return getFirstParam(sp.get(key));
+    const value = sp?.[key];
+    return getFirstParam(value ?? undefined);
   };
 
   const { addToCart } = useCart();
