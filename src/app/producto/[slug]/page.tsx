@@ -3,14 +3,15 @@
 // src/app/producto/[slug]/page.tsx
 import Link from "next/link";
 import Image from "next/image";
+import { use } from "react";
 
 import HeaderEcom from "@/components/home/HeaderEcom";
 import { mockProducts } from "@/lib/products";
 import { useCart } from "@/context/CartContext";
 
 type PageProps = {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 type ViewProduct = {
@@ -35,8 +36,8 @@ function getFirstParam(
 }
 
 export default function ProductPage({ params, searchParams }: PageProps) {
-  const { slug } = params;
-  const sp = searchParams;
+  const { slug } = use(params);
+  const sp = use(searchParams);
 
   const { addToCart } = useCart();
 
