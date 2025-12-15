@@ -137,14 +137,17 @@ export default function CartPage() {
       title: item.title,
       store: item.store,
       imageUrl: item.imageUrl,
-      quantity: item.quantity ?? 1,
+      priceUSD: item.priceUSD ?? 0,
       estimatedUSD: item.estimatedUSD,
+      qty: item.quantity ?? 1,
     }));
 
-    const totalUSD = items.reduce(
-      (acc, it) => acc + it.estimatedUSD * it.quantity,
-      0
-    );
+    const totalUSD = items.reduce((acc, it) => acc + it.estimatedUSD * it.qty, 0);
+
+    if (Number(totalUSD.toFixed(2)) !== Number(liveTotal.toFixed(2))) {
+      setError("Detectamos una inconsistencia en el total del carrito. Refrescá la página e intentá nuevamente.");
+      return;
+    }
 
     try {
       setLoading(true);

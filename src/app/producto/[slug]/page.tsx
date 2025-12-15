@@ -1,14 +1,16 @@
+"use client";
+
 // src/app/producto/[slug]/page.tsx
 import Link from "next/link";
 import Image from "next/image";
-import { notFound } from "next/navigation";
 
 import HeaderEcom from "@/components/home/HeaderEcom";
 import { mockProducts } from "@/lib/products";
+import { useCart } from "@/context/CartContext";
 
 type PageProps = {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
 type ViewProduct = {
@@ -32,9 +34,11 @@ function getFirstParam(
   return undefined;
 }
 
-export default async function ProductPage({ params, searchParams }: PageProps) {
-  const { slug } = await params;
-  const sp = await searchParams;
+export default function ProductPage({ params, searchParams }: PageProps) {
+  const { slug } = params;
+  const sp = searchParams;
+
+  const { addToCart } = useCart();
 
   // 1) Intentar producto local (mockProducts)
   const mock = mockProducts.find((p) => {
@@ -95,7 +99,29 @@ export default async function ProductPage({ params, searchParams }: PageProps) {
     }
   }
 
-  if (!product) return notFound();
+  if (!product)
+    return (
+      <div className="min-h-screen bg-[#f5f5f5]">
+        <HeaderEcom />
+        <div className="max-w-4xl mx-auto px-4 py-12 text-center">
+          <h1 className="text-2xl font-semibold text-slate-900 mb-3">
+            Producto no encontrado
+          </h1>
+          <p className="text-slate-600">
+            No pudimos encontrar el artículo que buscabas. Volvé al inicio
+            para seguir explorando.
+          </p>
+          <div className="mt-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#E02020] px-4 py-2 rounded-lg"
+            >
+              Ir al home
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
 
   // Imagen principal y versión en alta (s-l1600 si existe)
   const mainImage = product.images[0];
@@ -107,6 +133,19 @@ export default async function ProductPage({ params, searchParams }: PageProps) {
   const longDescription =
     product.description ||
     `Producto original comprado en ${product.store} en Estados Unidos. Nosotros lo compramos por vos, lo recibimos en Miami y lo enviamos hasta tu domicilio en Argentina.`;
+
+  const handleAddToCart = () => {
+    addToCart({
+      id: product!.id,
+      title: product!.title,
+      priceUSD: product!.priceUSD,
+      estimatedUSD: product!.estimatedUSD,
+      imageUrl: product!.images?.[0],
+      store: product!.store,
+      slug: product!.slug,
+      quantity: 1,
+    });
+  };
 
   const relatedProducts = mockProducts
     .filter(
@@ -178,7 +217,10 @@ export default async function ProductPage({ params, searchParams }: PageProps) {
                 </p>
               </div>
 
-              <button className="rounded-lg bg-[#E02020] text-white text-sm font-semibold py-2">
+              <button
+                onClick={handleAddToCart}
+                className="rounded-lg bg-[#E02020] text-white text-sm font-semibold py-2"
+              >
                 Agregar al carrito
               </button>
 
