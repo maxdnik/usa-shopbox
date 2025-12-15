@@ -3,16 +3,11 @@
 // src/app/producto/[slug]/page.tsx
 import Link from "next/link";
 import Image from "next/image";
-import { use } from "react";
+import { useParams, useSearchParams } from "next/navigation";
 
 import HeaderEcom from "@/components/home/HeaderEcom";
 import { mockProducts } from "@/lib/products";
 import { useCart } from "@/context/CartContext";
-
-type PageProps = {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-};
 
 type ViewProduct = {
   id: string;
@@ -27,24 +22,55 @@ type ViewProduct = {
   sourceUrl?: string | null;
 };
 
-function getFirstParam(
-  value: string | string[] | undefined
-): string | undefined {
+function getFirstParam(value: string | string[] | null | undefined) {
   if (typeof value === "string") return value;
   if (Array.isArray(value)) return value[0];
   return undefined;
 }
 
-export default function ProductPage({ params, searchParams }: PageProps) {
-  const { slug } = use(params);
-  const sp = use(searchParams);
+export default function ProductPage() {
+  const { slug } = useParams<{ slug: string }>();
+  const sp = useSearchParams();
+
+  const resolvedSlug = Array.isArray(slug) ? slug[0] : slug;
+
+  const getSearchParam = (key: string) => {
+    if (!sp) return undefined;
+    const values = sp.getAll(key);
+    if (values.length > 0) return getFirstParam(values);
+    return getFirstParam(sp.get(key));
+  };
 
   const { addToCart } = useCart();
 
+  if (!resolvedSlug)
+    return (
+      <div className="min-h-screen bg-[#f5f5f5]">
+        <HeaderEcom />
+        <div className="max-w-4xl mx-auto px-4 py-12 text-center">
+          <h1 className="text-2xl font-semibold text-slate-900 mb-3">
+            Producto no encontrado
+          </h1>
+          <p className="text-slate-600">
+            No pudimos encontrar el artículo que buscabas. Volvé al inicio
+            para seguir explorando.
+          </p>
+          <div className="mt-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#E02020] px-4 py-2 rounded-lg"
+            >
+              Ir al home
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+
   // 1) Intentar producto local (mockProducts)
   const mock = mockProducts.find((p) => {
-    if (!p.slug || !slug) return false;
-    return p.slug.toLowerCase() === slug.toLowerCase();
+    if (!p.slug || !resolvedSlug) return false;
+    return p.slug.toLowerCase() === resolvedSlug.toLowerCase();
   });
 
   let product: ViewProduct | null = null;
@@ -73,12 +99,12 @@ export default function ProductPage({ params, searchParams }: PageProps) {
     };
   } else {
     // 2) Producto proveniente de la búsqueda de eBay (querystring)
-    const src = getFirstParam(sp.src);
+    const src = getSearchParam("src");
     if (src === "ebay") {
-      const title = getFirstParam(sp.title) || slug;
-      const priceStr = getFirstParam(sp.price) || "0";
-      const image = getFirstParam(sp.image);
-      const url = getFirstParam(sp.url) || null;
+      const title = getSearchParam("title") || resolvedSlug;
+      const priceStr = getSearchParam("price") || "0";
+      const image = getSearchParam("image");
+      const url = getSearchParam("url") || null;
 
       const parsed = priceStr.replace(",", ".");
       const priceNumber = Number(parsed) || 0;
@@ -86,8 +112,8 @@ export default function ProductPage({ params, searchParams }: PageProps) {
         priceNumber > 0 ? Number((priceNumber * 1.3).toFixed(2)) : 0;
 
       product = {
-        id: slug,
-        slug,
+        id: resolvedSlug,
+        slug: resolvedSlug,
         title,
         description: "",
         store: "eBay",
