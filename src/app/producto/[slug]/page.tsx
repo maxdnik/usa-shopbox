@@ -4,6 +4,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { use } from "react";
+import { useRouter } from "next/navigation";
 
 import HeaderEcom from "@/components/home/HeaderEcom";
 import { mockProducts } from "@/lib/products";
@@ -36,6 +37,7 @@ type PageProps = {
 export default function ProductPage({ params, searchParams }: PageProps) {
   const resolvedParams = use(params);
   const sp = use(searchParams);
+  const router = useRouter();
 
   const slug = resolvedParams.slug;
 
@@ -177,6 +179,8 @@ export default function ProductPage({ params, searchParams }: PageProps) {
       slug: product!.slug,
       quantity: 1,
     });
+
+    router.push("/carrito");
   };
 
   const relatedProducts = mockProducts
