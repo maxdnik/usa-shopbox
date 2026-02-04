@@ -1,0 +1,57 @@
+[
+  {
+    "title": "iPhone 16 Pro Max 256GB - Natural Titanium",
+    "store": "Apple",
+    "brand": "Apple",
+    "category": "Celulares",
+    "priceUSD": 1199,
+    "estimatedUSD": 1618.65,
+    "slug": "iphone-16-pro-max-256gb-natural-titanium",
+    "attributes": { "capacity": "256GB", "color": "Natural Titanium" },
+    "description": "El iPhone más potente hasta la fecha con chip A18 Pro y pantalla de 6.9 pulgadas."
+  },
+  {
+    "title": "iPhone 16 Pro Max 512GB - Black Titanium",
+    "store": "Apple",
+    "brand": "Apple",
+    "category": "Celulares",
+    "priceUSD": 1399,
+    "estimatedUSD": 1888.65,
+    "slug": "iphone-16-pro-max-512gb-black-titanium",
+    "attributes": { "capacity": "512GB", "color": "Black Titanium" },
+    "description": "Máximo almacenamiento y rendimiento profesional."
+  },
+  {
+    "title": "MacBook Pro 14\" (M4) 16GB RAM 512GB SSD - Space Black",
+    "store": "Apple",
+    "brand": "Apple",
+    "category": "Computación",
+    "priceUSD": 1599,
+    "estimatedUSD": 2158.65,
+    "slug": "macbook-pro-14-m4-512gb-space-black",
+    "attributes": { "screenSize": "14\"", "capacity": "512GB SSD" },
+    "description": "Potencia extrema para profesionales con el nuevo chip M4."
+  },
+  {
+    "title": "Apple Watch Ultra 2 - Natural Titanium",
+    "store": "Apple",
+    "brand": "Apple",
+    "category": "Relojes",
+    "priceUSD": 799,
+    "estimatedUSD": 1078.65,
+    "slug": "apple-watch-ultra-2-natural-titanium",
+    "attributes": { "color": "Natural Titanium" },
+    "description": "El reloj más resistente y capaz de Apple, diseñado para la aventura."
+  },
+  {
+    "title": "iPad Pro 13\" (M4) 256GB - Silver",
+    "store": "Apple",
+    "brand": "Apple",
+    "category": "Tablets",
+    "priceUSD": 1299,
+    "estimatedUSD": 1753.65,
+    "slug": "ipad-pro-13-m4-256gb-silver",
+    "attributes": { "screenSize": "13\"", "capacity": "256GB" },
+    "description": "Increíblemente delgado, con pantalla Ultra Retina XDR y chip M4."
+  }
+]
