@@ -13,19 +13,23 @@
     "axios": "^1.13.2",
     "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.3",
-    "cheerio": "^1.1.2",
+    "cheerio": "^1.2.0",
+    "dotenv": "^17.3.1",
+    "framer-motion": "^12.34.0",
     "google-auth-library": "^10.5.0",
     "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.563.0",
     "mercadopago": "^2.12.0",
     "mongodb": "^7.0.0",
     "mongoose": "^8.20.0",
     "next": "16.0.3",
     "next-auth": "^4.24.13",
     "nodemailer": "^7.0.10",
-    "playwright": "^1.58.0",
+    "p-limit": "^7.3.0",
     "puppeteer": "^24.31.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "undici": "^7.22.0",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
@@ -36,9 +40,13 @@
     "@types/nodemailer": "^7.0.4",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "baseline-browser-mapping": "^2.10.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
+    "playwright": "^1.58.2",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   }
 }

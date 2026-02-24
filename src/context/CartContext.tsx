@@ -24,9 +24,10 @@ export type CartItem = {
   title: string;
 
   // pricing
-  priceUSD: number;          // precio base USA
-  estimatedUSD?: number;     // precio final estimado
-  netMargin?: number;        // margen neto unitario (opcional)
+  price?: number; // ✅ compat UI vieja (algunos componentes usan "price")
+  priceUSD: number; // precio base USA
+  estimatedUSD?: number; // precio final estimado
+  netMargin?: number; // margen neto unitario (opcional)
 
   // cantidad
   quantity: number;
@@ -37,6 +38,7 @@ export type CartItem = {
 
   // logística
   weight?: number; // kg
+  chargeableWeight?: number; // ✅ kg calculado por engine (para CartPageContent)
 
   // variantes / atributos (talle, color, etc.)
   selections?: Record<string, string>;
@@ -164,8 +166,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     () =>
       items.reduce(
         (sum, item) =>
-          sum +
-          (item.estimatedUSD ?? item.priceUSD ?? 0) * item.quantity,
+          sum + (item.estimatedUSD ?? item.priceUSD ?? 0) * item.quantity,
         0
       ),
     [items]

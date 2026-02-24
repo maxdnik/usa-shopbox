@@ -1,10 +1,7 @@
-// src/app/api/search/route.ts
-
 import { NextRequest, NextResponse } from "next/server";
 import puppeteer from "puppeteer";
 import type { Browser } from "puppeteer";
 import { mockProducts, type Product } from "@/lib/products";
-
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -18,19 +15,9 @@ function slugify(title: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
-/**
- * Normaliza cualquier tipo de category a un string indexable para búsqueda.
- * - Si es string => lo usa
- * - Si es objeto {main, sub, leaf} => concatena
- * - Si es null/undefined => ""
- */
-function categoryToSearchText(
-  category: unknown
-): string {
+function categoryToSearchText(category: unknown): string {
   if (!category) return "";
-
   if (typeof category === "string") return category;
-
   if (typeof category === "object") {
     const c = category as any;
     const main = typeof c.main === "string" ? c.main : "";
@@ -38,32 +25,27 @@ function categoryToSearchText(
     const leaf = typeof c.leaf === "string" ? c.leaf : "";
     return [main, sub, leaf].filter(Boolean).join(" ");
   }
-
   return String(category);
 }
 
 function storeToSearchText(store: unknown): string {
   if (!store) return "";
   if (typeof store === "string") return store;
-  // por si en algún momento es objeto o enum raro
   return String(store);
 }
 
 function searchFallbackFromMock(query: string, perPage = 24): Product[] {
   const q = query.toLowerCase();
-
   const filtered = mockProducts.filter((p) => {
     const titleText = (p.title ?? "").toLowerCase();
     const categoryText = categoryToSearchText((p as any).category).toLowerCase();
     const storeText = storeToSearchText((p as any).store).toLowerCase();
-
     return (
       titleText.includes(q) ||
       categoryText.includes(q) ||
       storeText.includes(q)
     );
   });
-
   return filtered.slice(0, perPage);
 }
 
@@ -151,7 +133,10 @@ export async function GET(req: NextRequest) {
       .filter((it) => it.title && it.priceUSD)
       .map((it, index) => {
         const price = it.priceUSD as number;
-        const estimated = Number((price * 1.35).toFixed(2)); // después lo afinamos
+        
+        // ⚠️ CORRECCIÓN CLAVE: Eliminamos el margen hardcodeado (* 1.35)
+        // Enviamos el precio RAW para que el frontend calcule todo (Flete + Aduana + Gestion)
+        const estimated = price; 
 
         return {
           id: `amazon-${Date.now()}-${index}`,
@@ -159,13 +144,10 @@ export async function GET(req: NextRequest) {
           store: "Amazon",
           imageUrl: it.imageUrl || undefined,
           priceUSD: price,
-          estimatedUSD: estimated,
-          // 👇 si tu Product.category es objeto en el tipo, esto podría exigir ajuste.
-          // Pero como ya te compila el resto, lo dejo como string SOLO si tu Product lo acepta.
-          // Si tu Product requiere objeto, decime y lo adapto a {main,sub,leaf}.
+          estimatedUSD: estimated, // Ahora es el precio limpio
           category: "Buscado en Amazon" as any,
           slug: slugify(it.title as string),
-          description: it.url || "", // de momento guardo la URL real acá
+          description: it.url || "", 
         };
       });
 
@@ -187,4 +169,3 @@ export async function GET(req: NextRequest) {
     }
   }
 }
-

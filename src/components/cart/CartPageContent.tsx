@@ -1,41 +1,58 @@
 "use client";
 
-import HeaderEcom from "@/components/home/HeaderEcom";
-import { useCart } from "@/context/CartContext";
+import { useMemo } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useCart } from "@/context/CartContext";
+// ✅ Importamos el motor de precios y el contexto
+import { usePricing } from "@/context/PricingContext";
+import { calculateCartPricing } from "@/lib/pricing-engine";
 
-export default function CartPage() {
+export default function CartPageContent() {
   const { cart, removeFromCart, clearCart } = useCart();
+  
+  // ✅ 1. Obtenemos la configuración real (Aduana $0, etc.)
+  const config = usePricing();
 
-  // 1. Cálculo del total usando los campos disponibles del producto
- const total = cart.reduce((acc, item) => acc + ((item.priceUSD ?? item.estimatedUSD ?? 0) * (item.quantity ?? 1)), 0);
+  // ✅ 2. Calculamos el total usando el MOTOR (igual que en backend)
+  const pricing = useMemo(() => {
+    return calculateCartPricing(cart, config);
+  }, [cart, config]);
 
   return (
     <>
-      <HeaderEcom />
+      <main className="bg-[#f5f5f5] min-h-screen pb-12">
+        <div className="max-w-6xl mx-auto px-4 pt-8">
+          <h1 className="text-3xl font-black text-slate-900 mb-8 uppercase tracking-tighter">
+            Tu Carrito
+          </h1>
 
-      <main className="bg-[#f5f5f5] min-h-screen py-10">
-        <div className="max-w-4xl mx-auto px-4">
-
-          {/* CARD PRINCIPAL - ESTILO APPLE CONSISTENTE */}
-          <div className="bg-white p-8 rounded-xl shadow-sm border">
-
-            {/* Si carrito vacío */}
-            {cart.length === 0 ? (
-              <p className="text-gray-400 font-bold uppercase tracking-widest text-center py-10">Tu carrito está vacío.</p>
-            ) : (
-              <div className="space-y-8">
-                <h1 className="text-3xl font-black text-slate-900 mb-8 uppercase tracking-tighter">Checkouttt</h1>
-
-                {cart.map((item) => (
-                  <div
-                    key={item.id}
-                    className="flex items-center justify-between pb-6 border-b border-slate-50 last:border-0"
-                  >
-
-                    <div className="flex items-center gap-5">
-                      {/* 2. FIX DE IMAGEN: Usa 'item.image' que es lo que manda ProductView */}
-                      <div className="w-24 h-24 bg-white rounded-lg overflow-hidden border flex items-center justify-center relative shadow-sm">
+          {cart.length === 0 ? (
+            <div className="bg-white rounded-[32px] p-16 text-center border border-slate-200 shadow-sm">
+              <div className="text-6xl mb-6">🛒</div>
+              <p className="text-slate-400 font-black text-xs uppercase tracking-widest mb-8">
+                Tu carrito está vacío
+              </p>
+              <Link
+                href="/"
+                className="inline-block bg-[#0A2647] text-white px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-[#1E3A8A] transition-colors"
+              >
+                Empezar a comprar
+              </Link>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              
+              {/* === LISTADO DE PRODUCTOS (IZQUIERDA) === */}
+              <div className="lg:col-span-2 space-y-6">
+                <div className="bg-white rounded-[32px] p-6 border border-slate-200 shadow-sm">
+                  {cart.map((item) => (
+                    <div
+                      key={item.id}
+                      className="flex gap-6 items-start py-6 border-b border-slate-50 last:border-0 last:pb-0 first:pt-0"
+                    >
+                      {/* Imagen */}
+                      <div className="w-24 h-24 bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 flex items-center justify-center relative shrink-0">
                         <Image
                           src={item.image || item.imageUrl || "/placeholder.png"}
                           alt={item.title}
@@ -44,81 +61,141 @@ export default function CartPage() {
                         />
                       </div>
 
-                      {/* Info con el Azul #1E3A8A pedido */}
-                      <div className="flex flex-col gap-1">
-                        <p className="font-black text-xl text-[#1E3A8A] uppercase tracking-tighter leading-tight">
-                          {item.title}
-                        </p>
+                      {/* Info */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex justify-between items-start gap-4">
+                          <div>
+                            <p className="font-black text-sm text-[#0A2647] uppercase tracking-tight leading-snug line-clamp-2">
+                              {item.title}
+                            </p>
+                            
+                            {/* Variaciones */}
+                            {item.selections && Object.keys(item.selections).length > 0 && (
+                              <div className="flex flex-wrap gap-2 mt-2">
+                                {Object.entries(item.selections).map(([key, value]) => (
+                                  <span key={key} className="text-[9px] font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded uppercase tracking-wider">
+                                    {key}: {value}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                          
+                          {/* Precio Unitario Estimado (Visual) */}
+                          <div className="text-right">
+                             <p className="font-black text-lg text-[#0A2647]">
+                               USD {((item.priceUSD ?? 0) * (item.quantity ?? 1)).toLocaleString()}
+                             </p>
+                             <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">
+                               Precio USA
+                             </p>
+                          </div>
+                        </div>
 
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                          {item.store || "Apple Store"}
-                        </p>
-
-                        <p className="text-sm font-black text-[#1E3A8A]">
-                          Cantidad: <span className="font-black">1</span>
-                        </p>
-
-                        <button
-                          onClick={() => removeFromCart(item.id)}
-                          className="text-red-600 text-[10px] font-black uppercase tracking-widest mt-2 text-left hover:underline"
-                        >
-                          Quitar
-                        </button>
+                        <div className="flex items-center justify-between mt-4">
+                          <div className="flex items-center gap-4">
+                             <span className="text-xs font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-lg">
+                               Cant: {item.quantity ?? 1}
+                             </span>
+                             {/* Peso calculado por el engine */}
+                             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                               Peso: {(item.chargeableWeight || item.weight || 0.5)} kg
+                             </span>
+                          </div>
+                          
+                          <button
+                            onClick={() => removeFromCart(item.id)}
+                            className="text-red-500 text-[10px] font-black uppercase tracking-widest hover:text-red-700 hover:underline"
+                          >
+                            Eliminar
+                          </button>
+                        </div>
                       </div>
                     </div>
+                  ))}
 
-                    {/* 3. FIX DE PRECIO: Muestra el valor en el azul institucional */}
-                    <div className="text-right flex items-baseline gap-1">
-                      <span className="text-[10px] font-black text-[#1E3A8A] opacity-40">USD</span>
-                      <p className="font-black text-2xl text-[#1E3A8A] tracking-tighter">
-                        {((item.priceUSD ?? item.estimatedUSD ?? 0) * (item.quantity ?? 1)).toLocaleString()}
-                      </p>
-                    </div>
+                  <div className="mt-6 pt-6 border-t border-slate-100">
+                    <button
+                      onClick={clearCart}
+                      className="text-xs font-bold text-slate-400 hover:text-slate-600 transition flex items-center gap-2"
+                    >
+                      <span>🗑️</span> Vaciar carrito completo
+                    </button>
                   </div>
-                ))}
-
-                {/* Resumen de compra consolidado */}
-                <div className="pt-6">
-                  <h2 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Resumen de compra</h2>
-
-                  <div className="flex justify-between items-center p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                    <span className="text-sm font-black text-slate-500 uppercase tracking-widest">Total estimado (USD)</span>
-                    <span className="text-3xl font-black text-[#1E3A8A] tracking-tighter">
-                      USD {total.toLocaleString()}
-                    </span>
-                  </div>
-
-                  <p className="text-[10px] text-slate-400 mt-4 italic px-2">
-                    Total estimado puesto en Argentina. El valor final puede variar según impuestos aduaneros vigentes.
-                  </p>
-
-                  <button className="w-full bg-[#E02020] text-white py-4 rounded-xl mt-8 text-sm font-black uppercase tracking-widest shadow-xl hover:bg-red-700 transition active:scale-95">
-                    Ir al pago seguro
-                  </button>
-
-                  <button
-                    onClick={clearCart}
-                    className="w-full py-3 rounded-xl mt-3 text-[9px] font-black text-slate-300 uppercase tracking-widest hover:text-slate-500 transition"
-                  >
-                    Vaciar mi carrito
-                  </button>
                 </div>
               </div>
-            )}
-          </div>
+
+              {/* === RESUMEN DE PAGO (DERECHA) === */}
+              <div className="lg:col-span-1">
+                <div className="bg-[#0A2647] rounded-[32px] p-8 text-white sticky top-24 shadow-xl border border-white/10">
+                  <h2 className="text-xl font-black uppercase tracking-tighter mb-6 border-b border-white/10 pb-4">
+                    Resumen de Cuenta
+                  </h2>
+
+                  {/* 🚨 Alertas del Engine (Mínimos, etc) */}
+                  {!pricing.checkoutEnabled && (
+                    <div className="mb-6 bg-red-500/20 border border-red-500/50 p-4 rounded-xl text-center">
+                      <p className="text-red-200 text-xs font-bold uppercase tracking-widest">
+                        {pricing.reason}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* 🧾 Desglose de Costos */}
+                  <div className="space-y-3 mb-8">
+                    {pricing.breakdown.map((line, idx) => (
+                      <div key={idx} className="flex justify-between items-center text-xs">
+                        <span className={`uppercase tracking-widest ${line.label.includes("Total") ? "font-black text-white" : "font-bold text-slate-400"}`}>
+                          {line.label}
+                        </span>
+                        <span className={`font-mono ${line.label.includes("Total") ? "font-bold text-white" : "text-slate-300"}`}>
+                          USD {line.amount.toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* 💰 Total Final */}
+                  <div className="bg-white/10 rounded-2xl p-6 mb-8 text-center border border-white/5">
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">
+                      Total Final All-in
+                    </p>
+                    <p className="text-4xl font-black tracking-tighter text-white">
+                      USD {pricing.totalFinal.toLocaleString()}
+                    </p>
+                    <p className="text-[9px] text-emerald-400 font-bold uppercase tracking-widest mt-2">
+                      Aduana y Envíos Incluidos
+                    </p>
+                  </div>
+
+                  <Link 
+                    href="/checkout" // O la ruta de tu checkout final
+                    className={`block w-full py-4 rounded-xl text-center text-sm font-black uppercase tracking-[0.2em] transition-all transform active:scale-95 ${
+                      pricing.checkoutEnabled 
+                        ? "bg-emerald-500 text-white hover:bg-emerald-400 shadow-lg hover:shadow-emerald-500/25" 
+                        : "bg-slate-700 text-slate-500 cursor-not-allowed"
+                    }`}
+                    onClick={(e) => !pricing.checkoutEnabled && e.preventDefault()}
+                  >
+                    {pricing.checkoutEnabled ? "Ir a Pagar" : "Revisar Carrito"}
+                  </Link>
+
+                  <div className="mt-6 flex flex-col items-center gap-2 opacity-30">
+                    <div className="flex gap-2">
+                       {/* Iconos de tarjetas o seguridad simples */}
+                       <div className="w-8 h-5 bg-white rounded"></div>
+                       <div className="w-8 h-5 bg-white rounded"></div>
+                       <div className="w-8 h-5 bg-white rounded"></div>
+                    </div>
+                    <p className="text-[8px] font-black uppercase tracking-widest">Pagos Procesados en USA</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          )}
         </div>
       </main>
-
-      <footer className="bg-[#0A2647] text-white mt-10">
-        <div className="max-w-6xl mx-auto px-4 py-8 text-[10px] font-black uppercase tracking-widest flex flex-col gap-3 md:flex-row md:items-center md:justify-between opacity-30">
-          <p>© {new Date().getFullYear()} USAShopBox Logistics. Todos los derechos reservados.</p>
-          <div className="flex gap-4">
-            <a href="#ayuda" className="hover:underline">Ayuda</a>
-            <a href="#terminos" className="hover:underline">Términos</a>
-            <a href="#contacto" className="hover:underline">Contacto</a>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }

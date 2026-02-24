@@ -55,7 +55,7 @@ export default function ProductPriceBlock({ product }: { product: any }) {
         </p>
 
         <div className="rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-3">
-          <p className="text-[10px] font-black text-emerald-800 uppercase tracking-widest mb-1">Puesto en Argentina</p>
+          <p className="text-[10px] font-black text-emerald-800 uppercase tracking-widest mb-1">Puesto en Argentinaaa</p>
           <p className="text-3xl font-black text-emerald-700">USD {estimatedArg.toLocaleString()}</p>
         </div>
 
