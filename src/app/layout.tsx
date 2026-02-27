@@ -2,8 +2,6 @@ import "./globals.css";
 import Providers from "./providers";
 import type { Metadata } from "next";
 
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   icons: {
     icon: [
