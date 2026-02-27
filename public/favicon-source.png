@@ -1,0 +1,15 @@
+<svg width="512" height="512" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Fondo redondeado -->
+  <rect x="5" y="5" width="90" height="90" rx="20" fill="#0A2647"></rect>
+
+  <!-- Cara superior roja -->
+  <polygon points="50,20 80,35 50,50 20,35" fill="#E10613"></polygon>
+
+  <!-- Cara izquierda -->
+  <polygon points="20,35 50,50 50,80 20,65" fill="#FFFFFF"></polygon>
+
+  <!-- Cara derecha -->
+  <polygon points="50,50 80,35 80,65 50,80" fill="#173C6B"></polygon>
+
+</svg>

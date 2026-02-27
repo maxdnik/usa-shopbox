@@ -3,7 +3,15 @@ import HeroCarousel from "@/components/home/HeroCarousel";
 import OfficialStores from "@/components/home/OfficialStores";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import Benefits from "@/components/home/Benefits";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  icons: {
+    icon: "/usa.png",
+    shortcut: "/usa.png",
+    apple: "/usa.png",
+  },
+};
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-white selection:bg-[#22D3EE] selection:text-[#0A2647]">

@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* ✅ USA SHOP BOX – Brand tokens */
+  --usb-navy: #0A2647;
+  --usb-white: #FFFFFF;
+  --usb-red: #D72638;
+  --usb-blue-soft: #2A4E7A;
 }
 
 @theme inline {
@@ -10,6 +16,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* ✅ Opcional: exponerlos como colores tailwind tokens */
+  --color-usb-navy: var(--usb-navy);
+  --color-usb-red: var(--usb-red);
+  --color-usb-blue-soft: var(--usb-blue-soft);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +29,44 @@
     --foreground: #ededed;
   }
 }
+
+/* ✅ underline taper para el lockup */
+.usb-underline-taper {
+  height: 4px; /* 3px si lo querés más fino */
+  border-radius: 999px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    90deg,
+    rgba(215, 38, 56, 0.0) 0%,
+    rgba(215, 38, 56, 0.85) 28%,
+    rgba(215, 38, 56, 1.0) 65%,
+    rgba(215, 38, 56, 1.0) 100%
+  );
+
+  /* taper: empieza finito y termina más grueso */
+  clip-path: polygon(0 46%, 100% 0, 100% 100%, 0 54%);
+
+  /* suaviza bordes en algunos browsers */
+  transform: translateZ(0);
+}
+
+/* ✅ Variante usando token (por si querés migrar después):
+.usb-underline-taper {
+  height: 4px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--usb-red) 0%, transparent) 0%,
+    color-mix(in srgb, var(--usb-red) 85%, transparent) 28%,
+    var(--usb-red) 65%,
+    var(--usb-red) 100%
+  );
+  clip-path: polygon(0 46%, 100% 0, 100% 100%, 0 54%);
+  transform: translateZ(0);
+}
+*/
 
 body {
   background: var(--background);

@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 import { useSession, signOut } from "next-auth/react";
-import { Search, ShoppingCart, User, LogOut, Menu, Package, X } from "lucide-react";
+import { Search, ShoppingCart, User, LogOut, Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const CATEGORIES = [
   { name: "Tecnología", slug: "Tecnología" },
@@ -23,15 +24,19 @@ const CATEGORIES = [
 export default function HeaderEcomClient() {
   const { cart } = useCart();
   const totalItems = cart.length;
+
   const { data: session, status } = useSession();
   const isLoggedIn = status === "authenticated";
   const userName = session?.user?.name?.split(" ")[0] || "";
+
   const router = useRouter();
   const searchParams = useSearchParams();
+
   const [query, setQuery] = useState(searchParams.get("query") || "");
   const [suggestions, setSuggestions] = useState<any[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
+
   const searchRef = useRef<HTMLFormElement>(null);
   const suggestionsRef = useRef<HTMLDivElement>(null);
 
@@ -52,6 +57,7 @@ export default function HeaderEcomClient() {
         setIsSearching(false);
       }
     };
+
     const timeoutId = setTimeout(fetchSuggestions, 300);
     return () => clearTimeout(timeoutId);
   }, [query]);
@@ -103,19 +109,44 @@ export default function HeaderEcomClient() {
       >
         <div className="mx-auto max-w-[1440px]">
           <div className="flex flex-col md:flex-row items-center justify-between px-4 py-3 md:px-8 gap-4 md:gap-8 relative z-10">
+            {/* ✅ LEFT BRAND */}
             <Link
               href="/"
-              className="flex items-center gap-3 group transition-transform duration-150 hover:scale-[1.02]"
+              className="group transition-transform duration-150 hover:scale-[1.02]"
               style={{ transitionTimingFunction: easePremium }}
             >
-              <div className="bg-white/10 rounded-lg p-1.5 md:p-2 border border-white/5">
-                <Package className="text-white w-5 h-5 md:w-6 md:h-6" strokeWidth={2} />
+              <div className="flex items-center gap-4">
+                {/* Isotipo */}
+                <div className="flex items-center gap-4">
+                  {/* Isotipo */}
+                    <div className="h-12 w-12 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 overflow-hidden">
+                      <Image
+                        src="/usa.png"
+                        alt="USA Shop Box"
+                        width={548}
+                        height={548}
+                        className="h-full w-full object-contain scale-[1.9]"
+                        priority
+                      />
+                    </div>
+                   
+                  {/* Wordmark */}
+                  <div className="flex flex-col leading-none">
+                    <span className="text-white font-semibold tracking-wide text-xl">
+                      USASHOPBOX
+                    </span>
+
+                    {/* 👇 underline alineado EXACTO al texto */}
+                    <div                     className="
+                      mt-2
+                      h-[3px] w-[140px] sm:w-[160px] md:w-[180px] max-w-[180px] usb-underline-taper -ml-8
+                    " />
+                  </div>
+                </div>
               </div>
-              <span className="font-bold text-[18px] md:text-[20px] text-white tracking-tight font-inter">
-                USASHOPBOX
-              </span>
             </Link>
 
+            {/* SEARCH */}
             <div className="relative w-full md:w-[520px] group">
               <form ref={searchRef} onSubmit={handleSearchSubmit} className="relative w-full">
                 <div className="relative flex items-center">
@@ -143,6 +174,7 @@ export default function HeaderEcomClient() {
                         setShowSuggestions(false);
                       }}
                       className="absolute right-12 text-slate-400 hover:text-slate-600"
+                      aria-label="Limpiar búsqueda"
                     >
                       <X className="w-4 h-4" />
                     </button>
@@ -150,15 +182,16 @@ export default function HeaderEcomClient() {
                   <button
                     type="submit"
                     className="absolute right-4 text-[#0A2647] opacity-60 hover:opacity-100 transition-opacity"
+                    aria-label="Buscar"
                   >
                     <Search className="w-5 h-5" />
                   </button>
                 </div>
+
                 <div
                   className="absolute inset-0 rounded-full pointer-events-none transition-opacity opacity-0 group-focus-within:opacity-100"
                   style={{
-                    boxShadow:
-                      "0 0 0 3px rgba(215,38,56,0.15), 0 4px 18px rgba(0,0,0,0.25)",
+                    boxShadow: "0 0 0 3px rgba(215,38,56,0.15), 0 4px 18px rgba(0,0,0,0.25)",
                   }}
                 />
               </form>
@@ -201,6 +234,7 @@ export default function HeaderEcomClient() {
               )}
             </div>
 
+            {/* RIGHT */}
             <div className="flex items-center gap-4 md:gap-6 shrink-0">
               {!isLoggedIn ? (
                 <div className="hidden md:flex items-center gap-4 text-[13px] font-medium text-white/85">
@@ -228,6 +262,7 @@ export default function HeaderEcomClient() {
                     onClick={() => signOut({ callbackUrl: "/" })}
                     className="hover:text-red-400 transition-colors"
                     title="Salir"
+                    aria-label="Cerrar sesión"
                   >
                     <LogOut className="w-4 h-4 opacity-80" />
                   </button>
@@ -253,11 +288,13 @@ export default function HeaderEcomClient() {
             </div>
           </div>
 
+          {/* divider */}
           <div className="w-full h-[1px] relative overflow-hidden">
             <div className="absolute inset-0 bg-white/10" />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent blur-[1px]" />
           </div>
 
+          {/* categories */}
           <div
             className="w-full relative"
             style={{
@@ -278,7 +315,7 @@ export default function HeaderEcomClient() {
                 <span>Categorías</span>
               </button>
 
-              <div className="w-[1px] h-5 bg-white/10 mx-1 shrink-0"></div>
+              <div className="w-[1px] h-5 bg-white/10 mx-1 shrink-0" />
 
               {CATEGORIES.map((cat) => (
                 <button
