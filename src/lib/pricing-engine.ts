@@ -53,76 +53,73 @@ export const PRICING_CONFIG = PRICING_CONFIG_DEFAULT;
  * Retorna { kg, isImputed, source }
  */
 export const getBillingWeightKg = (item: any, config = PRICING_CONFIG_DEFAULT) => {
-    // 1) Si viene logisticProfile válido -> usarlo
-    const bw = item?.logisticProfile?.billingWeightKg;
-    if (typeof bw === "number" && bw > 0) {
-      const src = item?.logisticProfile?.source;
+  // 1) Si viene logisticProfile válido -> usarlo
+  const bw = item?.logisticProfile?.billingWeightKg;
+  if (typeof bw === "number" && bw > 0) {
+    const src = item?.logisticProfile?.source;
+    const isImputed = src === "estimated_rule" || src === "estimated_ebay";
+    return { kg: bw, isImputed, source: src ?? "logisticProfile" };
+  }
+
+  // 2) BACKSTOP: si NO viene logisticProfile, lo calculamos acá (con config del admin si existe)
+  try {
+    // ✅ FIX Vercel/TS: config está tipado “cerrado”, casteamos a any SOLO para leer claves nuevas
+    const c: any = config;
+
+    const courierConfig = {
+      ...COURIER_CONFIG_DEFAULT,
+      volumetricDivisor:
+        Number(c.volumetricDivisor ?? c.VOLUMETRIC_DIVISOR) || COURIER_CONFIG_DEFAULT.volumetricDivisor,
+      globalMinBillableKg:
+        Number(c.globalMinBillableKg ?? c.GLOBAL_MIN_BILLABLE_KG) || COURIER_CONFIG_DEFAULT.globalMinBillableKg,
+      fallbackBufferPct:
+        Number(c.fallbackBufferPct ?? c.FALLBACK_BUFFER_PCT) || COURIER_CONFIG_DEFAULT.fallbackBufferPct,
+      ebayExtraBufferPct:
+        Number(c.ebayExtraBufferPct ?? c.EBAY_EXTRA_BUFFER_PCT) || COURIER_CONFIG_DEFAULT.ebayExtraBufferPct,
+      bucketsKg: Array.isArray(c.bucketsKg ?? c.BUCKETS_KG)
+        ? (c.bucketsKg ?? c.BUCKETS_KG)
+        : COURIER_CONFIG_DEFAULT.bucketsKg,
+    };
+
+    const lp = getLogisticProfile(
+      {
+        title: item?.title,
+        category: item?.category,
+        brand: item?.brand ?? item?.store,
+        weightKg: item?.weightKg ?? item?.weight,
+        dimensionsCm: item?.dimensionsCm ?? item?.specs?.dimensionsCm ?? item?.specs?.dimensions,
+        source: item?.source === "ebay" ? "ebay" : "mongo",
+        ebayCategoryPath: item?.ebayCategoryPath,
+      },
+      { courierConfig }
+    );
+
+    if (typeof lp?.billingWeightKg === "number" && lp.billingWeightKg > 0) {
+      const src = lp.source;
       const isImputed = src === "estimated_rule" || src === "estimated_ebay";
-      return { kg: bw, isImputed, source: src ?? "logisticProfile" };
+      return { kg: lp.billingWeightKg, isImputed, source: `runtime:${src}` };
     }
+  } catch (e) {
+    // swallow -> fallback legacy
+  }
 
-    // 2) BACKSTOP: si NO viene logisticProfile, lo calculamos acá (con config del admin si existe)
-    try {
-      const courierConfig = {
-        ...COURIER_CONFIG_DEFAULT,
-        volumetricDivisor:
-          Number(config.volumetricDivisor ?? config.VOLUMETRIC_DIVISOR) || COURIER_CONFIG_DEFAULT.volumetricDivisor,
-        globalMinBillableKg:
-          Number(config.globalMinBillableKg ?? config.GLOBAL_MIN_BILLABLE_KG) || COURIER_CONFIG_DEFAULT.globalMinBillableKg,
-        fallbackBufferPct:
-          Number(config.fallbackBufferPct ?? config.FALLBACK_BUFFER_PCT) || COURIER_CONFIG_DEFAULT.fallbackBufferPct,
-        ebayExtraBufferPct:
-          Number(config.ebayExtraBufferPct ?? config.EBAY_EXTRA_BUFFER_PCT) || COURIER_CONFIG_DEFAULT.ebayExtraBufferPct,
-        bucketsKg: Array.isArray(config.bucketsKg ?? config.BUCKETS_KG)
-          ? (config.bucketsKg ?? config.BUCKETS_KG)
-          : COURIER_CONFIG_DEFAULT.bucketsKg,
-      };
-
-      const lp = getLogisticProfile(
-        {
-          title: item?.title,
-          category: item?.category,
-          brand: item?.brand ?? item?.store,
-          weightKg: item?.weightKg ?? item?.weight,
-          dimensionsCm: item?.dimensionsCm ?? item?.specs?.dimensionsCm ?? item?.specs?.dimensions,
-          source: item?.source === "ebay" ? "ebay" : "mongo",
-          ebayCategoryPath: item?.ebayCategoryPath,
-        },
-        { courierConfig }
-      );
-
-      if (typeof lp?.billingWeightKg === "number" && lp.billingWeightKg > 0) {
-        const src = lp.source;
-        const isImputed = src === "estimated_rule" || src === "estimated_ebay";
-        return { kg: lp.billingWeightKg, isImputed, source: `runtime:${src}` };
-      }
-    } catch (e) {
-      // swallow -> fallback legacy
-    }
-
-    // 3) Último recurso: legacy (DEBERÍA NO PASAR YA)
-    const legacy = getChargeableWeight(item, config);
-    return { kg: legacy.kg, isImputed: legacy.isImputed, source: legacy.source ?? "legacy" };
-  };
+  // 3) Último recurso: legacy (DEBERÍA NO PASAR YA)
+  const legacy = getChargeableWeight(item, config);
+  return { kg: legacy.kg, isImputed: legacy.isImputed, source: legacy.source ?? "legacy" };
+};
 
 /**
  * 🕵️‍♂️ LEGACY: Determina el peso cobrable (Real o Imputado) por keywords/default
  */
-export const getChargeableWeight = (
-  item: any,
-  config = PRICING_CONFIG_DEFAULT
-) => {
+export const getChargeableWeight = (item: any, config = PRICING_CONFIG_DEFAULT) => {
   if (item.weight && typeof item.weight === "number" && item.weight > 0) {
     return { kg: item.weight, isImputed: false };
   }
 
-  const map =
-    config.WEIGHT_CATEGORY_MAP || PRICING_CONFIG_DEFAULT.WEIGHT_CATEGORY_MAP;
+  const map = config.WEIGHT_CATEGORY_MAP || PRICING_CONFIG_DEFAULT.WEIGHT_CATEGORY_MAP;
   const cfgAny = config as any;
   const defaultKg =
-    (config.WEIGHT_DEFAULT_KG ??
-      cfgAny.weight_default_kg ??
-      cfgAny.weightDefaultKg) ??
+    (config.WEIGHT_DEFAULT_KG ?? cfgAny.weight_default_kg ?? cfgAny.weightDefaultKg) ??
     PRICING_CONFIG_DEFAULT.WEIGHT_DEFAULT_KG;
 
   const textToSearch = `${item.category || ""} ${item.title || ""}`.toLowerCase();
@@ -168,45 +165,17 @@ export const calculateCartPricing = (items: any[], dynamicConfig?: any) => {
   const config = dynamicConfig || PRICING_CONFIG_DEFAULT;
 
   const BASE_FEE = resolveVal(config.base_fee_percent, config.BASE_FEE_PERCENT, 0.1);
-  const FREIGHT_COST = resolveVal(
-    config.charged_freight_kg,
-    config.CHARGED_FREIGHT_KG,
-    15
-  );
+  const FREIGHT_COST = resolveVal(config.charged_freight_kg, config.CHARGED_FREIGHT_KG, 15);
 
-  const ADUANA_COST = resolveValOrZero(
-    config.charged_aduana,
-    config.CHARGED_ADUANA,
-    40
-  );
-  const LOCAL_COST = resolveValOrZero(
-    config.charged_local,
-    config.CHARGED_LOCAL,
-    25
-  );
+  const ADUANA_COST = resolveValOrZero(config.charged_aduana, config.CHARGED_ADUANA, 40);
+  const LOCAL_COST = resolveValOrZero(config.charged_local, config.CHARGED_LOCAL, 25);
 
-  const REAL_FREIGHT = resolveVal(
-    config.real_freight_kg,
-    config.REAL_FREIGHT_KG,
-    4.5
-  );
+  const REAL_FREIGHT = resolveVal(config.real_freight_kg, config.REAL_FREIGHT_KG, 4.5);
   const REAL_ADUANA = resolveVal(config.real_aduana, config.REAL_ADUANA, 10);
   const REAL_LOCAL = resolveVal(config.real_local, config.REAL_LOCAL, 10);
-  const PAYMENT_COST = resolveVal(
-    config.payment_cost_percent,
-    config.PAYMENT_COST_PERCENT,
-    0.075
-  );
-  const MIN_MARGIN = resolveVal(
-    config.min_net_margin_percent,
-    config.MIN_NET_MARGIN_PERCENT,
-    0.15
-  );
-  const MIN_ORDER = resolveVal(
-    config.min_order_total_usd,
-    config.MIN_ORDER_TOTAL_USD,
-    50
-  );
+  const PAYMENT_COST = resolveVal(config.payment_cost_percent, config.PAYMENT_COST_PERCENT, 0.075);
+  const MIN_MARGIN = resolveVal(config.min_net_margin_percent, config.MIN_NET_MARGIN_PERCENT, 0.15);
+  const MIN_ORDER = resolveVal(config.min_order_total_usd, config.MIN_ORDER_TOTAL_USD, 50);
 
   if (!items || items.length === 0) {
     return {
@@ -246,7 +215,8 @@ export const calculateCartPricing = (items: any[], dynamicConfig?: any) => {
   let gestionLine = rawPriceUSA * BASE_FEE;
 
   // 3) PROFITABILITY CHECK (igual que antes)
-  const totalRealCost = rawPriceUSA + weightTotal * REAL_FREIGHT + REAL_ADUANA + REAL_LOCAL;
+  const totalRealCost =
+    rawPriceUSA + weightTotal * REAL_FREIGHT + REAL_ADUANA + REAL_LOCAL;
 
   const evaluate = (g: number) => {
     const total = publicPriceUSA + iva + freight + aduana + local + g;
