@@ -51,7 +51,9 @@ export async function generateMetadata({
   if (dbProd) {
     product = JSON.parse(JSON.stringify(dbProd));
   } else {
-    const mock = mockProducts.find((p) => p.slug?.toLowerCase() === slug.toLowerCase());
+    const mock = mockProducts.find(
+      (p) => p.slug?.toLowerCase() === slug.toLowerCase()
+    );
     if (mock) {
       product = JSON.parse(JSON.stringify(mock));
     } else if (getFirstParam(sp.src) === "ebay") {
@@ -127,7 +129,9 @@ function buildDbVariations(dbProduct: any): {
 
   // 2) SHOPIFY: options + shopifyVariants
   const opts = Array.isArray(dbProduct?.options) ? dbProduct.options : [];
-  const shopifyVars = Array.isArray(dbProduct?.shopifyVariants) ? dbProduct.shopifyVariants : [];
+  const shopifyVars = Array.isArray(dbProduct?.shopifyVariants)
+    ? dbProduct.shopifyVariants
+    : [];
 
   if (opts.length > 0 && shopifyVars.length > 0) {
     // A) Variations (plano)
@@ -142,7 +146,13 @@ function buildDbVariations(dbProduct: any): {
 
         const isAvailable = shopifyVars.some((sv: any) => {
           const svVal =
-            i === 0 ? sv?.option1 : i === 1 ? sv?.option2 : i === 2 ? sv?.option3 : undefined;
+            i === 0
+              ? sv?.option1
+              : i === 1
+              ? sv?.option2
+              : i === 2
+              ? sv?.option3
+              : undefined;
 
           return String(svVal || "").trim() === v && sv?.available !== false;
         });
@@ -239,6 +249,8 @@ export default async function ProductPage({ params, searchParams }: PageProps) {
       specs: plainProduct.specs || {},
       variations,
       variationMatrix,
+      // ✅ Normalizamos acá también por seguridad
+      sourceUrl: plainProduct.sourceUrl ?? null,
     };
   } else {
     // 2) Mock
@@ -249,7 +261,9 @@ export default async function ProductPage({ params, searchParams }: PageProps) {
         ...plainMock,
         id: plainMock.id,
         images: Array.from(
-          new Set([plainMock.image, ...(Array.isArray(plainMock.images) ? plainMock.images : [])].filter(Boolean))
+          new Set(
+            [plainMock.image, ...(Array.isArray(plainMock.images) ? plainMock.images : [])].filter(Boolean)
+          )
         ),
         sourceUrl: plainMock.sourceUrl ?? null,
       } as any;
@@ -339,6 +353,14 @@ export default async function ProductPage({ params, searchParams }: PageProps) {
   };
 
   // -----------------------------------------------------------------------------
+  // ✅ FIX VERCEL TYPES: normalizar sourceUrl null -> undefined para ProductViewData
+  // -----------------------------------------------------------------------------
+  const productForView = {
+    ...product,
+    sourceUrl: product.sourceUrl ?? undefined,
+  };
+
+  // -----------------------------------------------------------------------------
   // RELACIONADOS (DB + MOCK)
   // -----------------------------------------------------------------------------
   let relatedItems: any[] = [];
@@ -415,7 +437,8 @@ export default async function ProductPage({ params, searchParams }: PageProps) {
           </nav>
         </div>
 
-        <ProductView product={product} />
+        {/* ✅ Usar el objeto normalizado */}
+        <ProductView product={productForView as any} />
 
         {relatedProducts.length > 0 && (
           <section className="mt-16 mb-8">
@@ -548,11 +571,52 @@ async function scrapeEbayData(
         const lines = textContent.split("\n");
 
         const stopWords = [
-          "policy","política","return","devolución","shipping","envío","shipment","contact us","contactar",
-          "feedback","rating","thank you","gracias","check out","payment","pago","paypal","credit card",
-          "refund","reembolso","tax","impuesto","po box","apo","fpo","hawaii","alaska","puerto rico",
-          "business hours","horario","restocking","tracking","copyright","price","precio","msrp","retail",
-          "cost","costo","value","valor","usd","dollars","bid","oferta","subasta",
+          "policy",
+          "política",
+          "return",
+          "devolución",
+          "shipping",
+          "envío",
+          "shipment",
+          "contact us",
+          "contactar",
+          "feedback",
+          "rating",
+          "thank you",
+          "gracias",
+          "check out",
+          "payment",
+          "pago",
+          "paypal",
+          "credit card",
+          "refund",
+          "reembolso",
+          "tax",
+          "impuesto",
+          "po box",
+          "apo",
+          "fpo",
+          "hawaii",
+          "alaska",
+          "puerto rico",
+          "business hours",
+          "horario",
+          "restocking",
+          "tracking",
+          "copyright",
+          "price",
+          "precio",
+          "msrp",
+          "retail",
+          "cost",
+          "costo",
+          "value",
+          "valor",
+          "usd",
+          "dollars",
+          "bid",
+          "oferta",
+          "subasta",
         ];
 
         const seenLines = new Set<string>();
