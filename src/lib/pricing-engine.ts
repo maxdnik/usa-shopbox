@@ -1,5 +1,8 @@
 // src/lib/pricing-engine.ts
-import { getLogisticProfile, COURIER_CONFIG_DEFAULT } from "@/lib/logistics-profiles";
+import {
+  getLogisticProfile,
+  COURIER_CONFIG_DEFAULT,
+} from "@/lib/logistics-profiles";
 
 export const PRICING_CONFIG_DEFAULT = {
   // A) VARIABLES COBRADAS (UI)
@@ -48,7 +51,8 @@ export const PRICING_CONFIG = PRICING_CONFIG_DEFAULT;
 
 /**
  * ✅ NEW: Determina el peso cobrable PRIORITARIO desde logisticProfile.billingWeightKg
- * Si no existe, usa fallback legacy getChargeableWeight (keywords/default).
+ * Si no existe, lo calcula con getLogisticProfile (usando config del admin si existe).
+ * Último recurso: legacy getChargeableWeight (keywords/default).
  *
  * Retorna { kg, isImputed, source }
  */
@@ -63,21 +67,36 @@ export const getBillingWeightKg = (item: any, config = PRICING_CONFIG_DEFAULT) =
 
   // 2) BACKSTOP: si NO viene logisticProfile, lo calculamos acá (con config del admin si existe)
   try {
-    // ✅ FIX Vercel/TS: config está tipado “cerrado”, casteamos a any SOLO para leer claves nuevas
+    // ✅ FIX TS/Vercel: config viene tipado “cerrado”, casteamos a any para leer keys nuevas
     const c: any = config;
 
     const courierConfig = {
       ...COURIER_CONFIG_DEFAULT,
       volumetricDivisor:
-        Number(c.volumetricDivisor ?? c.VOLUMETRIC_DIVISOR) || COURIER_CONFIG_DEFAULT.volumetricDivisor,
+        Number(c.volumetricDivisor ?? c.VOLUMETRIC_DIVISOR) ||
+        COURIER_CONFIG_DEFAULT.volumetricDivisor,
       globalMinBillableKg:
-        Number(c.globalMinBillableKg ?? c.GLOBAL_MIN_BILLABLE_KG) || COURIER_CONFIG_DEFAULT.globalMinBillableKg,
+        Number(c.globalMinBillableKg ?? c.GLOBAL_MIN_BILLABLE_KG) ||
+        COURIER_CONFIG_DEFAULT.globalMinBillableKg,
+      useBuckets: Boolean(
+        (c.useBuckets ?? c.USE_BUCKETS) ?? COURIER_CONFIG_DEFAULT.useBuckets
+      ),
       fallbackBufferPct:
-        Number(c.fallbackBufferPct ?? c.FALLBACK_BUFFER_PCT) || COURIER_CONFIG_DEFAULT.fallbackBufferPct,
+        Number(
+          c.fallbackBufferPct ??
+            c.courier_fallback_buffer_pct ??
+            c.FALLBACK_BUFFER_PCT
+        ) || COURIER_CONFIG_DEFAULT.fallbackBufferPct,
       ebayExtraBufferPct:
-        Number(c.ebayExtraBufferPct ?? c.EBAY_EXTRA_BUFFER_PCT) || COURIER_CONFIG_DEFAULT.ebayExtraBufferPct,
+        Number(
+          c.ebayExtraBufferPct ??
+            c.courier_ebay_extra_buffer_pct ??
+            c.EBAY_EXTRA_BUFFER_PCT
+        ) || 0,
       bucketsKg: Array.isArray(c.bucketsKg ?? c.BUCKETS_KG)
         ? (c.bucketsKg ?? c.BUCKETS_KG)
+            .map((n: any) => Number(n))
+            .filter((n: any) => Number.isFinite(n))
         : COURIER_CONFIG_DEFAULT.bucketsKg,
     };
 
@@ -87,7 +106,10 @@ export const getBillingWeightKg = (item: any, config = PRICING_CONFIG_DEFAULT) =
         category: item?.category,
         brand: item?.brand ?? item?.store,
         weightKg: item?.weightKg ?? item?.weight,
-        dimensionsCm: item?.dimensionsCm ?? item?.specs?.dimensionsCm ?? item?.specs?.dimensions,
+        dimensionsCm:
+          item?.dimensionsCm ??
+          item?.specs?.dimensionsCm ??
+          item?.specs?.dimensions,
         source: item?.source === "ebay" ? "ebay" : "mongo",
         ebayCategoryPath: item?.ebayCategoryPath,
       },
@@ -99,13 +121,17 @@ export const getBillingWeightKg = (item: any, config = PRICING_CONFIG_DEFAULT) =
       const isImputed = src === "estimated_rule" || src === "estimated_ebay";
       return { kg: lp.billingWeightKg, isImputed, source: `runtime:${src}` };
     }
-  } catch (e) {
+  } catch {
     // swallow -> fallback legacy
   }
 
   // 3) Último recurso: legacy (DEBERÍA NO PASAR YA)
   const legacy = getChargeableWeight(item, config);
-  return { kg: legacy.kg, isImputed: legacy.isImputed, source: legacy.source ?? "legacy" };
+  return {
+    kg: legacy.kg,
+    isImputed: legacy.isImputed,
+    source: legacy.source ?? "legacy",
+  };
 };
 
 /**
@@ -118,8 +144,11 @@ export const getChargeableWeight = (item: any, config = PRICING_CONFIG_DEFAULT) 
 
   const map = config.WEIGHT_CATEGORY_MAP || PRICING_CONFIG_DEFAULT.WEIGHT_CATEGORY_MAP;
   const cfgAny = config as any;
+
   const defaultKg =
-    (config.WEIGHT_DEFAULT_KG ?? cfgAny.weight_default_kg ?? cfgAny.weightDefaultKg) ??
+    (config.WEIGHT_DEFAULT_KG ??
+      cfgAny.weight_default_kg ??
+      cfgAny.weightDefaultKg) ??
     PRICING_CONFIG_DEFAULT.WEIGHT_DEFAULT_KG;
 
   const textToSearch = `${item.category || ""} ${item.title || ""}`.toLowerCase();
@@ -142,9 +171,6 @@ export const getDisplayPriceUSA = (rawPrice: number, dynamicConfig?: any) => {
   return rawPrice * (1 + margin);
 };
 
-/**
- * 🧮 HELPER PRIVADO: Resuelve valores numéricos tratando null como 0 si es necesario
- */
 const resolveVal = (valA: any, valB: any, defaultVal: number) => {
   if (valA !== undefined && valA !== null) return Number(valA);
   if (valB !== undefined && valB !== null) return Number(valB);
@@ -186,7 +212,6 @@ export const calculateCartPricing = (items: any[], dynamicConfig?: any) => {
     };
   }
 
-  // 1) PESOS (nuevo: billingWeightKg prioritario)
   let weightTotal = 0;
   let isWeightImputed = false;
 
@@ -195,8 +220,6 @@ export const calculateCartPricing = (items: any[], dynamicConfig?: any) => {
     const { kg, isImputed } = getBillingWeightKg(item, config);
     if (isImputed) isWeightImputed = true;
     weightTotal += kg * qty;
-
-    // compat UI vieja (CartPageContent)
     return { ...item, chargeableWeight: kg };
   });
 
@@ -205,7 +228,6 @@ export const calculateCartPricing = (items: any[], dynamicConfig?: any) => {
     0
   );
 
-  // 2) COSTOS
   const publicPriceUSA = rawPriceUSA * (1 + BASE_FEE);
   const iva = rawPriceUSA * 0.21;
   const freight = weightTotal * FREIGHT_COST;
@@ -214,9 +236,7 @@ export const calculateCartPricing = (items: any[], dynamicConfig?: any) => {
 
   let gestionLine = rawPriceUSA * BASE_FEE;
 
-  // 3) PROFITABILITY CHECK (igual que antes)
-  const totalRealCost =
-    rawPriceUSA + weightTotal * REAL_FREIGHT + REAL_ADUANA + REAL_LOCAL;
+  const totalRealCost = rawPriceUSA + weightTotal * REAL_FREIGHT + REAL_ADUANA + REAL_LOCAL;
 
   const evaluate = (g: number) => {
     const total = publicPriceUSA + iva + freight + aduana + local + g;
@@ -233,19 +253,13 @@ export const calculateCartPricing = (items: any[], dynamicConfig?: any) => {
     const limitLow = resolveVal(config.limit_adjust_low, config.LIMIT_ADJUST_LOW, 0.25);
     const limitHigh = resolveVal(config.limit_adjust_high, config.LIMIT_ADJUST_HIGH, 0.18);
     const limit = rawPriceUSA < 150 ? limitLow : limitHigh;
-    const maxAllowed = rawPriceUSA * limit; // (lo dejás para futuro)
+    const maxAllowed = rawPriceUSA * limit;
 
     const targetTotal = totalRealCost / (1 - PAYMENT_COST - MIN_MARGIN);
     const requiredGestion = targetTotal - (publicPriceUSA + iva + freight + aduana + local);
 
     const newGestion = Math.max(0, requiredGestion);
-
-    // ✅ tu regla actual: no cobramos menos que base
     gestionLine = Math.max(gestionLine, newGestion);
-
-    // (si querés activar tope duro, descomentá)
-    // gestionLine = Math.min(Math.max(gestionLine, newGestion), maxAllowed);
-
     current = evaluate(gestionLine);
   }
 
