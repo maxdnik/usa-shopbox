@@ -45,7 +45,7 @@ export default function FeaturedProducts() {
 
         // Validamos que haya items antes de setear
         if (items.length > 0) {
-            setProducts(items.slice(0, 24)); // Nos quedamos con los primeros 8
+            setProducts(items.slice(0, 18)); // Nos quedamos con los primeros 8
         }
       } catch (err) {
         console.error("Error en FeaturedProducts:", err);
@@ -71,8 +71,8 @@ export default function FeaturedProducts() {
           {/* Header Sección */}
           <div className="flex items-end justify-between mb-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0A2647] tracking-tight leading-none mb-2">
-                Destacados
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F3057] tracking-tight leading-none mb-2">
+                Lo más elegido esta semana:
               </h2>
               <p className="text-slate-500 font-medium max-w-md">
                 Los productos más buscados en USA, disponibles para vos.

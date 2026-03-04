@@ -33,7 +33,7 @@ const paymentMethods = [
 // ✅ Links con rutas reales
 const navLinks = [
   { label: "Inicio", href: "/" },
-  { label: "Buscar Productos", href: "/buscar-productos" },
+  { label: "Mi Cuenta", href: "/dashboard" },
   { label: "Mi Carrito", href: "/carrito" },
   { label: "Seguimiento", href: "/seguimiento" },
 ];

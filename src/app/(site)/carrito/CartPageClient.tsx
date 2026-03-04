@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, FormEvent, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import { useRouter } from "next/navigation";
@@ -34,7 +34,7 @@ export default function CartPageClient() {
   // ✅ CONFIGURACIÓN DEL ADMIN
   const config = usePricing();
 
-  // ✅ CÁLCULO DE PRECIOS
+  // ✅ CÁLCULO DE PRECIOS (usa billingWeightKg si existe)
   const pricing = useMemo(() => {
     return calculateCartPricing(cart, config);
   }, [cart, config]);
@@ -115,8 +115,8 @@ export default function CartPageClient() {
     form.address &&
     form.postalCode;
 
-  const handleContinue = (e: FormEvent) => {
-    e.preventDefault();
+  // ✅ FIX: esto se usa en onClick, no es submit de <form>
+  const handleContinue = () => {
     setError(null);
 
     if (!isProfileComplete || cart.length === 0) {
@@ -182,10 +182,18 @@ export default function CartPageClient() {
 
                   <div className="space-y-8">
                     {cart.map((item) => {
+                      // ✅ Peso a mostrar (prioridad nueva)
+                      const billingWeight =
+                        item.chargeableWeight ??
+                        item.logisticProfile?.billingWeightKg ??
+                        item.weight ??
+                        0;
+
+                      // ✅ Display: si hay 1 item, mostramos totalFinal. Si hay varios, mostramos estimatedUSD si existe.
                       const finalPriceToShow =
                         cart.length === 1
                           ? pricing.totalFinal
-                          : item.estimatedUSD || 0;
+                          : Number(item.estimatedUSD ?? 0);
 
                       return (
                         <div
@@ -194,7 +202,7 @@ export default function CartPageClient() {
                         >
                           <div className="w-24 h-24 bg-slate-50 rounded-2xl p-3 relative shrink-0 border border-slate-100">
                             <Image
-                              src={item.image || ""}
+                              src={item.image || item.imageUrl || "/placeholder.png"}
                               alt={item.title}
                               fill
                               className="object-contain"
@@ -218,7 +226,7 @@ export default function CartPageClient() {
                                       >
                                         {key}:{" "}
                                         <span className="text-[#0A2647]">
-                                          {val as any}
+                                          {String(val)}
                                         </span>
                                       </span>
                                     )
@@ -230,9 +238,12 @@ export default function CartPageClient() {
                               <span className="text-[10px] font-black text-slate-400 uppercase">
                                 Cant: {item.quantity}
                               </span>
+
+                              {/* ✅ IMPORTANTE: Mostrar billingWeight */}
                               <span className="text-[10px] font-bold text-slate-300 uppercase ml-2">
-                                Peso: {item.weight || 0} Kg
+                                Peso (cobrable): {Number(billingWeight).toFixed(2)} Kg
                               </span>
+
                               <button
                                 type="button"
                                 onClick={() => removeFromCart(item.id)}
@@ -249,7 +260,7 @@ export default function CartPageClient() {
                             </p>
                             <p className="text-xl font-black text-[#0A2647]">
                               USD{" "}
-                              {finalPriceToShow.toLocaleString(undefined, {
+                              {Number(finalPriceToShow).toLocaleString(undefined, {
                                 minimumFractionDigits: 2,
                                 maximumFractionDigits: 2,
                               })}
@@ -259,7 +270,7 @@ export default function CartPageClient() {
                               <p className="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">
                                 Precio USA (Inc. Gestión): USD{" "}
                                 {(
-                                  (item.priceUSD || 0) *
+                                  (Number(item.priceUSD || 0) * Number(item.quantity || 1)) *
                                   (1 + (config.base_fee_percent ?? 0.1))
                                 ).toLocaleString(undefined, {
                                   minimumFractionDigits: 2,
@@ -270,7 +281,7 @@ export default function CartPageClient() {
                               {exchangeRate > 0 && (
                                 <p className="text-[10px] font-black text-[#0A2647] opacity-40">
                                   ≈ AR${" "}
-                                  {(finalPriceToShow * exchangeRate).toLocaleString()}
+                                  {(Number(finalPriceToShow) * exchangeRate).toLocaleString()}
                                 </p>
                               )}
                             </div>
@@ -360,7 +371,7 @@ export default function CartPageClient() {
                         }`}
                       >
                         <span>{line.label}</span>
-                        <span>USD {line.amount.toFixed(2)}</span>
+                        <span>USD {Number(line.amount).toFixed(2)}</span>
                       </div>
                     ))}
                   </div>

@@ -132,6 +132,72 @@ export const CATEGORIES_MAP: CategoryMain[] = [
       { name: "Decoración", leaves: ["Cuadros", "Espejos"] },
     ],
   },
+  
+  {
+    name: "Outdoor & Aventura",
+    icon: "🏕️",
+    subcategories: [
+      {
+        name: "Hidratación",
+        leaves: [
+          "Termos y Botellas",
+          "Vasos Térmicos",
+          "Mugs",
+          "Accesorios de Hidratación",
+        ],
+      },
+      {
+        name: "Coolers y Conservación",
+        leaves: [
+          "Coolers Rígidos",
+          "Coolers Blandos",
+          "Hieleras y Conservadoras",
+          "Accesorios para Coolers",
+        ],
+      },
+      {
+        name: "Bolsos y Gear",
+        leaves: [
+          "Mochilas Outdoor",
+          "Bolsos y Duffels",
+          "Bolsos Impermeables",
+          "Cajas y Organizadores",
+        ],
+      },
+      {
+        name: "Camping",
+        leaves: [
+          "Mantas y Sillas",
+          "Iluminación de Camping",
+          "Accesorios de Camping",
+        ],
+      },
+      {
+        name: "Parrilla y Cocina Outdoor",
+        leaves: [
+          "Cocina Outdoor",
+          "Accesorios de Parrilla",
+          "Utensilios y Sartenes",
+        ],
+      },
+      {
+        name: "Mascotas Outdoor",
+        leaves: [
+          "Accesorios para Mascotas",
+          "Comederos y Bebederos",
+        ],
+      },
+      {
+        name: "Accesorios",
+        leaves: [
+          "Hielos Reutilizables",
+          "Stickers y Repuestos",
+          "Tapas y Sorbetes",
+          "Otros Accesorios Outdoor",
+        ],
+      },
+    ],
+  },
 
   {
     name: "Deportes y Fitness",

@@ -1,77 +1,61 @@
-import { withAuth } from "next-auth/middleware";
+// src/middleware.ts
 import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+import { getToken } from "next-auth/jwt";
 
-export default withAuth(
-  function middleware(req) {
-    const token = req.nextauth.token;
-    const email = token?.email;
-    const path = req.nextUrl.pathname;
+export async function middleware(req: NextRequest) {
+  const { pathname } = req.nextUrl;
 
-    // --- 1. ZONA ADMINISTRATIVA (Caminos Paralelos) ---
-    // Atrapamos todo lo que sea /admin o /api/admin
-    if (path.startsWith("/admin") || path.startsWith("/api/admin")) {
-      
-      const isLogin = path === "/admin/login";
+  const token = await getToken({
+    req,
+    secret: process.env.NEXTAUTH_SECRET,
+  });
 
-      // A) SI YA SOS EL ADMIN (maxidimnik@gmail.com)
-      if (email === "maxidimnik@gmail.com") {
-        // Si intentas ir al login, te mando al dashboard (ya estás dentro)
-        if (isLogin) {
-          return NextResponse.redirect(new URL("/admin", req.url));
-        }
-        // Si vas a cualquier otra parte de admin, PASÁ, JEFE.
-        return NextResponse.next();
+  const email = (token as any)?.email;
+
+  // =========================
+  // 1) ZONA ADMIN
+  // =========================
+  if (pathname.startsWith("/admin") || pathname.startsWith("/api/admin")) {
+    const isAdminLogin = pathname === "/admin/login";
+
+    // Si sos Maxi => pasás
+    if (email === "maxidimnik@gmail.com") {
+      // si intentás entrar al login admin estando logueado => te mando a /admin
+      if (isAdminLogin) {
+        return NextResponse.redirect(new URL("/admin", req.url));
       }
-
-      // B) SI NO SOS EL ADMIN (Sos anónimo, o sos un cliente logueado)
-      if (!isLogin) {
-        // 🔥 AQUÍ ESTABA EL PROBLEMA: Antes te mandaba a "/", ahora te manda al Login de Admin
-        const url = new URL("/admin/login", req.url);
-        // Guardamos a dónde querías ir para volverte ahí después de loguearte
-        url.searchParams.set("callbackUrl", path);
-        return NextResponse.redirect(url);
-      }
-
-      // C) Si estás en /admin/login y no sos admin
-      // Dejamos pasar para que veas el formulario y pongas la contraseña
       return NextResponse.next();
     }
 
-    // --- 2. ZONA CLIENTES (/dashboard) ---
-    // Esta lógica sigue igual: si no hay usuario, va al login de clientes
-    if (path.startsWith("/dashboard")) {
-      if (!token) {
-        const url = new URL("/login", req.url);
-        url.searchParams.set("redirectTo", path);
-        return NextResponse.redirect(url);
-      }
+    // si NO sos Maxi:
+    // - dejá entrar SOLO a /admin/login
+    if (!isAdminLogin) {
+      const url = new URL("/admin/login", req.url);
+      url.searchParams.set("callbackUrl", pathname);
+      return NextResponse.redirect(url);
     }
 
     return NextResponse.next();
-  },
-  {
-    callbacks: {
-      authorized: ({ req, token }) => {
-        const path = req.nextUrl.pathname;
-
-        // 🔥 IMPORTANTE: Le decimos a NextAuth "Si es ruta de admin, dejame a mí"
-        // Devolvemos TRUE para evitar que NextAuth te mande al login general automáticamente.
-        // Así nuestra función de arriba toma el control.
-        if (path.startsWith("/admin") || path.startsWith("/api/admin")) {
-          return true;
-        }
-
-        // Para el resto (dashboard), seguridad normal (requiere token)
-        return !!token;
-      },
-    },
   }
-);
+
+  // =========================
+  // 2) ZONA CLIENTES (/dashboard)
+  // =========================
+  if (pathname.startsWith("/dashboard")) {
+    if (!token) {
+      const url = new URL("/login", req.url);
+
+      // estándar next-auth: callbackUrl (NO inventes redirectTo)
+      url.searchParams.set("callbackUrl", pathname);
+
+      return NextResponse.redirect(url);
+    }
+  }
+
+  return NextResponse.next();
+}
 
 export const config = {
-  matcher: [
-    "/dashboard/:path*",
-    "/admin/:path*",
-    "/api/admin/:path*"
-  ],
+  matcher: ["/dashboard/:path*", "/admin/:path*", "/api/admin/:path*"],
 };

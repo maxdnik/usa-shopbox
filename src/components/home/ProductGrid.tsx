@@ -81,7 +81,7 @@ export default function ProductGrid() {
           <div className="flex items-end justify-between mb-10">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0A2647] tracking-tight leading-none mb-2">
-                Destacados
+                Lo más elegido esta semana:
               </h2>
               <p className="text-sm font-medium text-slate-400">
                 Selección exclusiva para importación directa.

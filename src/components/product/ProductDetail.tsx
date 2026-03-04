@@ -1,9 +1,15 @@
-// src/components/ProductDetail.tsx
+// src/components/product/ProductDetail.tsx
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import Link from "next/link";
 import type { Product } from "@/lib/products";
+
+import { useRouter } from "next/navigation";
+import { useCart } from "@/context/CartContext";
+import { usePricing } from "@/context/PricingContext";
+import { calculateCartPricing } from "@/lib/pricing-engine";
+import { getLogisticProfile } from "@/lib/logistics-profiles";
 
 interface ProductDetailProps {
   product: Product;
@@ -14,9 +20,85 @@ export default function ProductDetail({
   product,
   relatedProducts,
 }: ProductDetailProps) {
+  const router = useRouter();
+  const { addToCart } = useCart();
+  const pricingConfig = usePricing();
+
   const longDescription =
     product.description ??
     `Producto original importado desde ${product.store}, ideal para quienes quieren aprovechar los precios de USA sin preocuparse por la logística.`;
+
+  // ✅ NEW: LogisticProfile (billingWeightKg) para cotizar y para congelar en carrito
+  const logisticProfile = useMemo(() => {
+    return getLogisticProfile({
+      title: product.title,
+      category: String((product as any)?.category ?? ""),
+      brand: String((product as any)?.brand ?? product.store ?? ""),
+      weightKg:
+        typeof (product as any)?.weight === "number" && (product as any).weight > 0
+          ? (product as any).weight
+          : undefined,
+      dimensionsCm: (product as any)?.dimensionsCm,
+      source: "mongo",
+    });
+  }, [product.title, (product as any)?.category, (product as any)?.brand, product.store, (product as any)?.weight, (product as any)?.dimensionsCm]);
+
+  // ✅ NEW: estimado en Argentina usando billingWeightKg
+  const estimatedUSDComputed = useMemo(() => {
+    const calc = calculateCartPricing(
+      [
+        {
+          priceUSD: Number(product.priceUSD || 0),
+          quantity: 1,
+          logisticProfile,
+        },
+      ],
+      pricingConfig
+    );
+    return calc.totalFinal;
+  }, [product.priceUSD, pricingConfig, logisticProfile]);
+
+  const handleAddToCart = () => {
+    const cartId =
+      String((product as any)?.id ?? (product as any)?._id ?? product.slug ?? `tmp-${Date.now()}`);
+
+    addToCart({
+      id: cartId,
+      productId: String((product as any)?.id ?? (product as any)?._id ?? ""),
+      slug: product.slug || cartId,
+      title: product.title,
+
+      // pricing
+      priceUSD: Number(product.priceUSD || 0),
+      estimatedUSD: Number(estimatedUSDComputed || product.estimatedUSD || 0),
+
+      // legacy (por si algún componente viejo lo usa)
+      weight: typeof (product as any)?.weight === "number" ? (product as any).weight : 0,
+
+      // ✅ NEW: congelamos billingWeightKg
+      logisticProfile,
+      chargeableWeight: logisticProfile.billingWeightKg,
+
+      // visual
+      image: (product as any)?.image || (product as any)?.imageUrl || "",
+
+      // cantidad
+      quantity: 1,
+
+      // metadata
+      store: product.store,
+      category: (product as any)?.category,
+      sourceUrl: (product as any)?.sourceUrl,
+      specs: (product as any)?.specs,
+      selections: (product as any)?.selections,
+    });
+
+    router.push("/carrito");
+  };
+
+  const handleQuoteArs = () => {
+    router.push("/checkout");
+  };
 
   return (
     <div className="space-y-10 pb-10">
@@ -147,7 +229,7 @@ export default function ProductDetail({
             Estimado puesto en Argentina
           </p>
           <p className="text-3xl font-extrabold text-emerald-700 mb-1">
-            USD {product.estimatedUSD}
+            USD {Number(estimatedUSDComputed || product.estimatedUSD || 0).toFixed(2)}
           </p>
           <p className="text-[11px] text-emerald-800">
             Incluye envío internacional, manejo en Miami y entrega en Argentina.
@@ -162,11 +244,17 @@ export default function ProductDetail({
         </div>
 
         <div className="flex flex-col gap-3">
-          <button className="inline-flex items-center justify-center rounded-xl bg-[#E02020] text-white text-sm font-semibold h-11 hover:bg-[#c71919] transition">
+          <button
+            onClick={handleAddToCart}
+            className="inline-flex items-center justify-center rounded-xl bg-[#E02020] text-white text-sm font-semibold h-11 hover:bg-[#c71919] transition"
+          >
             Agregar al carrito
           </button>
 
-          <button className="inline-flex items-center justify-center rounded-xl border border-slate-300 text-slate-700 text-sm font-semibold h-11 bg-white hover:bg-slate-50 transition">
+          <button
+            onClick={handleQuoteArs}
+            className="inline-flex items-center justify-center rounded-xl border border-slate-300 text-slate-700 text-sm font-semibold h-11 bg-white hover:bg-slate-50 transition"
+          >
             Calcular costo en pesos
           </button>
         </div>

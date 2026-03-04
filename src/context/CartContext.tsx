@@ -8,55 +8,59 @@ import React, {
   useState,
 } from "react";
 
+import type { LogisticProfile, CourierConfig } from "@/lib/logistics-profiles";
+import {
+  getLogisticProfile,
+  COURIER_CONFIG_DEFAULT,
+} from "@/lib/logistics-profiles";
+
 /* ======================================================
    Tipos
 ====================================================== */
 
 export type CartItem = {
-  // identificadores
   id: string;
   productId?: string;
   variantId?: string;
 
-  // catálogo
   sku?: string;
   slug?: string;
   title: string;
 
-  // pricing
-  price?: number; // ✅ compat UI vieja (algunos componentes usan "price")
-  priceUSD: number; // precio base USA
-  estimatedUSD?: number; // precio final estimado
-  netMargin?: number; // margen neto unitario (opcional)
+  price?: number;
+  priceUSD: number;
+  estimatedUSD?: number;
+  netMargin?: number;
 
-  // cantidad
   quantity: number;
 
-  // visual
   image?: string;
   imageUrl?: string;
 
-  // logística
+  // legacy
   weight?: number; // kg
-  chargeableWeight?: number; // ✅ kg calculado por engine (para CartPageContent)
+  chargeableWeight?: number; // kg (compat UI vieja)
 
-  // variantes / atributos (talle, color, etc.)
+  // ✅ nueva
+  logisticProfile?: LogisticProfile;
+
   selections?: Record<string, string>;
   specs?: Record<string, any>;
 
-  // trazabilidad (origen del producto)
   sourceUrl?: string;
-
-  // metadata opcional
   store?: string;
   category?: any;
+
+  // opcional (si viene)
+  source?: "mongo" | "ebay" | "other";
+  ebayCategoryPath?: string;
+  brand?: string;
+  weightKg?: number;
+  dimensionsCm?: any;
 };
 
 type CartContextType = {
-  // API nueva
   items: CartItem[];
-
-  // API vieja (compatibilidad con UI existente)
   cart: CartItem[];
 
   addToCart: (item: CartItem) => void;
@@ -64,18 +68,68 @@ type CartContextType = {
   clearCart: () => void;
   updateQuantity: (id: string, quantity: number) => void;
 
-  // compat (por si algún componente usa setCart directo)
   setCart: React.Dispatch<React.SetStateAction<CartItem[]>>;
 
   totalItems: number;
   totalUSD: number;
 };
 
+const CartContext = createContext<CartContextType | undefined>(undefined);
+const STORAGE_KEY = "usashopbox-cart";
+
 /* ======================================================
-   Context
+   Helpers
 ====================================================== */
 
-const CartContext = createContext<CartContextType | undefined>(undefined);
+function hasValidLP(it: any) {
+  return (
+    typeof it?.logisticProfile?.billingWeightKg === "number" &&
+    it.logisticProfile.billingWeightKg > 0
+  );
+}
+
+function buildCourierConfig(_it?: any): CourierConfig {
+  // Por ahora usamos defaults. Si después querés pasar config viva del admin,
+  // lo hacemos desde el lugar que llama addToCart (ProductView) o metemos un setter global.
+  return COURIER_CONFIG_DEFAULT;
+}
+
+function ensureLogisticsFrozen(it: any): CartItem {
+  // Si ya venía bien, sólo aseguramos chargeableWeight
+  if (hasValidLP(it)) {
+    return {
+      ...it,
+      chargeableWeight:
+        typeof it.chargeableWeight === "number" && it.chargeableWeight > 0
+          ? it.chargeableWeight
+          : it.logisticProfile.billingWeightKg,
+    };
+  }
+
+  const courierConfig = buildCourierConfig(it);
+
+  const lp = getLogisticProfile(
+    {
+      title: it?.title,
+      category: it?.category,
+      brand: it?.brand ?? it?.store,
+      weightKg: it?.weightKg ?? it?.weight,
+      dimensionsCm:
+        it?.dimensionsCm ??
+        it?.specs?.dimensionsCm ??
+        it?.specs?.dimensions,
+      source: it?.source === "ebay" ? "ebay" : "mongo",
+      ebayCategoryPath: it?.ebayCategoryPath,
+    },
+    { courierConfig }
+  );
+
+  return {
+    ...it,
+    logisticProfile: lp,
+    chargeableWeight: lp.billingWeightKg,
+  };
+}
 
 /* ======================================================
    Provider
@@ -84,56 +138,73 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
 
-  /* -----------------------------
-     Persistencia (localStorage)
-  ----------------------------- */
-
+  /* ================= LOAD + MIGRATE ================= */
   useEffect(() => {
     try {
-      const stored = localStorage.getItem("usashopbox-cart");
-      if (stored) {
-        setItems(JSON.parse(stored));
-      }
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (!stored) return;
+
+      const parsed = JSON.parse(stored);
+      if (!Array.isArray(parsed)) return;
+
+      // ✅ Migración: si venía un carrito viejo/roto, recalculamos y congelamos
+      const migrated = parsed.map((it: any) => ensureLogisticsFrozen(it));
+      setItems(migrated);
     } catch (err) {
       console.error("Error cargando carrito:", err);
     }
   }, []);
 
+  /* ================= SAVE ================= */
   useEffect(() => {
     try {
-      localStorage.setItem("usashopbox-cart", JSON.stringify(items));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
     } catch (err) {
       console.error("Error guardando carrito:", err);
     }
   }, [items]);
 
-  /* -----------------------------
-     Acciones
-  ----------------------------- */
-
+  /* ================= ADD ================= */
   function addToCart(newItem: CartItem) {
     setItems((prev) => {
-      const existing = prev.find((i) => i.id === newItem.id);
+      // ✅ congelamos siempre antes de guardar
+      const frozen = ensureLogisticsFrozen(newItem);
 
-      // Normalización centralizada
+      // ✅ normalización fuerte
       const normalizedItem: CartItem = {
-        ...newItem,
-        image: newItem.image || newItem.imageUrl,
-        quantity: newItem.quantity > 0 ? newItem.quantity : 1,
+        ...frozen,
+        id: String(frozen.id),
+        title: String(frozen.title || ""),
+        priceUSD: Number(frozen.priceUSD ?? 0),
+        image: frozen.image || frozen.imageUrl,
+        quantity: frozen.quantity && frozen.quantity > 0 ? frozen.quantity : 1,
       };
 
-      if (existing) {
-        return prev.map((i) =>
-          i.id === newItem.id
-            ? { ...i, quantity: i.quantity + normalizedItem.quantity }
-            : i
-        );
+      const existingIdx = prev.findIndex((i) => i.id === normalizedItem.id);
+
+      // Ya existe -> sumo cantidad, NO recalculo logística
+      if (existingIdx !== -1) {
+        return prev.map((i, idx) => {
+          if (idx !== existingIdx) return i;
+
+          return {
+            ...i,
+            quantity: (i.quantity ?? 1) + (normalizedItem.quantity ?? 1),
+
+            // 🔒 mantener lo ya congelado en el item existente
+            logisticProfile: i.logisticProfile ?? normalizedItem.logisticProfile,
+            chargeableWeight: i.chargeableWeight ?? normalizedItem.chargeableWeight,
+
+            image: i.image || normalizedItem.image,
+          };
+        });
       }
 
       return [...prev, normalizedItem];
     });
   }
 
+  /* ================= REMOVE / CLEAR / UPDATE ================= */
   function removeFromCart(id: string) {
     setItems((prev) => prev.filter((i) => i.id !== id));
   }
@@ -143,68 +214,53 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }
 
   function updateQuantity(id: string, quantity: number) {
-    if (quantity <= 0) {
+    const q = Number(quantity);
+    if (!Number.isFinite(q) || q <= 0) {
       removeFromCart(id);
       return;
     }
-
-    setItems((prev) =>
-      prev.map((i) => (i.id === id ? { ...i, quantity } : i))
-    );
+    setItems((prev) => prev.map((i) => (i.id === id ? { ...i, quantity: q } : i)));
   }
 
-  /* -----------------------------
-     Totales
-  ----------------------------- */
-
+  /* ================= TOTALS ================= */
   const totalItems = useMemo(
-    () => items.reduce((sum, item) => sum + item.quantity, 0),
+    () => items.reduce((sum, item) => sum + (item.quantity ?? 0), 0),
     [items]
   );
 
   const totalUSD = useMemo(
     () =>
-      items.reduce(
-        (sum, item) =>
-          sum + (item.estimatedUSD ?? item.priceUSD ?? 0) * item.quantity,
-        0
-      ),
+      items.reduce((sum, item) => {
+        const unit = Number(item.estimatedUSD ?? item.priceUSD ?? item.price ?? 0);
+        const qty = Number(item.quantity ?? 1);
+        return sum + unit * qty;
+      }, 0),
     [items]
   );
 
-  return (
-    <CartContext.Provider
-      value={{
-        // nueva
-        items,
-        // compat vieja
-        cart: items,
+  const value = useMemo<CartContextType>(
+    () => ({
+      items,
+      cart: items,
 
-        addToCart,
-        removeFromCart,
-        clearCart,
-        updateQuantity,
+      addToCart,
+      removeFromCart,
+      clearCart,
+      updateQuantity,
 
-        // compat
-        setCart: setItems,
+      setCart: setItems,
 
-        totalItems,
-        totalUSD,
-      }}
-    >
-      {children}
-    </CartContext.Provider>
+      totalItems,
+      totalUSD,
+    }),
+    [items, totalItems, totalUSD]
   );
-}
 
-/* ======================================================
-   Hook
-====================================================== */
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+}
 
 export function useCart() {
   const ctx = useContext(CartContext);
-  if (!ctx) {
-    throw new Error("useCart must be used within CartProvider");
-  }
+  if (!ctx) throw new Error("useCart must be used within CartProvider");
   return ctx;
 }

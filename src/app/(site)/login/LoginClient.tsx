@@ -1,17 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { signIn, useSession } from "next-auth/react";
 
+function safeCallback(url: string | null) {
+  // Permitimos solo redirects internos para evitar open-redirect
+  if (!url) return "/dashboard";
+  if (url.startsWith("/")) return url;
+  return "/dashboard";
+}
+
 export default function LoginClient() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { status } = useSession();
 
+  // ✅ NextAuth usa callbackUrl. Vos antes usabas redirectTo.
+  const callbackUrl = useMemo(() => {
+    const fromCb = searchParams.get("callbackUrl");
+    const fromOld = searchParams.get("redirectTo");
+    return safeCallback(fromCb ?? fromOld);
+  }, [searchParams]);
+
   useEffect(() => {
-    if (status === "authenticated") router.replace("/dashboard");
-  }, [status, router]);
+    if (status === "authenticated") router.replace(callbackUrl);
+  }, [status, router, callbackUrl]);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,7 +43,7 @@ export default function LoginClient() {
         redirect: false,
         email,
         password,
-        callbackUrl: "/dashboard",
+        callbackUrl, // ✅ dinámico
       });
 
       if (!res?.ok) {
@@ -36,7 +51,8 @@ export default function LoginClient() {
         return;
       }
 
-      router.replace("/dashboard");
+      // ✅ volvemos a donde venía el usuario
+      router.replace(callbackUrl);
       router.refresh();
     } catch {
       setError("No se pudo ingresar");
@@ -48,7 +64,7 @@ export default function LoginClient() {
   const handleGoogle = async () => {
     setError(null);
     setLoading(true);
-    await signIn("google", { callbackUrl: "/dashboard" });
+    await signIn("google", { callbackUrl }); // ✅ dinámico
   };
 
   if (status === "loading") return null;
@@ -134,7 +150,10 @@ export default function LoginClient() {
 
         <p className="text-sm text-slate-600 mt-4">
           ¿No tenés cuenta?{" "}
-          <Link href="/register" className="text-[#D72638] font-semibold">
+          <Link
+            href={`/register?callbackUrl=${encodeURIComponent(callbackUrl)}`}
+            className="text-[#D72638] font-semibold"
+          >
             Crear cuenta
           </Link>
         </p>
