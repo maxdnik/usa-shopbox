@@ -1,46 +1,61 @@
 import { Product } from "@/lib/models/Product";
 
-const prefixFacet = (prefix: string) => ([
-  { $unwind: "$tags" },
-  { $match: { tags: { $regex: `^${prefix}:` } } },
-  {
-    $group: {
-      _id: { $substrBytes: ["$tags", prefix.length + 1, 999] },
-      count: { $sum: 1 },
-    },
-  },
-  { $sort: { count: -1, _id: 1 } },
-]);
-
 export async function getOutdoorFacets(baseQuery: any) {
-  const [res] = await Product.aggregate([
+  const pipeline: any[] = [
     { $match: baseQuery },
     {
       $facet: {
         brands: [
-          { $group: { _id: "$brand", count: { $sum: 1 } } },
-          { $match: { _id: { $ne: null } } },
+          {
+            $group: {
+              _id: "$brand",
+              count: { $sum: 1 },
+            },
+          },
+          { $match: { _id: { $nin: [null, ""] } } },
           { $sort: { count: -1, _id: 1 } },
         ],
-
-        activity: prefixFacet("activity"),
-        waterproof: prefixFacet("waterproof"),
-        insulation: prefixFacet("insulation"),
-
-        sizes: [
-          { $unwind: "$options" },
-          { $match: { "options.name": "Size" } },
-          { $unwind: "$options.values" },
-          { $group: { _id: "$options.values", count: { $sum: 1 } } },
+        stores: [
+          {
+            $group: {
+              _id: "$store",
+              count: { $sum: 1 },
+            },
+          },
+          { $match: { _id: { $nin: [null, ""] } } },
           { $sort: { count: -1, _id: 1 } },
         ],
-
-        price: [
-          { $group: { _id: null, min: { $min: "$priceUSD" }, max: { $max: "$priceUSD" } } }
+        categories: [
+          {
+            $group: {
+              _id: "$category.leaf",
+              count: { $sum: 1 },
+            },
+          },
+          { $match: { _id: { $nin: [null, ""] } } },
+          { $sort: { count: -1, _id: 1 } },
+        ],
+        tags: [
+          { $unwind: "$tags" },
+          { $match: { tags: { $regex: "outdoor", $options: "i" } } },
+          {
+            $group: {
+              _id: "$tags",
+              count: { $sum: 1 },
+            },
+          },
+          { $sort: { count: -1, _id: 1 } },
         ],
       },
     },
-  ]);
+  ];
 
-  return res ?? { brands: [], activity: [], waterproof: [], insulation: [], sizes: [], price: [] };
+  const [res] = await Product.aggregate(pipeline);
+
+  return {
+    brands: res?.brands ?? [],
+    stores: res?.stores ?? [],
+    categories: res?.categories ?? [],
+    tags: res?.tags ?? [],
+  };
 }
