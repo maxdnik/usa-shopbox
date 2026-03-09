@@ -1,8 +1,5 @@
 import Link from "next/link";
 
-import HeaderEcom from "@/components/home/HeaderEcom";
-import Footer from "@/components/home/Footer";
-
 import dbConnect from "@/lib/mongodb";
 import { Product } from "@/lib/models/Product";
 import ProductCard from "@/components/products/ProductCard";
@@ -62,7 +59,9 @@ export default async function RunningPage({
   const allCategories = Array.from(
     new Set(
       rawCategories
-        .map((cat: any) => (typeof cat === "object" ? cat.leaf || cat.sub || cat.main : cat))
+        .map((cat: any) =>
+          typeof cat === "object" ? cat.leaf || cat.sub || cat.main : cat
+        )
         .filter(Boolean)
         .map((x: any) => String(x))
     )
@@ -154,34 +153,22 @@ export default async function RunningPage({
     };
   });
 
-  /**
-   * ✅ HERO: imagen del corredor de fondo (sútil, premium)
-   * - Poné tu imagen acá:
-   *   1) Guardala en: /public/images/running-hero.jpg
-   *   2) O usá una URL https
-   */
   const HERO_BG_URL = "/images/run.jpg";
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
-      <HeaderEcom />
+      {/* ✅ SACAMOS HeaderEcom + Footer porque ya los renderiza el layout */}
 
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 pt-8 pb-16">
-        {/* ✅ HERO PREMIUM (fondo sutil con blur + overlay) */}
+        {/* ✅ HERO PREMIUM */}
         <div className="relative overflow-hidden rounded-[32px] border border-slate-100 bg-white shadow-sm mb-10">
-          {/* Fondo con imagen */}
           <div
             className="absolute inset-0 bg-cover bg-center scale-105 opacity-35"
             style={{ backgroundImage: `url('${HERO_BG_URL}')` }}
           />
-
-          {/* Overlay premium: degradado + blur para legibilidad */}
           <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/75 to-white/92 backdrop-blur-sm" />
-
-          {/* Borde de luz sutil */}
           <div className="absolute inset-0 ring-1 ring-white/40" />
 
-          {/* Contenido */}
           <div className="relative z-10 p-8 md:p-10">
             <div className="flex items-center gap-6">
               <div className="w-24 h-24 bg-white/80 rounded-[24px] border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden">
@@ -210,7 +197,7 @@ export default async function RunningPage({
               </div>
             </div>
 
-            {/* FILTROS */}
+            {/* CHIPS */}
             <div className="mt-10 flex gap-3 overflow-x-auto pb-3 no-scrollbar">
               <Link
                 href={`/running?category=todos`}
@@ -265,8 +252,6 @@ export default async function RunningPage({
           </div>
         )}
       </main>
-
-      <Footer />
     </div>
   );
 }

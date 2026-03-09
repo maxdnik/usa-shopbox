@@ -1,0 +1,947 @@
+[
+  {
+    "id": "CITYW-001",
+    "type": "parka",
+    "title": "Arctic Parka",
+    "brand": "Woolrich",
+    "store": "Woolrich",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Parkas"
+    },
+    "slug": "woolrich-arctic-parka",
+    "sku": "CITYW-001",
+    "priceUSD": 900,
+    "images": [
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/d61c53af-8a4f-4c57-ab05-500e19736c4c/zk128o/std/720x1080/CFWOOU0483MHUT0001-BLK.jpg?format=auto&dpr=170&quality=auto-high",
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/7470b600-22e7-45a1-8aea-9eae3f5e6020/zk128o/std/720x1080/CFWOOU0483MHUT0001-BLK.jpg?format=auto&dpr=170&quality=auto-high",
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/7470b600-22e7-45a1-8aea-9eae3f5e6020/zk128o/std/720x1080/CFWOOU0483MHUT0001-BLK.jpg?format=auto&dpr=170&quality=auto-high"
+    ],
+    "description": "Iconic city-winter parka in Ramar Cloth, built to handle cold, wet urban weather with duck down insulation, water-repellent and wind-resistant protection, hood, and multiple utility pockets.",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+    "variants": [],
+    "color": "Black",
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "parka", "heritage"],
+    "sourceUrl": "https://www.woolrich.com/us/en/arctic-parka-in-ramar-cloth-CFWOOU0483MHUT0001_BLK.html"
+  },
+  {
+    "id": "CITYW-002",
+    "type": "jacket",
+    "title": "Ashby Waxed Jacket",
+    "brand": "Barbour",
+    "store": "Barbour",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Jackets"
+    },
+    "slug": "barbour-ashby-wax-jacket",
+    "sku": "CITYW-002",
+    "priceUSD": 398,
+    "color": "Olive",
+    "images": [
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd7e9b5ab/images/MWX0339OL71/MWX0339OL71_01front.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd1f09418/images/MWX0339OL71/MWX0339OL71_03getthelook.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dwfe92b17c/images/MWX0339OL71/MWX0339OL71_05detailc.jpg?q=70&sh=1875&sw=1500"
+    ],
+    "description": "Modern Barbour classic in 6oz Sylkoil waxed cotton with a matte, lived-in finish. A practical winter-ready jacket with strong city and heritage appeal.",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "jacket", "waxed-cotton"],
+    "sourceUrl": "https://www.barbour.com/us/ashby-waxed-jacket-MWX0339OL71.html"
+  },
+  {
+    "id": "CITYW-003",
+    "type": "parka",
+    "title": "Men's Isthmus Parka",
+    "brand": "Patagonia",
+    "store": "Patagonia",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Parkas"
+    },
+    "slug": "patagonia-mens-isthmus-parka",
+    "sku": "CITYW-003",
+    "priceUSD": 289,
+    "color": "Basin Green",
+    "images": [
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw27cf963a/images/hi-res/27023_BSNG_AR1.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwfe091c77/images/hi-res/27023_BSNG.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwb121a73c/images/hi-res/27023_SMDB_OPEN.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef"
+    ],
+    "description": "Steeped in pure Patagonia DNA, this warm, timeless and versatile hooded parka was inspired by a piece made in the early 80s. This wind- and weather-resistant version uses NetPlus 100% postconsumer recycled nylon faille made from recycled fishing nets, with a durable water repellent finish made without intentionally added PFAS. The hood and torso are lined with 100% recycled polyester fleece, and the sleeves are insulated with 60-g Thermogreen 100% recycled polyester.",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "variants": [],
+    "inStock": false,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "parka", "legacy"],
+    "sourceUrl": "https://www.patagonia.com/product/mens-isthmus-insulated-parka/27023.html?dwvar_27023_color=BSNG"
+  },
+  {
+    "id": "CITYW-004",
+    "type": "parka",
+    "title": "Therme Down Parka Men's",
+    "brand": "Arc'teryx",
+    "store": "Arc'teryx",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Parkas"
+    },
+    "slug": "arcteryx-therme-down-parka-mens",
+    "sku": "CITYW-004",
+    "priceUSD": 900,
+    "images": [
+      "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/F25-X000009914-Therme-Down-Parka-Carob-Full-Body.jpg?auto=format&q=70&fit=crop&fill=white&max-w=1350&max-h=1710&ixlib=react-9.10.0&w=927",
+      "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/F25-X000009914-Therme-Down-Parka-Carob-Hover.jpg?auto=format&q=70&fit=crop&fill=white&max-w=1350&max-h=1710&ixlib=react-9.10.0&w=927",
+      "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/F25-X000009914-Therme-Down-Parka-Carob-Front-View.jpg?auto=format&q=70&fit=crop&fill=white&max-w=1350&max-h=1710&ixlib=react-9.10.0&w=927"
+    ],
+    "description": "Refined waterproof down parka designed for cold, wet urban conditions. Minimalist Arc'teryx aesthetic with strong premium city positioning.",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "parka", "technical"],
+    "sourceUrl": "https://arcteryx.com/us/en/shop/mens/therme-down-parka-9914"
+  },
+  {
+    "id": "CITYW-005",
+    "type": "jacket",
+    "title": "Cartel Men's Bomber Jacket",
+    "brand": "Nobis",
+    "store": "Nobis",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Jackets"
+    },
+    "slug": "nobis-cartel-mens-bomber-jacket",
+    "sku": "CITYW-005",
+    "priceUSD": 767,
+    "color": "Cork",
+    "images": [
+      "https://inc.nobis.com/cdn/shop/files/Holden-cork-6.jpg?v=1750058655&width=1346",
+      "https://inc.nobis.com/cdn/shop/files/Holden-cork-2.jpg?v=1750058655&width=1346",
+      "https://inc.nobis.com/cdn/shop/files/Holden-cork-7.jpg?v=1750058655&width=1346"
+    ],
+    "description": "Luxury technical bomber with removable hood, built to be windproof, waterproof, and breathable. Excellent fit for elevated city-winter dressing.",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "jacket", "luxury-tech"],
+    "sourceUrl": "https://us.nobis.com/products/cartel"
+  },
+  {
+    "id": "CITYW-006",
+    "type": "hoodie",
+    "title": "Roland Bunny Reversible Hoodie",
+    "brand": "Moose Knuckles",
+    "store": "Moose Knuckles",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Hoodies"
+    },
+    "slug": "roland-bunny-reversible-hoodie",
+    "sku": "CITYW-006",
+    "priceUSD": 695,
+    "color": "Artichoke",
+    "images": [
+      "https://www.mooseknucklescanada.com/cdn/shop/files/m16ms623h_1883_front_category.jpg?format=webp&quality=90&v=1770999669&width=2000",
+      "https://www.mooseknucklescanada.com/cdn/shop/files/m16ms623h_1883_detail6.jpg?format=webp&quality=90&v=1770999669&width=2000",
+      "https://www.mooseknucklescanada.com/cdn/shop/files/m16ms623h_1883_detail3.jpg?format=webp&quality=90&v=1770999671&width=2000"
+    ],
+    "description": "Part of Moose Knuckles’ Bunny Collection, this men’s reversible hoodie features organic cotton on one side and plush faux fur on the other. Built as a lighter-weight option, it offers a relaxed fit, adjustable hood, and two-way zipper for versatile layering.",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "hoodie", "luxury"],
+    "sourceUrl": "https://www.mooseknucklescanada.com/en-us/products/roland-bunny-reversible-hoodie-m16ms623h-1883?variant=47806760157419"
+  },
+  {
+    "id": "CITYW-007",
+    "type": "sweater",
+    "title": "Henley Guide Sweater",
+    "brand": "Filson",
+    "store": "Filson",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Sweaters"
+    },
+    "slug": "filson-henley-guide-sweater",
+    "sku": "CITYW-007",
+    "priceUSD": 419.3,
+    "color": "Black",
+    "images": [
+      "https://www.filson.com/cdn/shop/files/f42f64776637a2506364cfa8416c18f54bd8a9498252f2cb5daca87274efbe69.jpg?v=1772667027",
+      "https://www.filson.com/cdn/shop/files/a71619bd5dd2688c17016d310f4120da527587a632de91cc152bdaf927e6b6b5.png?v=1772667036",
+      "https://www.filson.com/cdn/shop/files/3cb5e311a7f1a360b07b548efb600a678a7fafbfff4ddad467b730da6d0bb155.png?v=1772667034"
+    ],
+    "description": "Heavy premium merino wool sweater with water-resistant reinforcement on the yoke and arms. Strong heritage and outdoor-luxury crossover for city winter.",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "sweater", "heritage"],
+    "sourceUrl": "https://www.filson.com/products/henley-guide-sweater-black"
+  },
+  {
+    "id": "CITYW-008",
+    "type": "sweater",
+    "title": "Ovik Knit Sweater M",
+    "brand": "Fjallraven",
+    "store": "Fjallraven",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Sweaters"
+    },
+    "slug": "fjallraven-ovik-roller-neck-sweater-m",
+    "sku": "CITYW-008",
+    "priceUSD": 190,
+    "color": "Dark Navy",
+    "images": [
+      "https://www.fjallraven.com/4aa4d5/globalassets/catalogs/fjallraven/f8/f870/f87072/features/ovik_roller_neck_sweater_m_87072-555_e_model_fjr.jpg?width=1248&height=1248&rmode=BoxPad&bgcolor=fff&quality=100",
+      "https://www.fjallraven.com/4aa4e3/globalassets/catalogs/fjallraven/f8/f870/f87072/features/ovik_roller_neck_sweater_m_87072-555_c_model_fjr.jpg?width=1248&height=1248&rmode=BoxPad&bgcolor=fff&quality=100",
+      "https://www.fjallraven.com/49c6ce/globalassets/catalogs/fjallraven/f8/f870/f87072/f555/ovik_roller_neck_sweater_m_87072-555_a_main_fjr.jpg?width=1248&height=1248&rmode=BoxPad&bgcolor=fff&quality=100"
+    ],
+    "description": "Comfortable rollneck sweater in soft, warm wool.",
+    "sizes": ["S", "M", "L"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "sweater", "scandinavian"],
+    "sourceUrl": "https://www.fjallraven.com/us/en-us/men/tops/sweaters-knitwear/ovik-roller-neck-sweater-m/?v=F87072::7323450790318"
+  },
+  {
+    "id": "CITYW-009",
+    "type": "sweater",
+    "title": "Men's Shetland Collection Sweater",
+    "brand": "Pendleton",
+    "store": "Pendleton",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Sweaters"
+    },
+    "slug": "pendleton-mens-shetland-collection-sweater",
+    "sku": "CITYW-009",
+    "priceUSD": 128,
+    "color": "Black Heather",
+    "images": [
+      "https://media.pendleton-usa.com/image/upload/f_auto,q_auto,dpr_auto/w_1000//prod/images/55787_2419?_i=AG"
+    ],
+    "description": "Classic pullover in pure New Zealand wool, naturally odor- and stain-resistant. A strong mid-price premium knit for city-winter layering.",
+    "sizes": ["S", "XL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "sweater", "wool"],
+    "sourceUrl": "https://www.pendleton-usa.com/product/mens-shetland-collection-sweater/55787.html"
+  },
+  {
+    "id": "CITYW-010",
+    "type": "jacket",
+    "title": "City Bedale Quilted Jacket",
+    "brand": "Barbour",
+    "store": "Barbour",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Jackets"
+    },
+    "slug": "barbour-essential-city-bedale-quilted-jacket",
+    "sku": "CITYW-010",
+    "priceUSD": 330,
+    "color": "Dusty Olive",
+    "images": [
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7c0adae1/images/MQU1895OL32/MQU1895OL32_01front.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc38e962c/images/MQU1895OL32/MQU1895OL32_03getthelook.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/on/demandware.static/-/Sites-master-catalog/default/dw7cc66302/images/MQU1895OL32/MQU1895OL32_02flat.jpg"
+    ],
+    "description": "Inspired by Barbour’s iconic Bedale jacket, the City Bedale Quilted Jacket modernizes the classic with a sleek, contemporary silhouette.",
+    "sizes": ["M", "L", "XL", "XXL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "jacket", "heritage"],
+    "sourceUrl": "https://www.barbour.com/us/city-bedale-quilted-jacket-MQU1895OL32.html"
+  },
+  {
+    "id": "CITYW-011",
+    "type": "sweater",
+    "title": "Cotton Quarter-Zip Jumper",
+    "brand": "Barbour",
+    "store": "Barbour",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Sweaters"
+    },
+    "slug": "barbour-essential-cotton-quarter-zip-jumper",
+    "sku": "CITYW-011",
+    "priceUSD": 140,
+    "color": "Ocean Sky",
+    "images": [
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc0bf45dd/images/MKN1074BU61/MKN1074BU61_01front.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dwafe6474e/images/MKN1074BU61/MKN1074BU61_03getthelook.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dwcd4b6f7d/images/MKN1074BU61/MKN1074BU61_05detailb.jpg?q=70&sh=1875&sw=1500"
+    ],
+    "description": "A wardrobe essential quarter-zip jumper in lightweight cotton knit with subtle Barbour detailing.",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "sweater", "heritage"],
+    "sourceUrl": "https://www.barbour.com/us/cotton-quarter-zip-jumper-MKN1074BU61.html"
+  },
+  {
+    "id": "CITYW-1011",
+    "type": "sweater",
+    "title": "Pure Wool Crewneck Sweater",
+    "brand": "Woolrich",
+    "store": "Woolrich",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Sweaters"
+    },
+    "slug": "woolrich-pure-wool-crewneck-sweater",
+    "sku": "CITYW-1011",
+    "priceUSD": 310,
+    "color": "White",
+    "images": [
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/4ea4a83f-b066-486d-992c-14f3e21ae3a6/zk128o/std/720x1080/CFWOKN0328MRUF0469-8743.jpg?format=auto&dpr=170&quality=auto-high",
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/d1c0e63e-9c3b-4096-b303-653112469b9e/zk128o/std/720x1080/CFWOKN0328MRUF0469-8743.jpg?format=auto&dpr=170&quality=auto-high",
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/b5bd9c46-7a17-4499-ad6f-c61e6ee7669f/zk128o/std/720x1080/CFWOKN0328MRUF0469-8743.jpg?format=auto&dpr=170&quality=auto-high"
+    ],
+    "description": "Pure wool crewneck sweater with a refined cable motif, raglan sleeves, and ribbed trims. A clean premium knit for elegant city-winter layering.",
+    "sizes": ["S", "M", "L", "XL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "sweater", "wool"],
+    "sourceUrl": "https://www.woolrich.com/us/en/pure-wool-crewneck-sweater-CFWOKN0328MRUF0469_8743.html"
+  },
+  {
+    "id": "CITYW-012",
+    "type": "jacket",
+    "title": "Tamok Down750 Jacket Women's",
+    "brand": "Norrona",
+    "store": "Norrona",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Jackets"
+    },
+    "slug": "norrona-tamok-down750-jacket-womens",
+    "sku": "CITYW-012",
+    "priceUSD": 560,
+    "color": "Sage Green",
+    "images": [
+      "https://res.cloudinary.com/norrona/image/upload/c_scale,h_5000/u_modelbackdrop:Background-1,c_scale,h_5000/x_2500,y_2500,w_3750,h_5000,c_crop,g_xy_center/b_rgb:c5c5c5/c_pad,d_imgmissing.jpg,fl_progressive.lossy,q_auto,w_1956,h_2608/Auto%2F1221-19-3516-look-F.jpg",
+      "https://res.cloudinary.com/norrona/image/upload/c_scale,h_5000/u_modelbackdrop:Background-1,c_scale,h_5000/x_2500,y_2500,w_3750,h_5000,c_crop,g_xy_center/b_rgb:c5c5c5/c_pad,d_imgmissing.jpg,fl_progressive.lossy,q_auto,w_1324,h_1765/Auto%2F1221-19-3516-look-B.jpg",
+      "https://res.cloudinary.com/norrona/image/upload/c_scale,h_5000/u_modelbackdrop:Background-1,c_scale,h_5000/x_2500,y_2500,w_3750,h_5000,c_crop,g_xy_center/b_rgb:c5c5c5/c_pad,d_imgmissing.jpg,fl_progressive.lossy,q_auto,w_1324,h_1765/Auto%2F1221-19-3516-look-S.jpg"
+    ],
+    "description": "Premium down jacket made for cold-weather use, with strong Scandinavian design language and technical winter protection.",
+    "sizes": ["S", "M"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "jacket", "scandinavian", "women"],
+    "sourceUrl": "https://www.norrona.com/en-GB/products/tamok/tamok-down750-jacket-womens/?color=3516"
+  },
+  {
+    "id": "CITYW-013",
+    "type": "cardigan",
+    "title": "Covert Cardigan Men's",
+    "brand": "Arc'teryx",
+    "store": "Arc'teryx",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Cardigans"
+    },
+    "slug": "arcteryx-covert-cardigan-mens",
+    "sku": "CITYW-013",
+    "priceUSD": 180,
+    "color": "Habitat Heather",
+    "images": [
+      "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S26-X000010361-Covert-Cardigan-Habitat-Heather-Front-View.jpg?auto=format&q=70&fit=crop&fill=white&max-w=1350&max-h=1710&ixlib=react-9.10.0&w=927",
+      "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S26-X000010361-Covert-Cardigan-Habitat-Heather-Hover.jpg?auto=format&q=70&fit=crop&fill=white&max-w=1350&max-h=1710&ixlib=react-9.10.0&w=927",
+      "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S26-X000010361-Covert-Cardigan-Habitat-Heather-Side-View.jpg?auto=format&q=70&fit=crop&fill=white&max-w=1350&max-h=1710&ixlib=react-9.10.0&w=927"
+    ],
+    "description": "Iconic Arc'teryx cardigan with a wool-like heathered face and soft recycled fleece construction.",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "cardigan", "technical"],
+    "sourceUrl": "https://arcteryx.com/us/en/shop/mens/covert-cardigan-0361"
+  },
+  {
+    "id": "CITYW-014",
+    "type": "beanie",
+    "title": "Arctic Toque",
+    "brand": "Canada Goose",
+    "store": "Canada Goose",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Beanies"
+    },
+    "slug": "canada-goose-blend-double-fold-toque",
+    "sku": "CITYW-014",
+    "priceUSD": 225,
+    "color": "Coastal Grey Heather",
+    "images": [
+      "https://images.canadagoose.com/image/upload/w_1844,c_scale,f_auto,q_auto/v1761749480/product-image/5109U_9695_fsph.jpg",
+      "https://images.canadagoose.com/image/upload/w_1844,c_scale,f_auto,q_auto/v1761749482/product-image/5109U_9695_o.png"
+    ],
+    "description": "Merino and cashmere knit toque with luxury winter positioning.",
+    "sizes": ["One Size"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "beanie", "luxury"],
+    "sourceUrl": "https://www.canadagoose.com/us/en/pr/cashmere-blend-double-fold-toque-5109U.html?pid=699363463272"
+  },
+  {
+    "id": "CITYW-015",
+    "type": "beanie",
+    "title": "Watch Cap Beanie",
+    "brand": "Filson",
+    "store": "Filson",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Beanies"
+    },
+    "slug": "filson-watch-cap-beanie",
+    "sku": "CITYW-015",
+    "priceUSD": 75,
+    "color": "Red",
+    "images": [
+      "https://www.filson.com/cdn/shop/files/c77f1a666d2b12eae84848e8e3a90446a0b8b7da1098521d98e2b7578433897d.jpg?v=1770941008",
+      "https://www.filson.com/cdn/shop/files/bf2fbc4856f87c1cb147ced44e2cdcdf74eaa83a97ed6c2c6dd6e63285d0fe8e.jpg?v=1770941039",
+      "https://www.filson.com/cdn/shop/files/a7af9f9014814cfc5780e3297ec80ad3a86eed89fd4c1d3aa4ae1edd8684d702.jpg?v=1770941041"
+    ],
+    "description": "Classic Filson wool watch cap designed for cold-weather insulation in drizzle, snow, and daily winter use.",
+    "sizes": ["One Size"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "beanie", "heritage"],
+    "sourceUrl": "https://www.filson.com/products/watch-cap-red"
+  },
+  {
+    "id": "CITYW-017",
+    "type": "beanie",
+    "title": "Brodeo Beanie",
+    "brand": "Patagonia",
+    "store": "Patagonia",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Beanies"
+    },
+    "slug": "patagonia-brodeo-beanie",
+    "sku": "CITYW-017",
+    "priceUSD": 65,
+    "color": "New Navy",
+    "images": [
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwde6e6701/images/hi-res/29206_NENA_AR1.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw6cf02194/images/hi-res/29206_NENA.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw19b0bcbd/images/hi-res/29206_NENA_AR2.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef"
+    ],
+    "description": "Classic cuffed beanie in a warm recycled wool and recycled nylon blend.",
+    "sizes": ["One Size"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "beanie", "recycled"],
+    "sourceUrl": "https://www.patagonia.com/product/brodeo-cuffed-beanie/29206.html"
+  },
+  {
+    "id": "CITYW-019",
+    "type": "scarf",
+    "title": "Black Bear Wool Blend Scarf",
+    "brand": "Filson",
+    "store": "Filson",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Scarves"
+    },
+    "slug": "filson-black-bear-wool-blend-scarf",
+    "sku": "CITYW-019",
+    "priceUSD": 225,
+    "color": "Black",
+    "images": [
+      "https://www.filson.com/cdn/shop/files/871a8e70f3450db54f870e3f80cae02a23131aad33b6f10f8a433e427e90313d.png?v=1770941338",
+      "https://www.filson.com/cdn/shop/files/1b975378df59f94c360b7a9652134c4459feaca3ad8163df5f7f42641da79c13.png?v=1770941360",
+      "https://www.filson.com/cdn/shop/files/c42dc903a1167e0a80cf8e1e9d9c77563f84ccae2c16f8620396aaa455c17522.jpg?v=1770941361"
+    ],
+    "description": "Soft lambswool and silk blend scarf with a versatile, elevated feel.",
+    "sizes": ["One Size"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "premium", "urban-winter", "scarf", "heritage"],
+    "sourceUrl": "https://www.filson.com/products/wmns-grizzly-scarf-black"
+  },
+  {
+    "id": "CITYW-020",
+    "type": "throw",
+    "title": "Yakima Camp Throw",
+    "brand": "Pendleton",
+    "store": "Pendleton",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Throws"
+    },
+    "slug": "pendleton-yakima-camp-throw",
+    "sku": "CITYW-020",
+    "priceUSD": 188,
+    "color": "Tobacco",
+    "images": [
+      "https://media.pendleton-usa.com/image/upload/f_auto,q_auto,dpr_auto/w_1000//prod/images/72266_57255?_i=AG",
+      "https://media.pendleton-usa.com/image/upload/f_auto,q_auto,dpr_auto/w_1000//prod/images/72266_57255_ALT3?_i=AG",
+      "https://media.pendleton-usa.com/image/upload/f_auto,q_auto,dpr_auto/w_1000//prod/images/72266_57255_ALT2?_i=AG"
+    ],
+    "description": "Made-in-USA wool camp throw with iconic Pendleton heritage.",
+    "sizes": ["One Size"],
+    "variants": [],
+    "inStock": true,
+    "featured": false,
+    "tags": ["city-winter", "premium", "urban-winter", "throw", "wool", "heritage"],
+    "sourceUrl": "https://www.pendleton-usa.com/product/yakima-camp-throw/72266.html"
+  },
+  {
+    "id": "CITYW-W-001",
+    "type": "parka",
+    "title": "Arctic Parka in Ramar Cloth",
+    "brand": "Woolrich",
+    "store": "Woolrich",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Parkas"
+    },
+    "slug": "woolrich-parka-in-windstopper-by-gore-tex-labs-fabric",
+    "sku": "CITYW-W-001",
+    "priceUSD": 695,
+    "color": "Black",
+    "images": [
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/c743a06c-a8d9-4ef8-9ed7-a9d66b3c9a80/zk128o/std/720x1080/CFWWOU2213FRUT5305-3989.jpg?format=auto&dpr=170&quality=auto-high",
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/88c8298f-fc6e-4c06-9a65-6194dfed53cd/zk128o/std/720x1080/CFWWOU2213FRUT5305-3989.jpg?format=auto&dpr=170&quality=auto-high",
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a2e8e4e6-8adb-4682-85a0-dbfa1f4897e3/zk128o/std/720x1080/CFWWOU2213FRUT5305-3989.jpg?format=auto&dpr=170&quality=auto-high",
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e2e1071e-1460-4974-86d7-f774617e81d3/zk128o/std/720x1080/CFWWOU2213FRUT5305-3989.jpg?format=auto&dpr=170&quality=auto-high"
+    ],
+    "description": "Women's Arctic Parka in Woolrich's signature Ramar Cloth, insulated and built for cold urban weather with a clean heritage-luxury look.",
+    "sizes": ["S", "M", "L", "XL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "parka", "heritage"],
+    "sourceUrl": "https://www.woolrich.com/us/en/parka-in-windstopper-by-gore-tex-labs-fabric-CFWWOU2213FRUT5305_3989.html"
+  },
+  {
+    "id": "CITYW-W-002",
+    "type": "jacket",
+    "title": "Barbour x Ganni Leopard Print Waterproof Parka Jacket",
+    "brand": "Barbour",
+    "store": "Barbour",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Jackets"
+    },
+    "slug": "barbour-ganni-leopard-print-waterproof-parka-jacket",
+    "sku": "CITYW-W-002",
+    "priceUSD": 745,
+    "color": "Ganni Leopard Print",
+    "images": [
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7afca13f/images/LWB0931BK11/LWB0931BK11_01front.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7332a9ec/images/LWB0931BK11/LWB0931BK11_03getthelook.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dw09c9feff/images/LWB0931BK11/LWB0931BK11_05detaila.jpg?q=70&sh=1875&sw=1500"
+    ],
+    "description": "Longline waterproof parka with bold leopard print and premium winter styling.",
+    "sizes": ["US 2", "US 8", "US 12"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "jacket", "heritage"],
+    "sourceUrl": "https://www.barbour.com/us/barbour-x-ganni-leopard-print-waterproof-parka-jacket-LWB0931BK11.html"
+  },
+  {
+    "id": "CITYW-W-003",
+    "type": "parka",
+    "title": "Women's Down With It Parka",
+    "brand": "Patagonia",
+    "store": "Patagonia",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Parkas"
+    },
+    "slug": "patagonia-womens-down-with-it-parka",
+    "sku": "CITYW-W-003",
+    "priceUSD": 365,
+    "color": "Seabird Grey",
+    "images": [
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw9dc729f0/images/hi-res/28442_SBDY_CED1.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw83b34b66/images/hi-res/28442_SBDY.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwf034375f/images/hi-res/28442_SBDY_CED2.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef"
+    ],
+    "description": "Knee-length insulated parka with recycled materials and a removable hood, ideal for clean everyday winter wear.",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "parka", "recycled"],
+    "sourceUrl": "https://www.patagonia.com/product/womens-down-with-it-insulated-parka/28442.html"
+  },
+  {
+    "id": "CITYW-W-004",
+    "type": "parka",
+    "title": "Patera Parka Women's",
+    "brand": "Arc'teryx",
+    "store": "Arc'teryx",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Parkas"
+    },
+    "slug": "arcteryx-patera-parka-womens",
+    "sku": "CITYW-W-004",
+    "priceUSD": 800,
+    "color": "Nightscape",
+    "images": [
+      "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/F25-X000009949-Patera-Parka-Nightscape-Women-s-Front-View.jpg?auto=format&q=70&fit=crop&fill=white&max-w=1350&max-h=1710&ixlib=react-9.10.0&w=927",
+      "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/F25-X000009949-Patera-Parka-Nightscape-Women-s-Hover.jpg?auto=format&q=70&fit=crop&fill=white&max-w=1350&max-h=1710&ixlib=react-9.10.0&w=927",
+      "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/F25-X000009949-Patera-Parka-Nightscape-Women-s-Side-View.jpg?auto=format&q=70&fit=crop&fill=white&max-w=1350&max-h=1710&ixlib=react-9.10.0&w=927"
+    ],
+    "description": "Distinctive winter parka that combines down warmth with GORE-TEX weather protection in a sleek urban silhouette.",
+    "sizes": ["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "parka", "technical", "gore-tex"],
+    "sourceUrl": "https://arcteryx.com/us/en/shop/womens/patera-parka-9949"
+  },
+  {
+    "id": "CITYW-W-005",
+    "type": "sweater",
+    "title": "Övik Knit Sweater W",
+    "brand": "Fjallraven",
+    "store": "Fjallraven",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Sweaters"
+    },
+    "slug": "fjallraven-ovik-knit-sweater-w",
+    "sku": "CITYW-W-005",
+    "priceUSD": 0,
+    "color": "Dark Navy",
+    "images": [
+      "https://www.fjallraven.com/4aaed9/globalassets/catalogs/fjallraven/f8/f899/f89941/f555/ovik_knit_sweater_w_89941-555_a_main_fjr.jpg?width=1248&height=1248&rmode=BoxPad&bgcolor=fff&quality=100",
+      "https://www.fjallraven.com/49bf21/globalassets/catalogs/fjallraven/f8/f899/f89941/features/ovik_knit_sweater_w_89941-662_c_model_fjr.jpg?width=1248&height=1248&rmode=BoxPad&bgcolor=fff&quality=100",
+      "https://www.fjallraven.com/4aaed9/globalassets/catalogs/fjallraven/f8/f899/f89941/f555/ovik_knit_sweater_w_89941-555_b_main_fjr.jpg?width=1248&height=1248&rmode=BoxPad&bgcolor=fff&quality=100"
+    ],
+    "description": "Patterned wool sweater with a snug raglan fit and reinforced elbows, perfect for premium Scandinavian winter styling.",
+    "sizes": ["XS", "S"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "sweater", "scandinavian"],
+    "sourceUrl": "https://www.fjallraven.com/uk/en-gb/women/tops/sweaters-knitwear/ovik-knit-sweater-w/"
+  },
+  {
+    "id": "CITYW-W-006",
+    "type": "jacket",
+    "title": "Women's Down Sweater Jacket",
+    "brand": "Patagonia",
+    "store": "Patagonia",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Jackets"
+    },
+    "slug": "patagonia-womens-down-sweater-jacket",
+    "sku": "CITYW-W-006",
+    "priceUSD": 295,
+    "color": "Quiet Violet",
+    "images": [
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw46e828e5/images/hi-res/84684_QVLT_KA1.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw20e1105b/images/hi-res/84684_QVLT.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwe48d0913/images/hi-res/84684_QVLT_KA2.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef"
+    ],
+    "description": "Lightweight, windproof 800-fill down jacket that works extremely well as a premium city-winter everyday piece.",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "jacket", "down"],
+    "sourceUrl": "https://www.patagonia.com/product/womens-down-sweater-insulated-jacket/84684.html"
+  },
+  {
+    "id": "CITYW-W-007",
+    "type": "jacket",
+    "title": "Flyweight Cavalry Quilted Jacket",
+    "brand": "Barbour",
+    "store": "Barbour",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Jackets"
+    },
+    "slug": "barbour-flyweight-cavalry-quilted-jacket-womens",
+    "sku": "CITYW-W-007",
+    "priceUSD": 200,
+    "color": "Classic Black",
+    "images": [
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dwfd92f81e/images/LQU0228BK91/LQU0228BK91_01front.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dw3916af1d/images/LQU0228BK91/LQU0228BK91_03getthelook.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dwf22cc80c/images/LQU0228BK91/LQU0228BK91_04back.jpg?q=70&sh=1875&sw=1500"
+    ],
+    "description": "Diamond-quilted Barbour jacket with a flattering curved hem and polished everyday-winter look.",
+    "sizes": ["US 2", "US 4", "US 6", "US 8", "US 10", "US 12", "US 14", "US 16"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "jacket", "quilted"],
+    "sourceUrl": "https://www.barbour.com/us/flyweight-cavalry-quilted-jacket-LQU0228BK9112.html"
+  },
+  {
+    "id": "CITYW-W-008",
+    "type": "beanie",
+    "title": "Arctic Toque",
+    "brand": "Canada Goose",
+    "store": "Canada Goose",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Beanies"
+    },
+    "slug": "canada-goose-arctic-toque-womens",
+    "sku": "CITYW-W-008",
+    "priceUSD": 400,
+    "color": "Navy Heather",
+    "images": [
+      "https://canadagoose.com.au/cdn/shop/products/6936M_151_fsph.jpg?v=1750965190&width=1856",
+      "https://canadagoose.com.au/cdn/shop/products/6936M_151_e.jpg?v=1750965190&width=1333",
+      "https://canadagoose.com.au/cdn/shop/products/6936M_151_b.jpg?v=1750965190&width=1333"
+    ],
+    "description": "Made-in-Italy merino wool toque with strong luxury winter positioning.",
+    "sizes": ["One Size"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "beanie", "luxury"],
+    "sourceUrl": "https://www.canadagoose.com/au/en_AU/arctic-toque-6936M.html"
+  },
+  {
+    "id": "CITYW-W-009",
+    "type": "sweater",
+    "title": "Övik Half Zip Knit W",
+    "brand": "Fjallraven",
+    "store": "Fjallraven",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Sweaters"
+    },
+    "slug": "fjallraven-ovik-half-zip-knit-w",
+    "sku": "CITYW-W-009",
+    "priceUSD": 270,
+    "color": "Dune Beige",
+    "images": [
+      "https://www.fjallraven.com/490e45/globalassets/catalogs/fjallraven/f8/f869/f86993/f196/ovik_half_zip_knit_w_86993-196_a_main_fjr.jpg?width=1248&height=1248&rmode=BoxPad&bgcolor=fff&quality=100",
+      "https://www.fjallraven.com/490e59/globalassets/catalogs/fjallraven/f8/f869/f86993/f196/ovik_half_zip_knit_w_86993-196_b_main_fjr.jpg?width=1248&height=1248&rmode=BoxPad&bgcolor=fff&quality=100",
+      "https://www.fjallraven.com/490e69/globalassets/catalogs/fjallraven/f8/f869/f86993/features/ovik_half_zip_knit_w_86993-030_c_model_fjr.jpg?width=1248&height=1248&rmode=BoxPad&bgcolor=fff&quality=100"
+    ],
+    "description": "Timeless half-zip wool sweater with a more elevated look than a basic knit.",
+    "sizes": ["XXS", "M"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "sweater", "scandinavian"],
+    "sourceUrl": "https://www.fjallraven.com/ca/en-ca/women/tops/sweaters-knitwear/ovik-half-zip-knit-w/"
+  },
+  {
+    "id": "CITYW-W-010",
+    "type": "boots",
+    "title": "Women's Thermal #2223",
+    "brand": "Blundstone",
+    "store": "Blundstone",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Boots"
+    },
+    "slug": "blundstone-womens-thermal-2223",
+    "sku": "CITYW-W-010",
+    "priceUSD": 234.95,
+    "color": "Rustic Brown",
+    "images": [
+      "https://www.blundstone.com/cdn/shop/files/product-image_2223_p_usa_hero.jpg?v=1763433741&width=1000",
+      "https://www.blundstone.com/cdn/shop/files/product-image_2223-USA_p_split.jpg?v=1763433741&width=1000",
+      "https://www.blundstone.com/cdn/shop/files/product-image_v2_2223-USA_l_lifestyle_women_slider_1.jpg?v=1763433741&width=1000"
+    ],
+    "description": "Weather-ready thermal boot with waterproof leather, Thinsulate insulation and sheepswool-lined footbed.",
+    "sizes": ["US 6", "US 6.5", "US 7", "US 7.5", "US 8", "US 9"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "boots", "thermal"],
+    "sourceUrl": "https://www.blundstone.com/products/rustic-brown-premium-leather-pull-on-boots-womens-style-2223"
+  },
+  {
+    "id": "CITYW-W-012",
+    "type": "beanie",
+    "title": "Classic Knit Hat",
+    "brand": "Fjallraven",
+    "store": "Fjallraven",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Beanies"
+    },
+    "slug": "fjallraven-classic-knit-hat-womens",
+    "sku": "CITYW-W-012",
+    "priceUSD": 55,
+    "color": "Dark Navy",
+    "images": [],
+    "description": "Soft merino wool knit hat with double-layer construction for extra warmth and Scandinavian winter style.",
+    "sizes": ["One Size"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "beanie", "scandinavian"],
+    "sourceUrl": "https://www.fjallraven.com/us/en-us/women/accessories/caps-hats-beanies/classic-knit-hat/"
+  },
+  {
+    "id": "CITYW-W-013",
+    "type": "scarf",
+    "title": "Tartan Lambswool Scarf",
+    "brand": "Barbour",
+    "store": "Barbour",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Scarves"
+    },
+    "slug": "barbour-tabigail-tartan-scarf",
+    "sku": "CITYW-W-013",
+    "priceUSD": 70,
+    "color": "Classic Tartan",
+    "images": [
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dw4185a1c0/images/LSC0442PI55/LSC0442PI55_03getthelook.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dwa0117735/images/LSC0442PI55/LSC0442PI55_01front.jpg?q=70&sh=1875&sw=1500",
+      "https://www.barbour.com/dw/image/v2/BLCL_PRD/on/demandware.static/-/Sites-master-catalog/default/dw374b8b20/images/LSC0442PI55/LSC0442PI55_05detaila.jpg?q=70&sh=1875&sw=1500"
+    ],
+    "description": "Lightweight scarf featuring a large-scale version of Barbour tartan in a cotton-linen blend.",
+    "sizes": ["One Size"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "scarf", "heritage"],
+    "sourceUrl": "https://www.barbour.com/us/tartan-lambswool-scarf-USCAS0131TN11.html"
+  },
+  {
+    "id": "CITYW-W-015",
+    "type": "gloves",
+    "title": "Hestra Deerskin Wool Tricot Gloves",
+    "brand": "Hestra",
+    "store": "Hestra",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Gloves"
+    },
+    "slug": "hestra-deerskin-wool-tricot-gloves-womens",
+    "sku": "CITYW-W-015",
+    "priceUSD": 135,
+    "color": "Offwhite",
+    "images": [
+      "https://hestra-products.imgix.net/images/1010_ee3547a8d1-2001901-020-1_meta-original.jpg?&fit=clip&w=2000&fm=png&auto=compress,format",
+      "https://hestra-products.imgix.net/images/1010_81bf48a88b-2001901-020-5-original.jpg?&fit=clip&w=1000&fm=png&auto=compress,format",
+      "https://hestra-products.imgix.net/images/1010_529f1c9a6b-2001901-020-4-original.jpg?&fit=clip&w=1000&fm=png&auto=compress,format"
+    ],
+    "description": "Soft deerskin gloves with wool lining and timeless Scandinavian craftsmanship.",
+    "sizes": ["6", "7", "8", "9"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "gloves", "scandinavian"],
+    "sourceUrl": "https://www.hestragloves.us/alta-mitt-offwhite"
+  },
+  {
+    "id": "CITYW-W-017",
+    "type": "boots",
+    "title": "CARIBOU HORIZON GTX Women's Winter Boot",
+    "brand": "Sorel",
+    "store": "Sorel",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Boots"
+    },
+    "slug": "sorel-womens-caribou-horizon-gtx-winter-boot",
+    "sku": "CITYW-W-017",
+    "priceUSD": 360,
+    "color": "Canyon Gold, Honey White",
+    "images": [
+      "https://media.sorel.com/i/sorel/2138461_708_f?w=1536&h=1612",
+      "https://media.sorel.com/i/sorel/2138461_708_d?w=1536&h=1612",
+      "https://media.sorel.com/i/sorel/2138461_708_u?w=1536&h=1612"
+    ],
+    "description": "Modernized winter boot with warmth, flexibility, and strong cold-weather performance.",
+    "sizes": ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "boots", "snow"],
+    "sourceUrl": "https://www.sorel.com/p/caribou-horizon-gtx-womens-winter-boot-2138461.html?dwvar_2138461_color=708"
+  },
+  {
+    "id": "CITYW-W-018",
+    "type": "boots",
+    "title": "Women's Classic Ultra Mini Plains",
+    "brand": "UGG",
+    "store": "UGG",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter Women",
+      "leaf": "Boots"
+    },
+    "slug": "classic-ultra-mini-plains",
+    "sku": "CITYW-W-018",
+    "priceUSD": 250,
+    "color": "Chestnut",
+    "images": [
+      "https://dms.deckers.com/ugg/image/upload/t_slider-grid-tile-2x-wp/v1761848263/1178110-FDJ_1.png?_s=RAABAB0",
+      "https://dms.deckers.com/ugg/image/upload/t_slider-grid-tile-2x-wp/v1761848266/1178110-FDJ_2.png?_s=RAABAB0",
+      "https://dms.deckers.com/ugg/image/upload/t_slider-grid-tile-2x-wp/v1761848274/1178110-FDJ_4.png?_s=RAABAB0"
+    ],
+    "description": "Cold-weather leather boot with waterproof protection and wool lining for warmth.",
+    "sizes": ["6", "7", "8", "9", "10"],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": ["city-winter", "women", "premium", "urban-winter", "boots", "winter"],
+    "sourceUrl": "https://www.ugg.com/women-boots/classic-ultra-mini-plains/1178110.html"
+  }
+]

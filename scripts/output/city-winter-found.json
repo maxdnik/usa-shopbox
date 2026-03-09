@@ -1,0 +1,193 @@
+[
+  {
+    "requested": {
+      "brand": "Fjallraven",
+      "title": "Nuuk Parka"
+    },
+    "matchType": "matched_full_title",
+    "matches": [
+      {
+        "_id": "69ab497ab0eade58e58170f6",
+        "title": "Fjallraven Nuuk Parka - Women's",
+        "slug": "fjallraven-nuuk-parka-womens",
+        "brand": "Fjallraven",
+        "category": {
+          "main": "Ropa y Accesorios",
+          "sub": "Abrigos",
+          "leaf": "Camperas y Abrigos"
+        },
+        "priceUSD": 500
+      }
+    ]
+  },
+  {
+    "requested": {
+      "brand": "Canada Goose",
+      "title": "Langford Parka"
+    },
+    "matchType": "matched_full_title",
+    "matches": [
+      {
+        "_id": "69ab4978b0eade58e5817034",
+        "title": "Canada Goose Langford Parka - Men's",
+        "slug": "canada-goose-langford-parka-mens",
+        "brand": "Canada Goose",
+        "category": {
+          "main": "Ropa y Accesorios",
+          "sub": "Abrigos",
+          "leaf": "Camperas y Abrigos"
+        },
+        "priceUSD": 1495
+      }
+    ]
+  },
+  {
+    "requested": {
+      "brand": "Filson",
+      "title": "Down Cruiser Jacket"
+    },
+    "matchType": "matched_fuzzy",
+    "matches": [
+      {
+        "_id": "6992713b6a099d6e9612c1c1",
+        "brand": "Filson",
+        "category": {
+          "main": "Ropa y Accesorios",
+          "sub": "Ropa",
+          "leaf": "Camperas y Abrigos"
+        },
+        "priceUSD": 229,
+        "slug": "filson-rustic-canvas-short-cruiser-jacket-natural-seed",
+        "title": "Rustic Canvas Short Cruiser Jacket - Natural Seed",
+        "_score": 2
+      },
+      {
+        "_id": "6992713b6a099d6e9612c1c2",
+        "brand": "Filson",
+        "category": {
+          "main": "Ropa y Accesorios",
+          "sub": "Ropa",
+          "leaf": "Camperas y Abrigos"
+        },
+        "priceUSD": 229,
+        "slug": "filson-rustic-canvas-short-cruiser-jacket-indigo",
+        "title": "Rustic Canvas Short Cruiser Jacket - Indigo",
+        "_score": 2
+      },
+      {
+        "_id": "6992713b6a099d6e9612c1c3",
+        "brand": "Filson",
+        "category": {
+          "main": "Ropa y Accesorios",
+          "sub": "Ropa",
+          "leaf": "Camperas y Abrigos"
+        },
+        "priceUSD": 229,
+        "slug": "filson-rustic-canvas-short-cruiser-jacket-whiskey",
+        "title": "Rustic Canvas Short Cruiser Jacket - Whiskey",
+        "_score": 2
+      },
+      {
+        "_id": "69ab4978b0eade58e5817058",
+        "title": "Filson Down Cruiser Vest - Men's",
+        "slug": "filson-down-cruiser-vest-mens",
+        "brand": "Filson",
+        "category": {
+          "main": "Ropa y Accesorios",
+          "sub": "Ropa",
+          "leaf": "Camperas y Abrigos"
+        },
+        "priceUSD": 395,
+        "_score": 2
+      }
+    ]
+  },
+  {
+    "requested": {
+      "brand": "The North Face",
+      "title": "McMurdo Parka"
+    },
+    "matchType": "matched_full_title",
+    "matches": [
+      {
+        "_id": "6998f1599016617590723f32",
+        "brand": "The North Face",
+        "category": {
+          "main": "Ropa y Accesorios",
+          "sub": "Abrigos",
+          "leaf": "Buzos y Camperas"
+        },
+        "priceUSD": 400,
+        "slug": "tnf-nf0a5gjf",
+        "title": "Men’s McMurdo Parka"
+      }
+    ]
+  },
+  {
+    "requested": {
+      "brand": "Patagonia",
+      "title": "Better Sweater Jacket"
+    },
+    "matchType": "matched_keywords",
+    "matches": [
+      {
+        "_id": "697e59fc97833beedbad2844",
+        "title": "Patagonia Better Sweater Fleece Jacket",
+        "slug": "patagonia-better-sweater-fleece-jacket",
+        "brand": "Patagonia",
+        "category": {
+          "main": "Ropa y Accesorios",
+          "sub": "Abrigos",
+          "leaf": "Buzos y Camperas"
+        },
+        "priceUSD": 139
+      },
+      {
+        "_id": "69ab4977b0eade58e5817029",
+        "title": "Patagonia Better Sweater Fleece Jacket - Men's",
+        "slug": "patagonia-better-sweater-fleece-mens",
+        "brand": "Patagonia",
+        "category": {
+          "main": "Ropa y Accesorios",
+          "sub": "Ropa",
+          "leaf": "Buzos"
+        },
+        "priceUSD": 159
+      },
+      {
+        "_id": "69ab4979b0eade58e58170de",
+        "title": "Patagonia Better Sweater Fleece Jacket - Women's",
+        "slug": "patagonia-better-sweater-womens",
+        "brand": "Patagonia",
+        "category": {
+          "main": "Ropa y Accesorios",
+          "sub": "Ropa",
+          "leaf": "Buzos"
+        },
+        "priceUSD": 159
+      }
+    ]
+  },
+  {
+    "requested": {
+      "brand": "Danner",
+      "title": "Mountain 600 Boots"
+    },
+    "matchType": "matched_fuzzy",
+    "matches": [
+      {
+        "_id": "69ab4978b0eade58e581703d",
+        "title": "Danner Mountain Light Boots - Men's",
+        "slug": "danner-mountain-light-boots-mens",
+        "brand": "Danner",
+        "category": {
+          "main": "Deportes y Fitness",
+          "sub": "Outdoor",
+          "leaf": "Calzado Outdoor"
+        },
+        "priceUSD": 470,
+        "_score": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "CITYW-001",
+    "type": "parka",
+    "title": "Arctic Parka",
+    "brand": "Woolrich",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Parkas"
+    },
+    "slug": "woolrich-arctic-parka",
+    "sku": "CITYW-001",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "parka"
+    ]
+  },
+  {
+    "id": "CITYW-002",
+    "type": "jacket",
+    "title": "Ashby Wax Jacket",
+    "brand": "Barbour",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Jackets"
+    },
+    "slug": "barbour-ashby-wax-jacket",
+    "sku": "CITYW-002",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "jacket"
+    ]
+  },
+  {
+    "id": "CITYW-003",
+    "type": "parka",
+    "title": "Frozen Range Parka",
+    "brand": "Patagonia",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Parkas"
+    },
+    "slug": "patagonia-frozen-range-parka",
+    "sku": "CITYW-003",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "parka"
+    ]
+  },
+  {
+    "id": "CITYW-004",
+    "type": "parka",
+    "title": "Therme Parka",
+    "brand": "Arc'teryx",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Parkas"
+    },
+    "slug": "arcteryx-therme-parka",
+    "sku": "CITYW-004",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "parka"
+    ]
+  },
+  {
+    "id": "CITYW-005",
+    "type": "parka",
+    "title": "Cartel Parka",
+    "brand": "Nobis",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Parkas"
+    },
+    "slug": "nobis-cartel-parka",
+    "sku": "CITYW-005",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "parka"
+    ]
+  },
+  {
+    "id": "CITYW-006",
+    "type": "parka",
+    "title": "Stirling Parka",
+    "brand": "Moose Knuckles",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Parkas"
+    },
+    "slug": "moose-knuckles-stirling-parka",
+    "sku": "CITYW-006",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "parka"
+    ]
+  },
+  {
+    "id": "CITYW-007",
+    "type": "sweater",
+    "title": "Guide Wool Sweater",
+    "brand": "Filson",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Sweaters"
+    },
+    "slug": "filson-guide-wool-sweater",
+    "sku": "CITYW-007",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "sweater"
+    ]
+  },
+  {
+    "id": "CITYW-008",
+    "type": "sweater",
+    "title": "Ovik Knit Sweater",
+    "brand": "Fjallraven",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Sweaters"
+    },
+    "slug": "fjallraven-ovik-knit-sweater",
+    "sku": "CITYW-008",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "sweater"
+    ]
+  },
+  {
+    "id": "CITYW-009",
+    "type": "sweater",
+    "title": "Shetland Wool Sweater",
+    "brand": "Pendleton",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Sweaters"
+    },
+    "slug": "pendleton-shetland-wool-sweater",
+    "sku": "CITYW-009",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "sweater"
+    ]
+  },
+  {
+    "id": "CITYW-010",
+    "type": "sweater",
+    "title": "Patch Crew Neck Sweater",
+    "brand": "Barbour",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Sweaters"
+    },
+    "slug": "barbour-patch-crew-neck-sweater",
+    "sku": "CITYW-010",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "sweater"
+    ]
+  },
+  {
+    "id": "CITYW-011",
+    "type": "sweater",
+    "title": "Pure Wool Crewneck",
+    "brand": "Woolrich",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Sweaters"
+    },
+    "slug": "woolrich-pure-wool-crewneck",
+    "sku": "CITYW-011",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "sweater"
+    ]
+  },
+  {
+    "id": "CITYW-012",
+    "type": "sweater",
+    "title": "Warm Wool Sweater",
+    "brand": "Norrona",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Sweaters"
+    },
+    "slug": "norrona-warm-wool-sweater",
+    "sku": "CITYW-012",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "sweater"
+    ]
+  },
+  {
+    "id": "CITYW-013",
+    "type": "cardigan",
+    "title": "Covert Cardigan",
+    "brand": "Arc'teryx",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Knitwear"
+    },
+    "slug": "arcteryx-covert-cardigan",
+    "sku": "CITYW-013",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "cardigan"
+    ]
+  },
+  {
+    "id": "CITYW-014",
+    "type": "beanie",
+    "title": "Merino Beanie",
+    "brand": "Canada Goose",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Beanies"
+    },
+    "slug": "canada-goose-merino-beanie",
+    "sku": "CITYW-014",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "beanie"
+    ]
+  },
+  {
+    "id": "CITYW-015",
+    "type": "beanie",
+    "title": "Watch Cap Beanie",
+    "brand": "Filson",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Beanies"
+    },
+    "slug": "filson-watch-cap-beanie",
+    "sku": "CITYW-015",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "beanie"
+    ]
+  },
+  {
+    "id": "CITYW-016",
+    "type": "beanie",
+    "title": "Rho Merino Beanie",
+    "brand": "Arc'teryx",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Beanies"
+    },
+    "slug": "arcteryx-rho-merino-beanie",
+    "sku": "CITYW-016",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "beanie"
+    ]
+  },
+  {
+    "id": "CITYW-017",
+    "type": "beanie",
+    "title": "Brodeo Beanie",
+    "brand": "Patagonia",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Beanies"
+    },
+    "slug": "patagonia-brodeo-beanie",
+    "sku": "CITYW-017",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "beanie"
+    ]
+  },
+  {
+    "id": "CITYW-018",
+    "type": "beanie",
+    "title": "Classic Knit Hat",
+    "brand": "Fjallraven",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Beanies"
+    },
+    "slug": "fjallraven-classic-knit-hat",
+    "sku": "CITYW-018",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "beanie"
+    ]
+  },
+  {
+    "id": "CITYW-019",
+    "type": "scarf",
+    "title": "Wool Scarf",
+    "brand": "Filson",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Scarves"
+    },
+    "slug": "filson-wool-scarf",
+    "sku": "CITYW-019",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "scarf"
+    ]
+  },
+  {
+    "id": "CITYW-020",
+    "type": "scarf",
+    "title": "Yakima Camp Scarf",
+    "brand": "Pendleton",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Scarves"
+    },
+    "slug": "pendleton-yakima-camp-scarf",
+    "sku": "CITYW-020",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "scarf"
+    ]
+  },
+  {
+    "id": "CITYW-021",
+    "type": "gloves",
+    "title": "Leather Winter Gloves",
+    "brand": "Hestra",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Gloves"
+    },
+    "slug": "hestra-leather-winter-gloves",
+    "sku": "CITYW-021",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "gloves"
+    ]
+  },
+  {
+    "id": "CITYW-022",
+    "type": "gloves",
+    "title": "Insulated Gloves",
+    "brand": "Filson",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Gloves"
+    },
+    "slug": "filson-insulated-gloves",
+    "sku": "CITYW-022",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "gloves"
+    ]
+  },
+  {
+    "id": "CITYW-023",
+    "type": "gloves",
+    "title": "Venta Gloves",
+    "brand": "Arc'teryx",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Gloves"
+    },
+    "slug": "arcteryx-venta-gloves",
+    "sku": "CITYW-023",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "gloves"
+    ]
+  },
+  {
+    "id": "CITYW-024",
+    "type": "boots",
+    "title": "Thermal Boots",
+    "brand": "Blundstone",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Boots"
+    },
+    "slug": "blundstone-thermal-boots",
+    "sku": "CITYW-024",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "boots"
+    ]
+  },
+  {
+    "id": "CITYW-025",
+    "type": "boots",
+    "title": "Caribou Boots",
+    "brand": "Sorel",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Boots"
+    },
+    "slug": "sorel-caribou-boots",
+    "sku": "CITYW-025",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "boots"
+    ]
+  },
+  {
+    "id": "CITYW-026",
+    "type": "boots",
+    "title": "Iron Ranger Boots",
+    "brand": "Red Wing",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Boots"
+    },
+    "slug": "red-wing-iron-ranger-boots",
+    "sku": "CITYW-026",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "boots"
+    ]
+  },
+  {
+    "id": "CITYW-027",
+    "type": "apparel",
+    "title": "Premium 6-Inch Waterproof",
+    "brand": "Timberland",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Apparel"
+    },
+    "slug": "timberland-premium-6-inch-waterproof",
+    "sku": "CITYW-027",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "apparel"
+    ]
+  },
+  {
+    "id": "CITYW-028",
+    "type": "boots",
+    "title": "Butte Boots",
+    "brand": "UGG",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Boots"
+    },
+    "slug": "ugg-butte-boots",
+    "sku": "CITYW-028",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "boots"
+    ]
+  },
+  {
+    "id": "CITYW-029",
+    "type": "boots",
+    "title": "Madson II Boots",
+    "brand": "Sorel",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Boots"
+    },
+    "slug": "sorel-madson-ii-boots",
+    "sku": "CITYW-029",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "boots"
+    ]
+  },
+  {
+    "id": "CITYW-030",
+    "type": "backpack",
+    "title": "Dryden Backpack",
+    "brand": "Filson",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Bags"
+    },
+    "slug": "filson-dryden-backpack",
+    "sku": "CITYW-030",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "backpack"
+    ]
+  },
+  {
+    "id": "CITYW-031",
+    "type": "backpack",
+    "title": "Apex Backpack",
+    "brand": "Bellroy",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Bags"
+    },
+    "slug": "bellroy-apex-backpack",
+    "sku": "CITYW-031",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "backpack"
+    ]
+  },
+  {
+    "id": "CITYW-032",
+    "type": "backpack",
+    "title": "Everyday Backpack",
+    "brand": "Peak Design",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Bags"
+    },
+    "slug": "peak-design-everyday-backpack",
+    "sku": "CITYW-032",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "backpack"
+    ]
+  },
+  {
+    "id": "CITYW-033",
+    "type": "backpack",
+    "title": "Crossroads Backpack 27L",
+    "brand": "YETI",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Bags"
+    },
+    "slug": "yeti-crossroads-backpack-27l",
+    "sku": "CITYW-033",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "backpack"
+    ]
+  },
+  {
+    "id": "CITYW-034",
+    "type": "backpack",
+    "title": "Kanken No.2 Laptop Bag",
+    "brand": "Fjallraven",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Bags"
+    },
+    "slug": "fjallraven-kanken-no-2-laptop-bag",
+    "sku": "CITYW-034",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "backpack"
+    ]
+  },
+  {
+    "id": "CITYW-035",
+    "type": "jacket",
+    "title": "Nano Puff Jacket",
+    "brand": "Patagonia",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Jackets"
+    },
+    "slug": "patagonia-nano-puff-jacket",
+    "sku": "CITYW-035",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "jacket"
+    ]
+  },
+  {
+    "id": "CITYW-036",
+    "type": "jacket",
+    "title": "Atom Hoody",
+    "brand": "Arc'teryx",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Jackets"
+    },
+    "slug": "arcteryx-atom-hoody",
+    "sku": "CITYW-036",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "jacket"
+    ]
+  },
+  {
+    "id": "CITYW-037",
+    "type": "vest",
+    "title": "Mackinaw Wool Vest",
+    "brand": "Filson",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Layering"
+    },
+    "slug": "filson-mackinaw-wool-vest",
+    "sku": "CITYW-037",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "vest"
+    ]
+  },
+  {
+    "id": "CITYW-038",
+    "type": "scarf",
+    "title": "Tartan Lambswool Scarf",
+    "brand": "Barbour",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Scarves"
+    },
+    "slug": "barbour-tartan-lambswool-scarf",
+    "sku": "CITYW-038",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "scarf"
+    ]
+  },
+  {
+    "id": "CITYW-039",
+    "type": "boots",
+    "title": "Mountain 600 Chelsea Boots",
+    "brand": "Danner",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Boots"
+    },
+    "slug": "danner-mountain-600-chelsea-boots",
+    "sku": "CITYW-039",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "boots"
+    ]
+  },
+  {
+    "id": "CITYW-040",
+    "type": "backpack",
+    "title": "Kanken Re-Wool Backpack",
+    "brand": "Fjallraven",
+    "store": "",
+    "category": {
+      "main": "Winter",
+      "sub": "City Winter",
+      "leaf": "Bags"
+    },
+    "slug": "fjallraven-kanken-re-wool-backpack",
+    "sku": "CITYW-040",
+    "priceUSD": 0,
+    "imageUrl": null,
+    "images": [],
+    "description": "",
+    "sizes": [],
+    "variants": [],
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "city-winter",
+      "premium",
+      "urban-winter",
+      "backpack"
+    ]
+  }
+]

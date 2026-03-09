@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
     remotePatterns: [
-      // ✅ Ya tenías
       { protocol: "https", hostname: "us.pandora.net", pathname: "/dw/image/**" },
       { protocol: "https", hostname: "cdn.shopify.com" },
       { protocol: "https", hostname: "static.nike.com" },
@@ -17,21 +16,24 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.lego.com", pathname: "/cdn/**" },
       { protocol: "https", hostname: "assets.thenorthface.com" },
       { protocol: "https", hostname: "www.thenorthface.com" },
-      { protocol: "https", hostname: "pisces.bbystatic.com" }, // BestBuy (Garmin)
-      { protocol: "https", hostname: "shokz.com" }, // Shokz
-      { protocol: "https", hostname: "assets.adidas.com" }, // adidas
-      { protocol: "https", hostname: "dms.deckers.com" }, // HOKA (Deckers)
-      { protocol: "https", hostname: "images.ctfassets.net" }, // On Running (CTF assets)
-      { protocol: "https", hostname: "s7d4.scene7.com" }, // Saucony (Scene7)
-      { protocol: "https", hostname: "maurten.imgix.net" }, // Maurten (Imgix)
-      { protocol: "https", hostname: "www.sockgeek.com" }, // Balega retailer
-      { protocol: "https", hostname: "spibelt.com" }, // SPIbelt
-      { protocol: "https", hostname: "epictv.com" }, // Petzl retailer
-      { protocol: "https", hostname: "www.rei.com" }, // REI
-      { protocol: "https", hostname: "salomonstore.com.ar" }, // Salomon AR (imágenes)
-      { protocol: "https", hostname: "satisfyrunning.com" }, // HydraPak retailer (Shopify)
-      { protocol: "https", hostname: "www.stryd.com" }, // Stryd (_next/image)
+      { protocol: "https", hostname: "pisces.bbystatic.com" },
+      { protocol: "https", hostname: "shokz.com" },
+      { protocol: "https", hostname: "assets.adidas.com" },
+      { protocol: "https", hostname: "dms.deckers.com" },
+      { protocol: "https", hostname: "images.ctfassets.net" },
+      { protocol: "https", hostname: "s7d4.scene7.com" },
+      { protocol: "https", hostname: "maurten.imgix.net" },
+      { protocol: "https", hostname: "www.sockgeek.com" },
+      { protocol: "https", hostname: "spibelt.com" },
+      { protocol: "https", hostname: "epictv.com" },
+      { protocol: "https", hostname: "www.rei.com" },
+      { protocol: "https", hostname: "salomonstore.com.ar" },
+      { protocol: "https", hostname: "satisfyrunning.com" },
+      { protocol: "https", hostname: "www.stryd.com" },
       { protocol: "https", hostname: "www.adidas.com", pathname: "/**" },
+      { protocol: "https", hostname: "www.fjallrvane.sbs", pathname: "/wp-content/uploads/**" },
+      { protocol: "https", hostname: "www.fjallraven.com", pathname: "/490ebc/**" },
+      { protocol: "https", hostname: "www.fjallraven.com", pathname: "/**" },
     ],
   },
 };

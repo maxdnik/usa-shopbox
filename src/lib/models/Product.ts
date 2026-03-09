@@ -11,7 +11,7 @@ const ProductSchema = new Schema(
 
     // ✅ ORÍGENES
     source: { type: String, default: "manual", index: true }, // manual | filson | ebay | apple
-    sourceId: { type: String, index: true }, // ✅ Shopify id como string
+    sourceId: { type: String, index: true }, // Shopify id como string
     sourceHandle: { type: String, index: true },
     sourceUrl: { type: String },
     sourceCollections: { type: [String], default: [], index: true }, // handles
@@ -19,7 +19,14 @@ const ProductSchema = new Schema(
     productType: { type: String },
     vendor: { type: String },
 
-    // ✅ METADATA DE SYNC (recomendado)
+    // ✅ WINTER DROP (para /winter?category=...)
+    winterCategory: {
+      type: String,
+      enum: ["ski", ,"snowboard", "outdoor", "city"],
+      index: true,
+    },
+
+    // ✅ METADATA DE SYNC
     sourcePublishedAt: { type: Date },
     sourceUpdatedAt: { type: Date },
 
@@ -40,7 +47,7 @@ const ProductSchema = new Schema(
     images: [String],
     specs: { type: Map, of: String },
 
-    // ✅ Shopify-like options (para Color/Size/etc.)
+    // ✅ Shopify-like options
     options: {
       type: [
         {
@@ -51,12 +58,12 @@ const ProductSchema = new Schema(
       default: [],
     },
 
-    // ✅ Variantes Shopify completas (NO rompe tu sistema actual)
+    // ✅ Variantes Shopify completas
     shopifyVariants: {
       type: [
         {
-          sourceVariantId: String, // variant.id
-          title: String,           // "Navy / M"
+          sourceVariantId: String,
+          title: String, // "Navy / M"
           sku: String,
           priceUSD: Number,
           available: Boolean,
@@ -70,7 +77,7 @@ const ProductSchema = new Schema(
       default: [],
     },
 
-    // ✅ Tu estructura actual (la dejo tal cual)
+    // ✅ Tu estructura actual
     variations: [
       {
         sku: String,
@@ -81,8 +88,8 @@ const ProductSchema = new Schema(
       },
     ],
 
-    // ✅ Para debug / auditoría (muy útil)
-    sourceRaw: { type: Schema.Types.Mixed }, // opcional: guardar el JSON original
+    // ✅ Para debug / auditoría
+    sourceRaw: { type: Schema.Types.Mixed },
   },
   { timestamps: true }
 );
@@ -91,4 +98,8 @@ const ProductSchema = new Schema(
 ProductSchema.index({ source: 1, sourceId: 1 }, { unique: true, sparse: true });
 ProductSchema.index({ source: 1, sourceHandle: 1 }, { unique: true, sparse: true });
 
-export const Product = models.Product || model("Product", ProductSchema);
+// ✅ Índice optimizado para Winter
+ProductSchema.index({ winterCategory: 1, createdAt: -1 });
+
+export const Product =
+  models.Product || model("Product", ProductSchema);

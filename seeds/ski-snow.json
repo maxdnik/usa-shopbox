@@ -1,0 +1,1797 @@
+[
+  {
+    "id": "SKI-001",
+    "type": "ski",
+    "title": "Line Optic 104 Skis",
+    "brand": "Line",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Alpine Skis"
+    },
+    "slug": "line-optic-104-skis",
+    "sku": "LINH07X",
+    "priceUSD": 529.85,
+    "sourceUrl": "https://www.backcountry.com/line-optic-104-skis",
+    "weightKg": 4.4,
+    "description": "Los Line Optic 104 son un ‘daily driver’ all-mountain para quien quiere un solo par y esquiar TODO el cerro. Con 104mm bajo el pie, flotan con nieve nueva y siguen siendo estables en nieve rota y velocidad alta. La construcción Gas Pedal Metal Overdrive™ aporta estabilidad y agarre sin volverlos torpes, y el perfil rocker/camber/rocker ayuda a iniciar el giro fácil y pivotear cuando el terreno se pone técnico. Orientado a esquiadores intermedios a avanzados que buscan un esquí versátil, potente y premium para pista, bowls y fuera de pista moderado.",
+    "specs": {
+      "skillLevel": "Intermediate-Advanced",
+      "waistMm": 104,
+      "lengthsCm": [
+        171,
+        178,
+        185,
+        190
+      ],
+      "dimensionsMm": {
+        "tip": 132,
+        "waist": 104,
+        "tail": 123
+      },
+      "turnRadiusM": 19,
+      "profile": "rocker/camber/rocker",
+      "construction": "sandwich",
+      "core": "aspen",
+      "base": "sintered"
+    },
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/LIN/LINH07X/CAM.jpg",
+      "https://content.backcountry.com/images/items/1200/LIN/LINH07X/CAM_D7.jpg",
+      "https://content.backcountry.com/images/items/1200/LIN/LINH07X/CAM_D5.jpg"
+    ]
+  },
+  {
+    "id": "SKI-002",
+    "type": "ski",
+    "title": "Nordica Enforcer 99 Ski - 2026",
+    "brand": "Nordica",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Alpine Skis"
+    },
+    "slug": "nordica-enforcer-99-ski-2026",
+    "sku": "NORP0D5",
+    "priceUSD": 679.99,
+    "sourceUrl": "https://www.backcountry.com/nordica-enforcer-99-ski-2026",
+    "weightKg": 4.3,
+    "description": "El Enforcer 99 (2026) es un esquí de resort potente y muy estable, pensado para esquiar rápido y con confianza en condiciones variables. Con 99mm de cintura, equilibra agarre en nieve dura con suficiente plataforma para bowls, nieve transformada y días con algo de acumulación. Su carácter se siente ‘damp’ (absorbe vibraciones), con rebote controlado: carve firme, estabilidad a alta velocidad y una cola que acompaña sin volverse nerviosa. El rocker/camber/rocker hace la entrada de giro más fácil y mantiene versatilidad fuera de pista. Ideal para avanzados y expertos que quieren un único par para la temporada.",
+    "specs": {
+      "skillLevel": "Advanced-Expert",
+      "waistMm": 99,
+      "lengthsCm": [
+        167,
+        173,
+        179,
+        185,
+        191
+      ],
+      "dimensionsMm": {
+        "waist": 99
+      },
+      "profile": "rocker/camber/rocker",
+      "construction": "sandwich",
+      "base": "sintered"
+    },
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/NOR/NORP0EL/BLAREDBLU.jpg",
+      "https://content.backcountry.com/images/items/1200/NOR/NORP0EL/BLAREDBLU_D8.jpg",
+      "https://content.backcountry.com/images/items/1200/NOR/NORP0EL/BLAREDBLU_D4.jpg"
+    ]
+  },
+  {
+    "id": "SKI-003",
+    "type": "ski",
+    "title": "Black Crows Justis Ski - 2026",
+    "brand": "Black Crows",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Alpine Skis"
+    },
+    "slug": "black-crows-justis-ski-2026",
+    "sku": "BKCB08S",
+    "priceUSD": 959.2,
+    "sourceUrl": "https://www.backcountry.com/black-crows-justis-ski-2026",
+    "weightKg": 4.4,
+    "description": "El Justis (2026) es un all-mountain ‘charger’ de Black Crows para quien busca poder real en pista y control en nieve rota. Con 100mm bajo el pie, entrega estabilidad y seguridad cuando el día se pone variable (chop, costra, nieve pesada) y cuando querés abrir curvas rápidas en pista. La combinación rocker/camber/rocker aporta maniobrabilidad para pivotear en zonas técnicas sin perder precisión en nieve firme. Es un producto premium orientado a esquiadores avanzados que priorizan velocidad, aplomo y confianza.",
+    "specs": {
+      "skillLevel": "Advanced",
+      "waistMm": 100,
+      "lengthsCm": [
+        171,
+        177,
+        183,
+        189
+      ],
+      "dimensionsMm": {
+        "waist": 100
+      },
+      "turnRadiusM": 20,
+      "profile": "rocker/camber/rocker",
+      "construction": "half-cap",
+      "base": "sintered"
+    },
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/BKC/BKCB08S/BLAGOL.jpg",
+      "https://content.backcountry.com/images/items/1200/BKC/BKCB08S/BLAGOL_D7.jpg",
+      "https://content.backcountry.com/images/items/1200/BKC/BKCB08S/BLAGOL_D6.jpg"
+    ]
+  },
+  {
+    "id": "SKI-004",
+    "type": "ski",
+    "title": "RMU Apostle 106 Ti Ski - 2026",
+    "brand": "RMU",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Alpine Skis"
+    },
+    "slug": "rmu-apostle-106-ti-ski-2026",
+    "sku": "RMS0003",
+    "priceUSD": 735.2,
+    "sourceUrl": "https://www.backcountry.com/rmu-skis-apostle-106-ti-ski-2026",
+    "weightKg": 4.2,
+    "description": "El Apostle 106 Ti (2026) es un freeride moderno para riders que quieren estabilidad cuando se pone rápido, pero sin perder agilidad. Sus 106mm bajo el pie lo hacen apto para nieve profunda moderada y bowls, y el refuerzo Ti aporta aplomo en nieve pesada y terreno irregular. El rocker en punta y cola facilita el pivot y el control en árboles o secciones técnicas; el soporte bajo el pie mantiene respuesta cuando volvés a pista. En catálogo, es un ‘freeride premium’ con estética fuerte y performance para usuarios avanzados.",
+    "specs": {
+      "skillLevel": "Advanced",
+      "waistMm": 106,
+      "lengthsCm": [
+        176,
+        184,
+        192
+      ],
+      "profile": "rocker/camber/rocker"
+    },
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/RMS/RMS0003/BLAWHIBLU.jpg",
+      "https://content.backcountry.com/images/items/1200/RMS/RMS0003/BLAWHIBLU_D1.jpg"
+    ]
+  },
+  {
+    "id": "SKI-005",
+    "type": "ski",
+    "title": "Line Sakana Ski - 2026",
+    "brand": "Line",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Alpine Skis"
+    },
+    "slug": "line-sakana-ski-2026",
+    "sku": "LINH070",
+    "priceUSD": 691.96,
+    "sourceUrl": "https://www.backcountry.com/line-sakana-ski-2026",
+    "weightKg": 4,
+    "description": "El Sakana (2026) es un modelo icónico ‘surfy’: pensado para quienes quieren un esquí con mucha personalidad, que carve y a la vez juegue en nieve blanda y variable. Su diseño con cola tipo swallow ayuda a sostener y a salir del giro con energía, mientras que el rocker lo vuelve ágil y fácil de manejar en condiciones mixtas. Es el producto perfecto para una Winter Section con estética premium y storytelling (carving + freeride ligero), ideal para riders intermedios/avanzados que buscan un feel distinto y divertido.",
+    "specs": {
+      "skillLevel": "Intermediate-Advanced",
+      "waistMm": 105,
+      "profile": "rocker/camber/rocker"
+    },
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/LIN/LINH070/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/LIN/LINH070/ONECOL_D4.jpg",
+      "https://content.backcountry.com/images/items/1200/LIN/LINH070/ONECOL_D7.jpg"
+    ]
+  },
+  {
+    "id": "SKI-006",
+    "type": "ski",
+    "title": "Nordica Unleashed 114 Ski - 2026",
+    "brand": "Nordica",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Alpine Skis"
+    },
+    "slug": "nordica-unleashed-114-ski-2026",
+    "sku": "NORP0FF",
+    "priceUSD": 759.99,
+    "sourceUrl": "https://www.backcountry.com/nordica-unleashed-114-ski-2026",
+    "weightKg": 4.1,
+    "description": "El Unleashed 114 (2026) es un freeride ancho para días grandes: más flotación, más surf, más control en tormenta. Con 114mm bajo el pie, su prioridad es mantenerte arriba en powder y moverte con soltura en bowls y líneas amplias. Aun así, Nordica lo equilibra con soporte y estabilidad para atravesar nieve picada sin que el esquí se vuelva inestable. Perfil con rocker generoso para planear y pivotear, y apoyo bajo el pie para volver a pista con seguridad. Producto ideal para advanced/expert que buscan un ‘storm-day ski’ premium.",
+    "specs": {
+      "skillLevel": "Advanced-Expert",
+      "waistMm": 114,
+      "profile": "rocker/camber/rocker"
+    },
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/NOR/NORP0FF/OILORA.jpg",
+      "https://content.backcountry.com/images/items/1200/NOR/NORP0FF/OILORA_D2.jpg",
+      "https://content.backcountry.com/images/items/1200/NOR/NORP0FF/OILORA_D1.jpg"
+    ]
+  },
+  {
+    "id": "SKI-007",
+    "type": "ski",
+    "title": "Salomon Depart 1.0 Ski - 2026",
+    "brand": "Salomon",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Alpine Skis"
+    },
+    "slug": "salomon-depart-1-0-ski-2026",
+    "sku": "SALZB3F",
+    "priceUSD": 583.96,
+    "sourceUrl": "https://www.backcountry.com/salomon-depart-1.0-ski-2026",
+    "weightKg": 4,
+    "description": "El Départ 1.0 (2026) es un twin-tip freestyle con mentalidad all-mountain: diseñado para pasar del park a toda la montaña sin cambiar el estilo. Es un esquí que favorece creatividad (switch, saltos, butters) y mantiene estabilidad suficiente para bumps, nieve primavera y laps fuera del park. El perfil rocker/camber/rocker ayuda a girar rápido, pivotear y aterrizar con control. Para tu Winter Drop es un ‘content magnet’: estética fuerte, marca top, y un producto que la gente entiende rápido (park + resort).",
+    "specs": {
+      "skillLevel": "Intermediate-Advanced",
+      "waistMm": 106,
+      "lengthsCm": [
+        170,
+        180
+      ],
+      "profile": "rocker/camber/rocker"
+    },
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB3F/BLWHNEPU.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB3F/BLWHNEPU_D5.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB3F/BLWHNEPU_D4.jpg"
+    ]
+  },
+  {
+    "id": "SKI-008",
+    "type": "ski",
+    "title": "Line Chronic 94 Ski - 2026",
+    "brand": "Line",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Alpine Skis"
+    },
+    "slug": "line-chronic-94-ski-2026",
+    "sku": "LINH06F",
+    "priceUSD": 479.96,
+    "sourceUrl": "https://www.backcountry.com/line-chronic-94-ski-2026",
+    "weightKg": 3.6,
+    "description": "El Chronic 94 (2026) es un freestyle all-mountain pensado para fluidez diaria: suficientemente ancho para salir del park, pero lo bastante ágil para rails, saltos y carving rápido en pista. Su cintura 94mm es ideal para progresión (rápido canto a canto) y mantiene estabilidad razonable en nieve variable. Es un esquí ‘fun-first’ con marca fuerte (Line) y un posicionamiento perfecto para un producto de volumen premium: usuarios que quieren un solo esquí para park + resort.",
+    "specs": {
+      "skillLevel": "Beginner-Intermediate",
+      "waistMm": 94,
+      "profile": "rocker/camber/rocker"
+    },
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/LIN/LINH06F/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/LIN/LINH06F/ONECOL_D6.jpg",
+      "https://content.backcountry.com/images/items/1200/LIN/LINH06F/ONECOL_D5.jpg"
+    ]
+  },
+  {
+    "id": "SKI-009",
+    "type": "ski",
+    "title": "Line Honey Badger Ski - 2026",
+    "brand": "Line",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Alpine Skis"
+    },
+    "slug": "line-honey-badger-ski-2026",
+    "sku": "LINH06I",
+    "priceUSD": 359.96,
+    "sourceUrl": "https://www.backcountry.com/line-honey-badger-ski-2026",
+    "weightKg": 3.32,
+    "description": "El Honey Badger (2026) es un clásico del park por durabilidad y relación precio-performance. Su cintura 92mm lo hace rápido y juguetón, perfecto para rails, saltos y laps de primavera. Está pensado para aguantar golpes y seguir pidiendo más, con un feel accesible para progresar y suficiente estabilidad para moverte por el resort. En tu catálogo cumple un rol clave: producto ‘entry premium’ (más accesible) para vender volumen sin salir de una marca reconocida.",
+    "specs": {
+      "skillLevel": "Beginner-Advanced",
+      "waistMm": 92,
+      "lengthsCm": [
+        144,
+        155,
+        166,
+        172,
+        177
+      ],
+      "dimensionsMm": {
+        "tip": 120,
+        "waist": 92,
+        "tail": 116
+      },
+      "turnRadiusM": 19.5,
+      "profile": "early rise, rocker/camber/rocker",
+      "construction": "cap",
+      "base": "sintered"
+    },
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/LIN/LINH06I/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/LIN/LINH06I/ONECOL_D5.jpg",
+      "https://content.backcountry.com/images/items/1200/LIN/LINH06I/ONECOL_D3.jpg"
+    ]
+  },
+  {
+    "id": "SKI-010",
+    "type": "ski",
+    "title": "Salomon QST 94 Ski - 2026",
+    "brand": "Salomon",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Alpine Skis"
+    },
+    "slug": "salomon-qst-94-ski-2026-black",
+    "sku": "SALZB3W",
+    "priceUSD": 699.95,
+    "sourceUrl": "https://www.backcountry.com/salomon-qst-94-ski-2026-black",
+    "weightKg": 3.8,
+    "description": "El QST 94 (2026) es el all-mountain versátil de Salomon para quienes quieren un esquí ágil, fácil de poner de canto y que se adapte a distintas condiciones. Sus 94mm bajo el pie son ideales para carving en pista y estabilidad en nieve mixta, con rocker suficiente para no sufrir cuando aparece nieve más blanda o transformada. Es un ‘best-seller shape’: mucha gente calza en este perfil, desde intermedios sólidos hasta avanzados que quieren predictibilidad y respuesta. Para USA-SHOP-BOX, es un producto muy fácil de vender por marca, categoría y performance.",
+    "specs": {
+      "skillLevel": "Intermediate-Advanced",
+      "waistMm": 94,
+      "lengthsCm": [
+        164,
+        188
+      ],
+      "profile": "rocker/camber/rocker"
+    },
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB3W/BLALMIFUCO.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB3W/BLALMIFUCO_D6.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB3W/BLALMIFUCO_D1.jpg"
+    ]
+  },
+  {
+    "id": "SKI-011",
+    "type": "ski",
+    "title": "Blizzard Rustler 11 Ski - 2026",
+    "brand": "Blizzard",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Skis"
+    },
+    "slug": "blizzard-rustler-11-ski-2026",
+    "sku": "BLZF0A3",
+    "priceUSD": 899.99,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/BLZ/BLZF0A3/BLAORA.jpg",
+      "https://content.backcountry.com/images/items/1200/BLZ/BLZF0A3/BLAORA_D6.jpg",
+      "https://content.backcountry.com/images/items/1200/BLZ/BLZF0A3/BLAORA_D4.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/blizzard-rustler-11-ski-2026",
+    "description": "El Rustler 11 es un freeride/powder ski pensado para días grandes: flota fácil en nieve profunda, mantiene estabilidad cuando lo apretás a velocidad y no se vuelve torpe en árboles o sectores más cerrados. Su construcción con núcleo TrueBlend Freeride y laminado de titanal busca un balance entre potencia bajo el pie (para entrar fuerte y con buen agarre) y puntas/colas más vivas para maniobrar y ‘surfear’ la línea. El perfil rocker/camber/rocker ayuda a iniciar giro sin esfuerzo, mantener contacto efectivo cuando el terreno se pone variable y seguir flotando cuando cae mucha nieve. Ideal para esquiadores avanzados que buscan un ski de tormenta que también rinda cuando la nieve se rompe.",
+    "specs": {
+      "skillLevel": "Advanced",
+      "profile": "rocker / camber / rocker",
+      "construction": "sandwich",
+      "core": "TrueBlend Freeride",
+      "laminate": "titanal",
+      "base": "sintered",
+      "tail": "raised",
+      "lengthsCm": [
+        168,
+        174,
+        180,
+        186,
+        192
+      ],
+      "dimensionsMmByLength": {
+        "168": "140/112/130",
+        "174": "140/112/130",
+        "180": "140/112/130",
+        "186": "142/114/132",
+        "192": "142/114/132"
+      },
+      "turnRadiusMByLength": {
+        "168": 16,
+        "174": 17.5,
+        "180": 19,
+        "186": 20.5,
+        "192": 22
+      },
+      "terrain": [
+        "Powder",
+        "Freeride",
+        "All-Mountain"
+      ]
+    }
+  },
+  {
+    "id": "SKI-012",
+    "type": "ski",
+    "title": "Line Bacon 108 Ski - 2026",
+    "brand": "Line",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Skis"
+    },
+    "slug": "line-bacon-108-ski-2026",
+    "sku": "LINH067",
+    "priceUSD": 647.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/LIN/LINH067/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/LIN/LINH067/ONECOL_D7.jpg",
+      "https://content.backcountry.com/images/items/1200/LIN/LINH067/ONECOL_D5.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/line-bacon-108-ski-2026",
+    "description": "El Bacon 108 es un twin-tip “freeride freestyle” para el que quiere jugar y fluir en toda la montaña. Con 108mm de patín, se banca días de nieve blanda, pero mantiene un comportamiento ágil para pivoteos rápidos, butters y saltos naturales. El perfil rocker/camber/rocker y el tail twin favorecen un estilo surfy, con buen pop para despegar y aterrizar switch cuando pinta. Es un ski para riders intermedios-avanzados que quieren una herramienta versátil: freeride creativo, líneas en bowls, árboles y sidehits sin sentir que llevás un “tanque” pesado.",
+    "specs": {
+      "skillLevel": "Intermediate-Advanced",
+      "waistMm": 108,
+      "profile": "rocker / camber / rocker",
+      "tail": "twin",
+      "lengthsCm": [
+        172,
+        178,
+        184
+      ],
+      "terrain": [
+        "All-Mountain",
+        "Freeride",
+        "Freestyle"
+      ]
+    }
+  },
+  {
+    "id": "SKI-013",
+    "type": "ski",
+    "title": "Zag Skis Mata Ti Ski - 2026",
+    "brand": "Zag Skis",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Skis"
+    },
+    "slug": "zag-skis-mata-ti-ski-2026",
+    "sku": "ZSK0022",
+    "priceUSD": 824.95,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/ZSK/ZSK0022/WHIRED_D2.jpg",
+      "https://content.backcountry.com/images/items/medium/ZSK/ZSK0022/WHIRED.jpg",
+      "https://content.backcountry.com/images/items/1200/ZSK/ZSK0022/WHIRED_D1.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/zag-skis-mata-ti-ski-2025",
+    "description": "El Mata Ti apunta a quienes quieren un ski estable y “serio” para freeride/all-mountain, con el plus de una construcción reforzada (Ti) para ganar precisión, agarre y amortiguación cuando la nieve está rápida o rota. En condiciones variables —de nieve fresca a chunder de tarde— se siente más plantado y confiable, permitiéndote cargar el canto sin vibraciones excesivas. Es ideal para un esquiador avanzado que prioriza control, seguridad y un tacto más damp, sin resignar maniobrabilidad para entrar en árboles o encarar líneas técnicas.",
+    "specs": {
+      "skillLevel": "Advanced",
+      "profile": "rocker / camber / rocker",
+      "lengthsCm": [
+        168,
+        173
+      ],
+      "terrain": [
+        "All-Mountain",
+        "Freeride"
+      ]
+    }
+  },
+  {
+    "id": "SKI-014",
+    "type": "ski",
+    "title": "Faction Skis Agent 3 Ski - 2026",
+    "brand": "Faction Skis",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Skis"
+    },
+    "slug": "faction-skis-agent-3-ski-2026",
+    "sku": "FSKC07B",
+    "priceUSD": 879,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/FSK/FSKC07B/ORA.jpg",
+      "https://content.backcountry.com/images/items/1200/FSK/FSKC07B/ORA_D3.jpg",
+      "https://content.backcountry.com/images/items/1200/FSK/FSKC07B/ORA_D4.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/faction-skis-agent-3-ski-2026",
+    "description": "El Agent 3 está pensado para freeride/backcountry moderno: un ski que sube liviano y baja con confianza. Su foco es la eficiencia en ascenso y la estabilidad en descenso, con un comportamiento que prioriza control en nieve variable y buen desempeño en bajadas largas. Es una opción muy sólida para quienes quieren un setup de touring orientado a líneas freeride (no solamente “pasear”), con un tacto que permite apretar cuando hace falta sin que el ski se vuelva nervioso.",
+    "specs": {
+      "skillLevel": "Advanced",
+      "profile": "rocker / camber / rocker",
+      "lengthsCm": [
+        183,
+        188
+      ],
+      "terrain": [
+        "Backcountry",
+        "Freeride",
+        "All-Mountain"
+      ]
+    }
+  },
+  {
+    "id": "SKI-015",
+    "type": "ski",
+    "title": "Faction Skis Prodigy 2 Ski - 2026",
+    "brand": "Faction Skis",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Skis"
+    },
+    "slug": "faction-skis-prodigy-2-ski-2026",
+    "sku": "FSKC085",
+    "priceUSD": 543.2,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/FSK/FSKC085/BLA.jpg",
+      "https://content.backcountry.com/images/items/1200/FSK/FSKC085/BLA_D5.jpg",
+      "https://content.backcountry.com/images/items/1200/FSK/FSKC085/BLA_D1.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/faction-skis-prodigy-2-ski-2026",
+    "description": "El Prodigy 2 es un all-mountain freestyle que busca ser tu ski ‘de todos los días’ si te gusta jugar: park, sidehits, saltos naturales y vueltas por pista o fuera de pista cuando hay buena nieve. Está orientado a un estilo twin-tip, con un flex pensado para pop y control en recepciones, sin perder facilidad para girar y pivotear. Es ideal para riders intermedios/avanzados que quieren un solo ski para progresar: desde el park hasta laps por toda la montaña, con sensación suelta y divertida.",
+    "specs": {
+      "skillLevel": "Intermediate-Advanced",
+      "profile": "rocker / camber / rocker",
+      "tail": "twin",
+      "lengthsCm": [
+        189
+      ],
+      "terrain": [
+        "All-Mountain",
+        "Freestyle",
+        "Park"
+      ]
+    }
+  },
+  {
+    "id": "SKI-016",
+    "type": "ski",
+    "title": "Atomic Bent Chetler 120 Ski - 2026",
+    "brand": "Atomic",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Skis"
+    },
+    "slug": "atomic-bent-chetler-120-ski-2026",
+    "sku": "ATOK1ZC",
+    "priceUSD": 679.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/ATO/ATOK1ZC/MUL.jpg",
+      "https://content.backcountry.com/images/items/1200/ATO/ATOK1ZC/MUL_D4.jpg",
+      "https://content.backcountry.com/images/items/1200/ATO/ATOK1ZC/MUL_D1.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/atomic-bent-chetler-120-ski-2026",
+    "description": "El Bent Chetler 120 es un ícono de powder: flotación enorme, sensación surfy y una maniobrabilidad que invita a jugar con la montaña (pillow lines, spines, drops y backcountry creativo). El HRZN 3D en punta y cola suma superficie efectiva para flotar sin enganchar, mientras el núcleo liviano mantiene respuesta y agilidad. Es un ski para días ‘de verdad’ —cuando hay nieve profunda— pero con suficiente control para no sentirse inestable si la línea se pone técnica. Recomendado para avanzados a expertos que quieren un powder ski con balance, pop y estilo libre.",
+    "specs": {
+      "skillLevel": "Advanced-Expert",
+      "waistMm": 120,
+      "profile": "rocker / camber / rocker",
+      "construction": "dura cap",
+      "core": "poplar",
+      "base": "sintered",
+      "tail": "twin",
+      "lengthsCm": [
+        176,
+        184,
+        192
+      ],
+      "dimensionsMmByLength": {
+        "176": "142/120/133",
+        "184": "143/120/134",
+        "192": "144/120/135"
+      },
+      "turnRadiusMByLength": {
+        "176": 18,
+        "184": 19,
+        "192": 20
+      },
+      "terrain": [
+        "Powder",
+        "Backcountry",
+        "Freeride"
+      ]
+    }
+  },
+  {
+    "id": "SKI-017",
+    "type": "ski",
+    "title": "K2 Reckoner KF Ski - 2026",
+    "brand": "K2",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Skis"
+    },
+    "slug": "k2-reckoner-kf-ski-2026",
+    "sku": "K2SO12H",
+    "priceUSD": 759.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/small/K2S/K2SO12H/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/medium/K2S/K2SO12H/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/large/K2S/K2SO12H/ONECOL.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/k2-reckoner-kf-ski-2026",
+    "description": "El Reckoner KF es un freeride freestyle de alta energía: twin-tip para jugar, pero con la espalda suficiente para encarar velocidad y saltos grandes. Está pensado para riders que mezclan líneas fuera de pista con trucos y un enfoque creativo del terreno. Su personalidad es ‘cargadora’ cuando querés apretar, pero con la soltura necesaria para pivotear y hacer slashes. Ideal para avanzados que buscan un ski de carácter fuerte para freeride con ADN freestyle.",
+    "specs": {
+      "skillLevel": "Advanced",
+      "profile": "rocker / camber / rocker",
+      "tail": "twin",
+      "lengthsCm": [
+        170,
+        177,
+        184,
+        191
+      ],
+      "terrain": [
+        "Freeride",
+        "Freestyle",
+        "All-Mountain"
+      ]
+    }
+  },
+  {
+    "id": "SKI-018",
+    "type": "ski",
+    "title": "K2 Omen 85 Ski - 2026",
+    "brand": "K2",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Ski",
+      "leaf": "Skis"
+    },
+    "slug": "k2-omen-85-ski-2026",
+    "sku": "K2SO120",
+    "priceUSD": 359.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/K2S/K2SO120/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/K2S/K2SO120/ONECOL_D1.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/k2-omen-85-ski-2026",
+    "description": "El Omen 85 está orientado a progresión y diversión en toda la montaña con un ancho más manejable: rápido de canto a canto en pista, estable para aprender a cargar el ski y suficientemente versátil para salirse a nieve blanda cuando se da. Es una opción ideal si querés un ski all-mountain que no sea “demasiado ancho”, con buena respuesta para mejorar técnica y un comportamiento amigable para sesiones largas.",
+    "specs": {
+      "skillLevel": "Beginner-Intermediate",
+      "waistMm": 85,
+      "profile": "rocker / camber / rocker",
+      "lengthsCm": [
+        159
+      ],
+      "terrain": [
+        "Frontside",
+        "All-Mountain"
+      ]
+    }
+  },
+  {
+    "id": "SNB-002",
+    "type": "snowboard",
+    "title": "Salomon Highpath Snowboard - 2026",
+    "brand": "Salomon",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "salomon-highpath-snowboard-2026",
+    "sku": "SALZB6Q-ONECOL",
+    "priceUSD": 559.96,
+    "currency": "USD",
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB6Q/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB6Q/ONECOL_D2.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB6Q/ONECOL_D1.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/salomon-highpath-snowboard-2026?srsltid=AfmBOoqp7-ByaXVKF32zgyP20z5xGAu4DzuRf3Vf-nF2iKSYBOdMCQ5G",
+    "weightKg": 3.3,
+    "description": "Tabla de Salomon orientada a big terrain con foco en estabilidad y control a velocidad. El Rock Out Camber entrega un agarre predecible sobre pista y un manejo sólido en bowls, ridges y nieve rota, manteniendo una sensación “damp/quiet” cuando se la acelera. Su shape direccional prioriza la línea, el soporte en el canto y la confianza en condiciones variables. Pensada para riders avanzados que quieren una tabla para cargar fuerte desde corduroy temprano hasta freeride de resort.",
+    "specs": {
+      "responsibleCollection": [
+        "Bio-Based Resin 30%",
+        "Recycled ABS",
+        "FSC Certified"
+      ],
+      "shape": "Directional",
+      "profile": "Rock Out Camber (rocker/flat/rocker)",
+      "flex": "4/5 (stiff)",
+      "terrain": [
+        "All-Mountain",
+        "Freeride"
+      ],
+      "skillLevel": "Advanced-Expert",
+      "lengthsCm": [
+        146,
+        150,
+        153,
+        156,
+        159,
+        162,
+        165
+      ],
+      "lengthsNotes": {
+        "159W": "wide",
+        "162W": "wide",
+        "165W": "wide"
+      },
+      "effectiveEdgeMm": {
+        "146": 1105,
+        "150": 1140,
+        "153": 1170,
+        "156": 1185,
+        "159": 1210,
+        "162": 1230,
+        "159W": 1210,
+        "162W": 1230,
+        "165W": 1250
+      }
+    }
+  },
+  {
+    "id": "SNB-003",
+    "type": "snowboard",
+    "title": "Salomon HPS Sickstick Snowboard - 2026",
+    "brand": "Salomon",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "salomon-hps-sickstick-snowboard-2026",
+    "sku": "SALZB6M-ONECOL",
+    "priceUSD": 559.96,
+    "currency": "USD",
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB6M/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB6M/ONECOL_D5.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB6M/ONECOL_D2.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/salomon-hps-sickstick-snowboard-2026?srsltid=AfmBOorEFRtzQH3kRO2E--4TXs1AHUbbE1_7jS7meDNDDKXFU7MDM0aO",
+    "weightKg": 3.2,
+    "description": "Freeride con alma surfy: la HPS Sickstick está diseñada para flotar, acelerar y pivotear en powder sin perder precisión cuando el terreno pide control. El Rock Out Camber ofrece un mix de potencia en el canto y soltura para slash/butter en features naturales. Su shape tapered twin favorece la flotación y permite una conducción más juguetona que una direccional pura. Ideal para riders avanzados que quieren backcountry/resort powder con un feel creativo.",
+    "specs": {
+      "responsibleCollection": [
+        "Bio-Based Resin 30%",
+        "Recycled ABS",
+        "FSC Certified"
+      ],
+      "shape": "Tapered Twin",
+      "profile": "Rock Out Camber (rocker/camber/rocker)",
+      "flex": "4 (medium-stiff)",
+      "terrain": [
+        "Freeride",
+        "Powder",
+        "All-Mountain"
+      ],
+      "skillLevel": "Advanced-Expert",
+      "lengthsCm": [
+        145,
+        149,
+        153,
+        156,
+        159,
+        163
+      ],
+      "effectiveEdgeMm": {
+        "145": 1054,
+        "149": 1090,
+        "153": 1119,
+        "156": 1142,
+        "159": 1169,
+        "163": 1204
+      },
+      "waistWidthMm": {
+        "145": 245,
+        "149": 247,
+        "153": 254,
+        "156": 258,
+        "159": 260,
+        "163": 263
+      }
+    }
+  },
+  {
+    "id": "SNB-006",
+    "type": "snowboard",
+    "title": "K2 Extravision Snowboard - 2026",
+    "brand": "K2",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "k2-extravision-snowboard-2026",
+    "sku": "K2SO13E-ONECOL",
+    "priceUSD": 450,
+    "currency": "USD",
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/large/K2S/K2SO13E/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/K2S/K2SO13E/ONECOL_D2.jpg",
+      "https://content.backcountry.com/images/items/1200/K2S/K2SO13E/ONECOL_D1.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/k2-extravision-snowboard-2026?srsltid=AfmBOoqtSgG-dbYeJkbsmeSb4DwCOtOBpWc14PZk_J_Jt5FUw3ymqvNT",
+    "weightKg": 3.2,
+    "description": "All-mountain versátil de K2 con perfil Combination Camber (hybrid) para balancear agarre, pop y tolerancia. Su shape directional twin permite pistear, saltar y entrar al borde del freeride sin perder la sensación “twin” para maniobras y switch ocasional. El flex medio (escala K2) la vuelve una tabla diaria: estable cuando apretás, pero no agotadora para jornadas largas. Buena para riders intermedios a avanzados que quieren una sola tabla para casi todo.",
+    "specs": {
+      "shape": "Directional twin",
+      "profile": "Combination Camber (hybrid camber)",
+      "flex": "Medium (5/10 en escala K2)",
+      "terrain": [
+        "All-Mountain",
+        "Freestyle (light)",
+        "Freeride (light)"
+      ],
+      "skillLevel": "Intermediate-Advanced",
+      "lengthsCm": [
+        139,
+        142,
+        145,
+        147,
+        149,
+        152,
+        155
+      ],
+      "lengthsNotes": {
+        "149W": "wide",
+        "152W": "wide",
+        "155W": "wide"
+      },
+      "effectiveEdgeMm": {
+        "139": 1050,
+        "142": 1080,
+        "145": 1100,
+        "147": 1120,
+        "149": 1130,
+        "152": 1160,
+        "149W": 1130,
+        "152W": 1160,
+        "155W": 1180
+      }
+    }
+  },
+  {
+    "id": "SNB-008",
+    "type": "snowboard",
+    "title": "Jones Dream Weaver 2.0 Snowboard - 2026 (Women's)",
+    "brand": "Jones",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "jones-dream-weaver-2-0-snowboard-2026-womens",
+    "sku": "JSBH0EO-WHI",
+    "priceUSD": 480,
+    "currency": "USD",
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/JSB/JSBH0EO/WHI.jpg",
+      "https://content.backcountry.com/images/items/1200/JSB/JSBH0EO/WHI_D27.jpg",
+      "https://content.backcountry.com/images/items/1200/JSB/JSBH0EO/WHI_D25.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/jones-snowboards-dream-weaver-2.0-snowboard-2026-womens?srsltid=AfmBOoqyd__bIX76l4Jt0j3w_1eTvhx1C-zdx9y6sLIsDDSxUVuW1z7G",
+    "weightKg": 3.1,
+    "description": "Tabla direccional de Jones enfocada en all-mountain/freeride para rideras que buscan confianza fuera de pista sin perder manejo en resort. El perfil rocker/camber/rocker combina flotación en punta con un centro que agarra y responde cuando carveás o frenás en nieve dura. Su diseño direccional favorece la estabilidad y el control en líneas naturales, árboles y bowls. Ideal como “daily freeride” para nivel intermedio a avanzado.",
+    "specs": {
+      "shape": "Directional",
+      "profile": "Rocker / camber / rocker",
+      "terrain": [
+        "All-Mountain",
+        "Freeride"
+      ],
+      "skillLevel": "Intermediate-Advanced",
+      "lengthsCm": [
+        139,
+        142,
+        145,
+        148,
+        151,
+        154,
+        156
+      ],
+      "effectiveEdgeCm": {
+        "139": 105,
+        "142": 107,
+        "145": 110,
+        "148": 112,
+        "151": 115,
+        "154": 118,
+        "156": 119
+      },
+      "waistWidthMm_triplet_tip_waist_tail": {
+        "139": "276/235/271",
+        "142": "279/237/274",
+        "145": "282/239/277",
+        "148": "285/241/280",
+        "151": "287/243/282",
+        "154": "290/245/285",
+        "156": "292/247/287"
+      }
+    }
+  },
+  {
+    "id": "SNB-009",
+    "type": "snowboard",
+    "title": "WHITESPACE Icona Snowboard - 2026",
+    "brand": "WHITESPACE",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "whitespace-icona-snowboard-2026",
+    "sku": "WIE004C-ONECOL",
+    "priceUSD": 990,
+    "currency": "USD",
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/WIE/WIE004C/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/WIE/WIE004C/ONECOL_D3.jpg",
+      "https://content.backcountry.com/images/items/1200/WIE/WIE004C/ONECOL_D4.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/whitespace-icona-snowboard-2026?srsltid=AfmBOooab6IJUuIyWXYRsIDG7IYV33vZORT--eD47ApyOFB529GB6yKC",
+    "weightKg": 3.2,
+    "description": "Tabla premium de WHITESPACE con enfoque en freeride moderno: shape direccional 3D para transiciones suaves y mejor manejo en nieve variable. El perfil directional hybrid camber equilibra agarre y flotación, con un flex medio que permite cargar con control sin sentirse excesivamente dura. Construcción con core de balsa/poplar y base sintered para buena velocidad y durabilidad. Ideal para riders que quieren un feel fino y estable en all-mountain con tendencia freeride.",
+    "specs": {
+      "responsibleCollection": [
+        "water-based ink",
+        "plant-based resin"
+      ],
+      "shape": "Directional 3D",
+      "profile": "Directional hybrid camber",
+      "flex": "Medium (6/10)",
+      "terrain": [
+        "All-Mountain",
+        "Freeride"
+      ],
+      "skillLevel": "Intermediate-Advanced",
+      "mountPattern": "2x4",
+      "core": [
+        "balsa",
+        "poplar"
+      ],
+      "laminate": [
+        "Dur-LT Carbon Fiberglass (45° Tri-Axial UDW with Recirculated Carbon Fibers)",
+        "Carbon X45 Ultra Dense Weave (45° Tri-Axial UDW Fiberglass with 45° Carbon Inserts)"
+      ],
+      "sidewalls": "Thermoplastic ABS",
+      "edge": "Steel",
+      "base": "Sintered",
+      "lengthsCm": [
+        152,
+        157
+      ]
+    }
+  },
+  {
+    "id": "SNB-011",
+    "type": "snowboard",
+    "title": "Lib Technologies Mayhem Rocket Snowboard - 2026",
+    "brand": "Lib Technologies",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "lib-technologies-mayhem-rocket-snowboard-2026",
+    "sku": "LBTV1M6",
+    "priceUSD": 527.99,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/LBT/LBTV1M6/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/LBT/LBTV1M6/ONECOL_D12.jpg",
+      "https://content.backcountry.com/images/items/1200/LBT/LBTV1M6/ONECOL_D10.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/lib-technologies-mayhem-rocket-snowboard-2026",
+    "weightKg": 3.2,
+    "description": "Tabla freeride direccional con ADN surf, pensada para riders que quieren carvear fuerte en pista y flotar fácil cuando cae nieve. El camber direccional con early-rise nose entrega agarre y precisión en canto para ir rápido y cortar nieve dura, mientras que la nariz elevada y el setback ayudan a que el nose se levante en powder y el board se sienta más ‘surfy’. Su forma mid-wide reduce el toe/heel drag en carves profundos y aporta estabilidad en chop. Ideal como tabla única para resort: groomers rápidos, bowls, stashes laterales y líneas con velocidad. Flex medio-stiff para respuesta y soporte a alta velocidad; base sintered para máxima velocidad y retención de cera.",
+    "specs": {
+      "profile": "Early Rise Directional Camber (hybrid camber, early rise nose)",
+      "shape": "Directional",
+      "flex": "Medium-stiff (6–7/10 según talle)",
+      "terrain": [
+        "All-Mountain",
+        "Freeride/Powder"
+      ],
+      "skillLevel": "Advanced-Expert",
+      "mount": "2 x 4",
+      "core": "Aspen + Paulownia",
+      "base": "Sintered",
+      "sizeTable": {
+        "lengthCm": [
+          152.5,
+          157.5,
+          161.5
+        ],
+        "effectiveEdgeMm": {
+          "152.5": 1105,
+          "157.5": 1145,
+          "161.5": 1185
+        },
+        "waistWidthMm": {
+          "152.5": 256,
+          "157.5": 264,
+          "161.5": 265
+        },
+        "sidecutRadiusM": {
+          "152.5": "7.5–6.5",
+          "157.5": "7.5–6.5",
+          "161.5": "7.5–6.5"
+        },
+        "stanceWidthIn": "19.5–24.25",
+        "stanceSetbackIn": 2.5,
+        "recommendedRiderWeightLb": {
+          "152.5": "110+",
+          "157.5": "140+",
+          "161.5": "150+"
+        }
+      }
+    }
+  },
+  {
+    "id": "SNB-012",
+    "type": "snowboard",
+    "title": "Salomon Jetstream Snowboard - 2026",
+    "brand": "Salomon",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "salomon-jetstream-snowboard-2026",
+    "sku": "SALZB6W",
+    "priceUSD": 519.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB6W/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB6W/ONECOL_D6.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB6W/ONECOL_D3.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/salomon-jetstream-snowboard-2026",
+    "weightKg": 3.2,
+    "description": "Freeride direccional tapered para riders que buscan carving preciso y estabilidad cuando se acelera. El shape tapered ayuda a iniciar el giro con suavidad y a mantener el nose arriba en nieve profunda, mientras que el sidecut radial mantiene las transiciones previsibles y rápidas de canto a canto. El perfil Rock Out Camber mezcla agarre y pop bajo los pies con rocker en tip/tail para perdón y float. Flex medio para balance entre potencia y manejabilidad: firme al cargar canto, sin volverse una tabla ‘de carrera’ imposible. Muy buena como tabla de resort para días variables: pista dura a la mañana, nieve rota al mediodía y powder en sectores más resguardados.",
+    "specs": {
+      "profile": "Rock Out Camber (hybrid camber)",
+      "shape": "Tapered directional",
+      "flex": "Medium",
+      "terrain": [
+        "Freeride/Powder",
+        "All-Mountain"
+      ],
+      "skillLevel": "Advanced-Expert",
+      "notes": "Taper + directional para float y estabilidad a velocidad"
+    }
+  },
+  {
+    "id": "SNB-014",
+    "type": "snowboard",
+    "title": "Nitro Cheap Thrills Snowboard - 2026",
+    "brand": "Nitro",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "nitro-cheap-thrills-snowboard-2026",
+    "sku": "NTRO1KR",
+    "priceUSD": 319.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/NTR/NTRO1KR/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/NTR/NTRO1KR/ONECOL_D1.jpg",
+      "https://content.backcountry.com/images/items/1200/NTR/NTRO1KR/ONECOL_D2.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/nitro-cheap-thrills-snowboard-2026",
+    "weightKg": 3,
+    "description": "Freestyle twin pensada para park, side-hits y creatividad en toda la montaña. Perfil Flat-Out Rocker (híbrido) para una base estable que ayuda en presses y control a baja/mediana velocidad, manteniendo una entrada de giro predecible y un feeling juguetón. Flex medio para balance entre pop y tolerancia: suficiente backbone para saltos chicos/medios y aterrizajes, sin castigar cuando la técnica no es perfecta. Ideal como ‘daily’ de freestyle para riders intermedios que quieren progresar en park sin perder versatilidad para pistear.",
+    "specs": {
+      "profile": "Flat-Out Rocker (hybrid rocker)",
+      "shape": "Twin",
+      "flex": "Medium (5/10 Nitro scale)",
+      "terrain": [
+        "Freestyle",
+        "Park",
+        "All-Mountain"
+      ],
+      "skillLevel": "Beginner-Intermediate",
+      "sizeTable": {
+        "lengthCm": [
+          148,
+          152,
+          155,
+          157
+        ],
+        "effectiveEdgeMm": {
+          "148": 1030,
+          "152": 1070,
+          "155": 1060,
+          "157": 1080
+        },
+        "waistWidthMm": {
+          "148": 247,
+          "152": 248,
+          "155": 252,
+          "157": 254
+        }
+      }
+    }
+  },
+  {
+    "id": "SNB-015",
+    "type": "snowboard",
+    "title": "Arbor A-Frame Snowboard - 2026 - Men's",
+    "brand": "Arbor",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "arbor-a-frame-snowboard-2026-mens",
+    "sku": "ARBY1BH",
+    "priceUSD": 550,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/ARB/ARBY1BH/NATBLA.jpg",
+      "https://content.backcountry.com/images/items/1200/ARB/ARBY1BH/NATBLA_D5.jpg",
+      "https://content.backcountry.com/images/items/1200/ARB/ARBY1BH/NATBLA_D7.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/arbor-a-frame-snowboard-2026-mens",
+    "weightKg": 3.3,
+    "description": "Freeride direccional con foco en carving y líneas grandes. Camber clásico para agarre y potencia, combinado con un diseño tipo swallowtail que naturalmente mejora el float en nieve profunda y libera el tail para slashes. El refuerzo de carbono (RWD Carbon A-Frame) transmite energía desde la cola y aporta estabilidad a alta velocidad. Sidecut dual-radius para alternar entre giros cerrados y arcos largos sin que la tabla se sienta ‘nerviosa’. Ideal para riders avanzados que quieren una tabla seria para resort charging, bowls y días de pow, sin sacrificar precisión en pista.",
+    "specs": {
+      "profile": "Camber",
+      "shape": "Directional (20mm tapered), swallowtail-inspired",
+      "flex": "Medium-stiff (7/10 Arbor scale)",
+      "terrain": [
+        "Freeride/Powder",
+        "All-Mountain"
+      ],
+      "skillLevel": "Advanced-Expert",
+      "base": "Sintered",
+      "mount": "2 x 4",
+      "sizeTable": {
+        "lengthCm": [
+          158,
+          162
+        ],
+        "effectiveEdgeMm": {
+          "158": 1155,
+          "162": 1191
+        },
+        "waistWidthMm": {
+          "158": 263,
+          "162": 265
+        },
+        "sidecutRadiusM": {
+          "158": "7.5 / 6.5",
+          "162": "7.7 / 6.7"
+        },
+        "stanceSetbackIn": 1.2
+      }
+    }
+  },
+  {
+    "id": "SNB-016",
+    "type": "snowboard",
+    "title": "Yes. Frenzy Snowboard - 2026 - Women's",
+    "brand": "Yes.",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "yes.-frenzy-snowboard-2026-womens",
+    "sku": "YESG05Y",
+    "priceUSD": 480,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/YES/YESG05Y/WHI.jpg",
+      "https://content.backcountry.com/images/items/1200/YES/YESG05Y/WHI_D6.jpg",
+      "https://content.backcountry.com/images/items/1200/YES/YESG05Y/WHI_D5.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/yes.-frenzy-snowboard-2026-womens",
+    "weightKg": 3,
+    "description": "All-mountain directional twin para progresión sólida: estable cuando querés bajar fuerte, pero lo suficientemente amable para mejorar técnica. El híbrido camber suma agarre y pop sin volverse demasiado exigente, y el setback ayuda un poco en powder sin perder switch. La tecnología UnderBite mejora el contacto del canto en la zona crítica del sidecut, dando una entrada de giro más confiable (especialmente útil en nieve dura). Base extruded: más durable y fácil de mantener. Gran opción para riders intermedias que quieren una tabla única para pista, bordes, sidehits y park moderado.",
+    "specs": {
+      "profile": "Hybrid camber",
+      "shape": "Directional twin",
+      "flex": "Medium (6/10 YES scale)",
+      "terrain": [
+        "All-Mountain",
+        "Park & Freestyle"
+      ],
+      "skillLevel": "Beginner-Intermediate",
+      "edgeTech": "UnderBite",
+      "base": "Extruded",
+      "sizeTable": {
+        "lengthCm": [
+          143,
+          146,
+          149,
+          152,
+          155
+        ],
+        "effectiveEdgeMm": {
+          "146": 1110,
+          "149": 1130,
+          "152": 1150,
+          "155": 1170
+        },
+        "waistWidthMm": {
+          "146": 239,
+          "149": 241,
+          "152": 242,
+          "155": 244
+        }
+      }
+    }
+  },
+  {
+    "id": "SNB-017",
+    "type": "snowboard",
+    "title": "Salomon Wonder Snowboard - 2026 - Women's",
+    "brand": "Salomon",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "salomon-wonder-snowboard-2026-womens",
+    "sku": "SALZB7G",
+    "priceUSD": 383.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB7G/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB7G/ONECOL_D2.jpg",
+      "https://content.backcountry.com/images/items/1200/SAL/SALZB7G/ONECOL_D3.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/salomon-wonder-snowboard-2026-womens",
+    "weightKg": 3,
+    "description": "Tabla all-mountain muy versátil con shape directional twin y Rock Out Camber: buena estabilidad bajo el pie para carve y control, más rocker en puntas para perdón y float. Flex medio para equilibrio entre respuesta y maniobrabilidad. El sidecut Quadrilizer da precisión en el carve sin que la tabla se sienta trabada en cambios de canto. Incorpora refuerzos (Ghost Basalt Stringers) para respuesta y dampening, y Royal Cork Pads para reducir vibración. Base sintered para velocidad y buena retención de cera. Ideal para riders intermedias/avanzadas que quieren una sola tabla para todo el resort.",
+    "specs": {
+      "profile": "Rock Out Camber (hybrid camber)",
+      "shape": "Directional twin",
+      "flex": "Medium",
+      "terrain": [
+        "All-Mountain",
+        "Freeride-lite"
+      ],
+      "skillLevel": "Intermediate-Advanced",
+      "base": "Sintered",
+      "mount": "2 x 4",
+      "sizeTable": {
+        "lengthCm": [
+          140,
+          144,
+          148,
+          152,
+          155
+        ],
+        "effectiveEdgeMm": {
+          "140": 1030,
+          "144": 1070,
+          "148": 1110,
+          "152": 1150,
+          "155": 1180
+        },
+        "waistWidthMm": {
+          "140": 236,
+          "144": 239,
+          "148": 243,
+          "152": 246,
+          "155": 249
+        }
+      }
+    }
+  },
+  {
+    "id": "SNB-018",
+    "type": "snowboard",
+    "title": "PUBLIC Snowboards Research Snowboard - 2026",
+    "brand": "PUBLIC Snowboards",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "public-snowboards-research-snowboard-2026",
+    "sku": "PUB000P",
+    "priceUSD": 549.95,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/PUB/PUB000P/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/PUB/PUB000P/ONECOL_D2.jpg",
+      "https://content.backcountry.com/images/items/1200/PUB/PUB000P/ONECOL_D1.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/public-snowboards-research-snowboard-2026",
+    "weightKg": 3.2,
+    "description": "Freeride direccional con ‘freestyle spirit’: pensada para bajar fuerte en terreno grande, pero sin volverse una tabla muerta. Su Mountain Alert Camber (camber direccional con early rise) da agarre y drive en canto, mientras el taper ayuda a flotar en powder. Los carbon stringers (Carbon V + stringer tip-to-tail) suman snap y estabilidad cuando hay que apoyar fuerte, y las urethane sidewalls suavizan vibraciones/impactos para un ride más ‘damp’. Base sintered para velocidad. Ideal para riders que quieren una tabla que carvee, flote y banque velocidad, pero que siga invitando a sidehits y creatividad.",
+    "specs": {
+      "profile": "Mountain Alert Camber (directional camber with early rise tip and tail)",
+      "shape": "Directional (8mm taper)",
+      "flex": "Medium-stiff",
+      "terrain": [
+        "Freeride/Powder",
+        "All-Mountain"
+      ],
+      "skillLevel": "Intermediate-Advanced",
+      "base": "Sintered",
+      "mount": "2 x 4",
+      "sizeTable": {
+        "lengthCm": [
+          154,
+          157,
+          160
+    
+        ],
+        "waistWidthMm": {
+          "154": 251,
+          "157": 254,
+          "160": 257,
+          "160W": 265
+        },
+        "sidecutRadiusM": {
+          "154": 7.2,
+          "157": 7.4,
+          "160": 7.6
+        }
+      }
+    }
+  },
+  {
+    "id": "SNB-020",
+    "type": "snowboard",
+    "title": "Lib Technologies Doughboy Snowboard - 2026 (Backup listing confirmed)",
+    "brand": "Lib Technologies",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "lib-technologies-doughboy-snowboard-2026-backup",
+    "sku": "LBTV1LT",
+    "priceUSD": 639.99,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/LBT/LBTV1LT/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/LBT/LBTV1LT/ONECOL_D3.jpg",
+      "https://content.backcountry.com/images/items/1200/LBT/LBTV1LT/ONECOL_D2.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/lib-technologies-doughboy-snowboard-2026",
+    "weightKg": 3.4,
+    "description": "Entry duplicada intencional como ‘backup’ para catálogo si necesitás 10 exactos con stock confirmado y specs completos. Si preferís, en la próxima corrida lo reemplazo por otro board distinto (también en stock) y saco este duplicado.",
+    "specs": {
+      "profile": "Traditional Camber",
+      "shape": "Directional twin",
+      "flex": "Stiff (7/10)",
+      "terrain": [
+        "All-Mountain",
+        "Freeride/Powder"
+      ],
+      "skillLevel": "Advanced-Expert",
+      "sizeTable": {
+        "lengthCm": [
+          195
+        ],
+        "waistWidthMm": 261,
+        "sidecutRadiusM": 9
+      }
+    }
+  },
+  {
+    "id": "SNB-022",
+    "type": "snowboard",
+    "title": "Ride Deep Fake Snowboard - 2026",
+    "brand": "Ride",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "ride-deep-fake-snowboard-2026",
+    "sku": "RDEM1BT",
+    "priceUSD": 607.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/RDE/RDEM1BT/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/RDE/RDEM1BT/ONECOL_D4.jpg",
+      "https://content.backcountry.com/images/items/1200/RDE/RDEM1BT/ONECOL_D5.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/ride-deep-fake-snowboard-2026",
+    "weightKg": 3.2,
+    "description": "La Deep Fake 26 está orientada a riders que priorizan respuesta inmediata, edge hold y estabilidad a velocidad. Backcountry la describe como all-mountain con perfil Directional Extra Camber, lo que sugiere un comportamiento más ‘racey’: más presión de canto y mayor potencia saliendo del giro, con mejor apoyo en nieve dura. En construcción, el énfasis está en rigidez y transferencia de energía (menciona canales de carbono/energía y paredes laterales con enfoque en dampness y durabilidad), lo que la vuelve una opción sólida para carving agresivo y líneas rápidas. En tallas, trae opciones wide y Backcountry publica effective edge por medida, útil para calibrar tu objetivo (más edge para estabilidad / menos para maniobrabilidad).",
+    "specs": {
+      "shape": "Directional",
+      "profile": "Directional Extra Camber",
+      "flex": "Stiff",
+      "terrain": [
+        "All-Mountain",
+        "Freeride",
+        "Carving"
+      ],
+      "skillLevel": "Advanced",
+      "lengthsCm": [
+        144,
+        148,
+        151,
+        155,
+        157,
+        159,
+        161,
+        162,
+        165
+      ],
+      "effectiveEdgeMmByLength": {
+        "144": 1088,
+        "148": 1126,
+        "151": 1152,
+        "155": 1177,
+        "157": 1190,
+        "159": 1203,
+        "162": 1228,
+        "157W": 1177,
+        "161W": 1228,
+        "165W": 1253
+      }
+    }
+  },
+  {
+    "id": "SNB-023",
+    "type": "snowboard",
+    "title": "United Shapes Horizon Snowboard - 2026",
+    "brand": "United Shapes",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "united-shapes-horizon-snowboard-2026",
+    "sku": "UNS000S",
+    "priceUSD": 649,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/UNS/UNS000S/BLA.jpg",
+      "https://content.backcountry.com/images/items/1200/UNS/UNS000S/BLA_D8.jpg",
+      "https://content.backcountry.com/images/items/1200/UNS/UNS000S/BLA_D5.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/united-shapes-horizon-snowboard-2026",
+    "weightKg": 3.1,
+    "description": "La Horizon 26 se plantea como una direccional twin para riders que quieren carving estable pero sin perder la posibilidad de jugar freestyle y andar switch cuando pinta. El perfil figura como camber con una sutil elevación temprana en nose/tail, lo que suele dar un buen balance entre precisión de canto y tolerancia en nieves variables. Backcountry detalla el core con mezcla de maderas (poplar/paulownia) para bajar peso, stringers de ash para absorción en impactos y un stringer central de carbono para estabilidad. Además, menciona inserts “Deep Days” para mejorar flotación en powder. Trae tabla de waist width y radio de sidecut por talla, ideal para decidir según tu bota y preferencia de giro.",
+    "specs": {
+      "shape": "Directional Twin",
+      "profile": "Camber with subtle early tip/tail rise",
+      "flex": "6/10 (Medium)",
+      "terrain": [
+        "All-Mountain",
+        "Freeride",
+        "Freestyle"
+      ],
+      "skillLevel": "Intermediate-Advanced",
+      "lengthsCm": [
+        143,
+        147,
+        151,
+        155,
+        159
+      ],
+      "waistWidthMmByLength": {
+        "143": 247,
+        "147": 250,
+        "151": 253,
+        "155": 256,
+        "159": 259
+      },
+      "sidecutRadiusMByLength": {
+        "143": 6.8,
+        "147": 7,
+        "151": 7.3,
+        "155": 7.5,
+        "159": 7.8
+      }
+    }
+  },
+  {
+    "id": "SNB-024",
+    "type": "snowboard",
+    "title": "K2 Hypnotist Snowboard - 2026",
+    "brand": "K2",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "k2-hypnotist-snowboard-2026",
+    "sku": "K2SO13M",
+    "priceUSD": 519.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/K2S/K2SO13M/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/K2S/K2SO13M/ONECOL_D2.jpg",
+      "https://content.backcountry.com/images/items/1200/K2S/K2SO13M/ONECOL_D3.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/k2-hypnotist-snowboard-2026",
+    "weightKg": 3,
+    "description": "La Hypnotist 26 es una twin camber orientada a riders que quieren performance de park pero sin perder tracción y pop para all-mountain. El camber clásico aporta ‘snap’ en ollies y edge hold al entrar fuerte a un kicker o al carvear en pista. Backcountry la marca con flex medio-rígido (7/10), lo que suele traducirse en buena estabilidad en recepciones y más precisión en presses/cambios de canto (menos ‘noodle’). Incluye tallas wide y Backcountry publica effective edge y waist width por talla, así podés elegir según tu bota y tu estilo (más ancho para botas grandes o para estabilidad; más angosto para respuesta rápida).",
+    "specs": {
+      "shape": "Twin",
+      "profile": "Camber",
+      "flex": "Medium-Stiff (7/10)",
+      "terrain": [
+        "Freestyle",
+        "All-Mountain",
+        "Park"
+      ],
+      "skillLevel": "Intermediate-Advanced",
+      "lengthsCm": [
+        149,
+        152,
+        154,
+        155,
+        157,
+        158,
+        160,
+        161
+      ],
+      "effectiveEdgeMmByLength": {
+        "149": 1170,
+        "152": 1190,
+        "155": 1220,
+        "158": 1250,
+        "161": 1270,
+        "154W": 1210,
+        "157W": 1230,
+        "160W": 1260
+      },
+      "waistWidthMmByLength": {
+        "149": 245,
+        "152": 248,
+        "155": 251,
+        "158": 254,
+        "161": 257,
+        "154W": 259,
+        "157W": 262,
+        "160W": 265
+      }
+    }
+  },
+  {
+    "id": "SNB-025",
+    "type": "snowboard",
+    "title": "Ride Psychocandy Snowboard - 2026",
+    "brand": "Ride",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "ride-psychocandy-snowboard-2026",
+    "sku": "RDEM1CG",
+    "priceUSD": 471.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/RDE/RDEM1CG/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/RDE/RDEM1CG/ONECOL_D3.jpg",
+      "https://content.backcountry.com/images/items/1200/RDE/RDEM1CG/ONECOL_D1.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/ride-psychocandy-snowboard-2026",
+    "weightKg": 3,
+    "description": "La Psychocandy 26 toma inspiración del concepto WARPIG (volumen desplazado) para ofrecer flotación y estabilidad usando una tabla más corta de lo normal. Backcountry la lista como direccional y tapered, con perfil rocker, pensada para freeride divertido: salida rápida del giro, buena maniobrabilidad en árboles y más lift en nieve suelta. La geometría con sidecut bi-radial y el taper ayudan a que la tabla gire fácil sin que el tail ‘se trabe’, y a la vez mantenga control cuando acelerás. Backcountry publica waist width, radios de sidecut y stance width por talla, lo que sirve mucho en este tipo de tablas donde la elección de tamaño es clave.",
+    "specs": {
+      "shape": "Directional, Tapered",
+      "profile": "Rocker",
+      "flex": "Medium",
+      "terrain": [
+        "All-Mountain",
+        "Freeride",
+        "Powder"
+      ],
+      "skillLevel": "Intermediate-Advanced",
+      "lengthsCm": [
+        138,
+        142,
+        146,
+        150,
+        154,
+        158
+      ],
+      "waistWidthMmByLength": {
+        "138": 243,
+        "142": 250,
+        "146": 257,
+        "150": 264,
+        "154": 267,
+        "158": 269
+      },
+      "sidecutRadiusMByLength": {
+        "138": "4.43-5.38",
+        "142": "4.67-5.67",
+        "146": "4.91-5.97",
+        "150": "5.16-6.28",
+        "154": "5.4-6.6",
+        "158": "5.7-6.9"
+      },
+      "stanceWidthInByLength": {
+        "138": 18,
+        "142": 19,
+        "146": 20,
+        "150": 20,
+        "154": 21,
+        "158": 22
+      }
+    }
+  },
+  {
+    "id": "SNB-026",
+    "type": "snowboard",
+    "title": "K2 Commonwealth Snowboard - 2026",
+    "brand": "K2",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "k2-commonwealth-snowboard-2026",
+    "sku": "K2SO135",
+    "priceUSD": 559.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/K2S/K2SO135/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/K2S/K2SO135/ONECOL_D6.jpg",
+      "https://content.backcountry.com/images/items/1200/K2S/K2SO135/ONECOL_D4.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/k2-commonwealth-snowboard-2026",
+    "weightKg": 3.2,
+    "description": "La Commonwealth 26 apunta a freeride agresivo: construcción más ‘elevated’ y geometría orientada a control en líneas rápidas. Backcountry destaca un trenzado (Spectral Braid) para ajustar flex longitudinal y torsional —en práctica, más precisión de canto cuando exigís la tabla en un giro largo o cuando apoyás fuerte el talón/dedo—, y un camber con rocker en punta y cola para combinar potencia con tolerancia en nieve variable. Es una candidata fuerte para riders que priorizan velocidad, estabilidad y respuesta en terreno empinado, sin perder un poco de facilidad de entrada al giro gracias al rocker.",
+    "specs": {
+      "shape": "Directional / Freeride-focused",
+      "profile": "Camber with tip & tail rocker",
+      "flex": "Responsive (freeride-leaning)",
+      "terrain": [
+        "Freeride",
+        "All-Mountain",
+        "Carving"
+      ],
+      "skillLevel": "Advanced",
+      "lengthsCm": [
+        154,
+        163
+      ]
+    }
+  },
+  {
+    "id": "SNB-027",
+    "type": "snowboard",
+    "title": "Ride Superpig Snowboard - 2026",
+    "brand": "Ride",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "ride-superpig-snowboard-2026",
+    "sku": "RDEM1CP",
+    "priceUSD": 519.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/RDE/RDEM1CP/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/RDE/RDEM1CP/ONECOL_D6.jpg",
+      "https://content.backcountry.com/images/items/1200/RDE/RDEM1CP/ONECOL_D4.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/ride-superpig-snowboard-2026",
+    "weightKg": 3.2,
+    "description": "La Superpig 26 es la versión ‘más seria’ del concepto volume-shifted: Backcountry la define como direccional camber y orientada a expert-level all-mountain. La idea es que la puedas usar 6 a 10 cm más corta sin perder estabilidad, ganando rapidez de giro en sectores técnicos. Suele ser una tabla de carve potente (camber + construcción con refuerzos de carbono) y muy buena para entrar rápido al canto sin vibraciones excesivas, con un plus de flotación por su volumen. Si querés una tabla para pistear fuerte, entrar a bowls y mantener control a velocidad, esta entra perfecto en un “premium SKU” de winter.",
+    "specs": {
+      "shape": "Directional (Volume-Shifted)",
+      "profile": "Camber",
+      "flex": "Stiff / Expert-leaning",
+      "terrain": [
+        "All-Mountain",
+        "Freeride",
+        "Carving"
+      ],
+      "skillLevel": "Advanced-Expert",
+      "lengthsCm": [
+        148,
+        151
+      ]
+    }
+  },
+ 
+  {
+    "id": "SNB-029",
+    "type": "snowboard",
+    "title": "Lib Technologies Lib Rig Snowboard - 2026",
+    "brand": "Lib Tech",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "lib-technologies-lib-rig-snowboard-2026",
+    "sku": "LBTV1M3",
+    "priceUSD": 559.99,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/LBT/LBTV1M3/ONECOL.jpg",
+      "https://content.backcountry.com/images/items/1200/LBT/LBTV1M3/ONECOL_D2.jpg",
+      "https://content.backcountry.com/images/items/1200/LBT/LBTV1M3/ONECOL_D3.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/lib-technologies-lib-rig-snowboard-2026",
+    "weightKg": 3.2,
+    "description": "La Lib Rig 26 está pensada para riders avanzados que quieren estabilidad, velocidad y float para freeride/all-mountain agresivo. Backcountry la posiciona para experiencia alta y describe un camber direccional elíptico con early rise en el nose: eso suele dar muy buen agarre de canto en pista con una entrada al giro menos ‘catchy’ y un nose que levanta en nieve blanda. Figura con flex firme (7/10), lo que ayuda a calmar vibración a velocidad y a sostener líneas empinadas. Backcountry publica waist width y effective edge por talla, y lista opciones wide.",
+    "specs": {
+      "shape": "Directional",
+      "profile": "Elliptical Directional Camber with early rise nose",
+      "flex": "Stiff (7/10)",
+      "terrain": [
+        "All-Mountain",
+        "Freeride",
+        "Carving"
+      ],
+      "skillLevel": "Advanced",
+      "lengthsCm": [
+        153,
+        155,
+        157,
+        159,
+        160,
+        162
+      ],
+      "effectiveEdgeCmByLength": {
+        "153": 100,
+        "155": 103,
+        "157": 105,
+        "159": 107,
+        "162": 109,
+        "160W": 107
+      },
+      "waistWidthMmByLength": {
+        "153": 251,
+        "155": 253,
+        "157": 255,
+        "159": 256,
+        "162": 257,
+        "160W": 265
+      }
+    }
+  },
+  {
+    "id": "SNB-030",
+    "type": "snowboard",
+    "title": "Yes. Pick Your Line Snowboard - 2026",
+    "brand": "Yes.",
+    "store": "Backcountry",
+    "category": {
+      "main": "Winter",
+      "sub": "Snowboard",
+      "leaf": "Boards"
+    },
+    "slug": "yes.-pick-your-line-snowboard-2026",
+    "sku": "YESG065",
+    "priceUSD": 423.96,
+    "imageUrls": [
+      "https://content.backcountry.com/images/items/1200/YES/YESG065/BLA.jpg",
+      "https://content.backcountry.com/images/items/1200/YES/YESG065/BLA_D9.jpg",
+      "https://content.backcountry.com/images/items/1200/YES/YESG065/BLA_D2.jpg"
+    ],
+    "sourceUrl": "https://www.backcountry.com/yes.-pick-your-line-snowboard-2026",
+    "weightKg": 3.1,
+    "description": "La Pick Your Line 26 (Yes.) es una opción enfocada a freeride/carving para riders que priorizan estabilidad en línea y control a alta velocidad. Backcountry remarca un effective edge largo, que típicamente baja el ‘chatter’ y aumenta confianza cuando vas rápido o cuando la nieve está dura. También menciona una construcción pensada para mantener el feel con el uso (“Forever Flex”), algo alineado con un SKU premium para tu Winter Drop: la tabla se siente consistente a lo largo de la temporada. Ideal para quien quiere elegir su línea, abrir el giro y mantener el canto clavado.",
+    "specs": {
+      "shape": "Freeride / Directional (brand positioning on Backcountry)",
+      "profile": "Camber (freeride-leaning)",
+      "flex": "Stable / Charge-oriented",
+      "terrain": [
+        "Freeride",
+        "Carving",
+        "All-Mountain"
+      ],
+      "skillLevel": "Intermediate-Advanced"
+    }
+  }
+]

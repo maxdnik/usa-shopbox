@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import WinterSection from "@/components/home/WinterSection";
 import Hero from "@/components/home/Hero";
 import HeroCarousel from "@/components/home/HeroCarousel";
 import OfficialStores from "@/components/home/OfficialStores";
@@ -23,6 +23,7 @@ export default function HomePage() {
       <main className="flex-1">
         <Hero />
         <div className="max-w-[1440px] mx-auto px-4 md:px-8 pb-16">
+        <WinterSection /> 
           <OfficialStores />
           <div className="w-full">
             <HeroCarousel />
