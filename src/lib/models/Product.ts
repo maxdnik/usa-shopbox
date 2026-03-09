@@ -22,7 +22,7 @@ const ProductSchema = new Schema(
     // ✅ WINTER DROP (para /winter?category=...)
     winterCategory: {
       type: String,
-      enum: ["ski", ,"snowboard", "outdoor", "city"],
+      enum: ["ski", "snowboard", "outdoor", "city"],
       index: true,
     },
 
