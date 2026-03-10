@@ -91,7 +91,6 @@ export const CATEGORIES_MAP: CategoryMain[] = [
     ],
   },
 
-  // ✅ NUEVA CATEGORÍA: MODA (ideal para Pandora / Joyería)
   {
     name: "Moda",
     icon: "👜",
@@ -132,7 +131,7 @@ export const CATEGORIES_MAP: CategoryMain[] = [
       { name: "Decoración", leaves: ["Cuadros", "Espejos"] },
     ],
   },
-  
+
   {
     name: "Outdoor & Aventura",
     icon: "🏕️",
@@ -214,6 +213,22 @@ export const CATEGORIES_MAP: CategoryMain[] = [
       {
         name: "Training",
         leaves: ["Calzado Training", "Indumentaria Training", "Accesorios Training"],
+      },
+      {
+        name: "Winter",
+        leaves: [
+          "Skis",
+          "Snowboards",
+          "Ski Boots",
+          "Snowboard Boots",
+          "Ski Bindings",
+          "Snowboard Bindings",
+          "Ski Goggles",
+          "Snowboard Goggles",
+          "Ski Helmets",
+          "Snowboard Helmets",
+          "Winter Accessories",
+        ],
       },
     ],
   },

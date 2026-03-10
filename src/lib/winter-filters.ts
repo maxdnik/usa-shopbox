@@ -1,3 +1,5 @@
+import type { FilterQuery } from "mongoose";
+
 export type WinterSearch = {
   category?: string;
   brand?: string;
@@ -6,7 +8,7 @@ export type WinterSearch = {
   max?: string;
 };
 
-function splitCSV(v?: string | null) {
+function splitCSV(v?: string | null): string[] {
   if (!v) return [];
   return v
     .split(",")
@@ -14,73 +16,77 @@ function splitCSV(v?: string | null) {
     .filter(Boolean);
 }
 
-export function buildWinterQuery(sp: WinterSearch) {
-  const query: any = {};
-  const category = sp.category ?? "ski";
+export function buildWinterQuery(sp: WinterSearch): FilterQuery<any> {
+  const category = String(sp.category ?? "ski").toLowerCase().trim();
 
-  // ------------------------------------------------
-  // CATEGORY
-  // ------------------------------------------------
-  if (category === "ski") {
-    query.winterCategory = "ski";
-  } else if (category === "snowboard") {
-    query.winterCategory = "snowboard";
-  } else if (category === "outdoor") {
-    query.winterCategory = "outdoor";
-
-    // Excluir City Winter y City Winter Women del tab Outdoor
-    query.$and = query.$and || [];
-    query.$and.push({
-      tags: {
-        $nin: ["collection:city-winter", "collection:city-winter-women"],
-      },
-    });
-  } else if (category === "city-winter") {
-    // En DB entraron como outdoor, pero con tag collection:city-winter
-    query.winterCategory = "outdoor";
-    query.tags = { $in: ["collection:city-winter"] };
-  } else if (category === "city-winter-women") {
-    // En DB entraron como outdoor, pero con tag collection:city-winter-women
-    query.winterCategory = "outdoor";
-    query.tags = { $in: ["collection:city-winter-women"] };
-  }
-
-  // ------------------------------------------------
-  // BRAND
-  // ------------------------------------------------
   const brands = splitCSV(sp.brand);
-  if (brands.length) {
-    query.brand = { $in: brands };
-  }
-
-  // ------------------------------------------------
-  // SIZE
-  // Buscar desde options, que es donde lo estás guardando bien
-  // ------------------------------------------------
   const sizes = splitCSV(sp.size);
-  if (sizes.length) {
-    query.$and = query.$and || [];
-    query.$and.push({
-      options: {
-        $elemMatch: {
-          name: "Size",
-          values: { $in: sizes },
-        },
-      },
+
+  const conditions: FilterQuery<any>[] = [];
+
+  if (category === "ski") {
+    conditions.push({
+      $or: [
+        { winterCategory: "ski" },
+        { tags: "snow:goggles" }
+      ],
     });
   }
 
-  // ------------------------------------------------
-  // PRICE
-  // ------------------------------------------------
-  const min = sp.min ? Number(sp.min) : NaN;
-  const max = sp.max ? Number(sp.max) : NaN;
+  else if (category === "snowboard") {
+    conditions.push({
+      $or: [
+        { winterCategory: "snowboard" },
+        { tags: "snow:goggles" }
+      ],
+    });
+  }
+
+  else if (category === "city-winter") {
+    conditions.push({
+      tags: "collection:city-winter",
+    });
+  }
+
+  else if (category === "city-winter-women") {
+    conditions.push({
+      tags: "collection:city-winter-women",
+    });
+  }
+
+  else if (category === "outdoor") {
+    conditions.push({
+      winterCategory: "outdoor",
+    });
+  }
+
+  if (brands.length) {
+    conditions.push({
+      brand: { $in: brands },
+    });
+  }
+
+  if (sizes.length) {
+    conditions.push({
+      "options.values": { $in: sizes },
+    });
+  }
+
+  const min = Number(sp.min);
+  const max = Number(sp.max);
 
   if (!Number.isNaN(min) || !Number.isNaN(max)) {
-    query.priceUSD = {};
-    if (!Number.isNaN(min)) query.priceUSD.$gte = min;
-    if (!Number.isNaN(max)) query.priceUSD.$lte = max;
+    const price: any = {};
+
+    if (!Number.isNaN(min)) price.$gte = min;
+    if (!Number.isNaN(max)) price.$lte = max;
+
+    conditions.push({ priceUSD: price });
   }
 
-  return query;
+  if (!conditions.length) return {};
+
+  if (conditions.length === 1) return conditions[0];
+
+  return { $and: conditions };
 }
