@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import connectDB from "@/lib/mongodb";
-import Product from "@/lib/models/Product";
+import { Product } from "@/lib/models/Product";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   await connectDB();
