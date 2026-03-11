@@ -2,17 +2,19 @@ import { MetadataRoute } from "next";
 import connectDB from "@/lib/mongodb";
 import { Product } from "@/lib/models/Product";
 
+export const dynamic = "force-dynamic";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   await connectDB();
 
   const products = await Product.find({}, { slug: 1, updatedAt: 1, _id: 0 }).lean();
 
-  const productUrls: MetadataRoute.Sitemap = products
-    .filter((product: any) => product?.slug)
-    .map((product: any) => ({
-      url: `https://www.usa-shopbox.com/producto/${product.slug}`,
-      lastModified: product.updatedAt || new Date(),
-      changeFrequency: "weekly",
+  const productUrls = (products || [])
+    .filter((p: any) => p?.slug)
+    .map((p: any) => ({
+      url: `https://www.usa-shopbox.com/producto/${p.slug}`,
+      lastModified: p.updatedAt || new Date(),
+      changeFrequency: "weekly" as const,
       priority: 0.7,
     }));
 
